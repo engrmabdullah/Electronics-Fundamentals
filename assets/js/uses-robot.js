@@ -27,7 +27,7 @@
 
     /* ══════════════ لوحة التحكّم ══════════════ */
     microcontroller: {
-      ar: 'لوحة التحكّم', en: 'Microcontroller',
+      ar: 'المتحكّم الدقيق', en: 'Microcontroller',
       items: [
         { ar: 'إشارة المرور المصغّرة', en: 'Model Traffic Light',
           line: 'يُشعل الأضواء الثلاثة بالترتيب، ويحسب ثواني كل لون.',
@@ -358,8 +358,8 @@
             <circle cx="96" cy="34" r="15" fill="${C.glow}" opacity=".14"/>
             <path d="M6 72 h10 v-6 h10 v6 h10 v-6 h10 v6 h10" stroke="${C.green}" stroke-width="2" fill="none"/>`) },
 
-        { ar: 'حسّاس الضوء', en: 'Light Sensor Test',
-          line: 'تربط حسّاس الضوء بالليد لتجربة الإضاءة التلقائية.',
+        { ar: 'المقاومة الضوئية', en: 'LDR Test',
+          line: 'تربط المقاومة الضوئية بالليد لتجربة الإضاءة التلقائية.',
           svg: V(`<rect x="6" y="18" width="108" height="52" rx="4" fill="${C.light}" stroke="${C.metal}" stroke-width="2"/>
             <rect x="6" y="42" width="108" height="4" fill="${C.metal}" opacity=".45"/>
             ${(() => { let d = ''; const ys = [26, 34, 52, 60];
@@ -405,7 +405,7 @@
 
     /* ══════════════ السمّاعة ══════════════ */
     speaker: {
-      ar: 'السمّاعة', en: 'Speaker',
+      ar: 'مكبّر الصوت', en: 'Loudspeaker',
       items: [
         { ar: 'سمّاعة الهاتف', en: 'Phone Earpiece',
           line: 'تحوّل الإشارة الكهربائية إلى صوت تسمعه في المكالمة.',
@@ -622,7 +622,7 @@
 
     /* ══════════════ الدائرة المتكاملة ══════════════ */
     ic: {
-      ar: 'الدائرة المتكاملة', en: 'Integrated Circuit',
+      ar: 'الدائرة المتكاملة', en: 'Integrated Circuit (IC)',
       items: [
         { ar: 'بوّابة AND', en: 'AND Gate 7408',
           line: 'الرقاقة 7408 تُشعل الليد إذا ضُغط المفتاحان معًا.',
