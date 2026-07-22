@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>الدرس 27 — لوحة التحكّم | Microcontroller</title>
+<title>الدرس 27 — المتحكّم الدقيق | Microcontroller</title>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/deck.css">
 </head>
-<body data-lesson="e27" data-title="الدرس 27 — لوحة التحكّم · Microcontroller">
+<body data-lesson="e27" data-title="الدرس 27 — المتحكّم الدقيق · Microcontroller">
 <div class="deck">
 
 <!-- ══════ 1 · الغلاف — مفارقة ══════ -->
@@ -32,8 +32,8 @@
     <div class="anim" data-anim="board-hello"></div>
 
     <p class="big center mt">
-      في وسطها رقاقة تنفّذ أوامرك بالترتيب.<br>
-      وحولها منافذ تصلها بالعالم.
+      المتحكّم الدقيق (عقل اللوحة) رقاقة تنفّذ أوامرك بالترتيب.<br>
+      نضعها على لوحة، وحولها منافذ تصلها بالعالم.
     </p>
 
     <p class="center mt">اسمها بالإنجليزية: <span class="term">microcontroller</span> 🔊</p>
@@ -48,8 +48,10 @@
     <div class="part" data-part="arduino"></div>
 
     <p class="big center mt">
-      مقبس USB لإرسال البرنامج من الحاسوب،<br>
-      ورقاقة في الوسط، وصفّان من المنافذ على الحافّتين.
+      هذه لوحة أردوينو، أشهرها جميعًا.<br>
+      مقبس USB يرسل البرنامج من الحاسوب،<br>
+      ورقاقتها الوسطى هي المتحكّم الدقيق،<br>
+      وصفّان من المنافذ على الحافّتين.
     </p>
   </div>
 </section>
@@ -158,7 +160,7 @@ digitalWrite(13, HIGH);</code></pre>
       <div class="note__ico">⛔</div>
       <div class="note__body big">
         لا تصل محرّكًا بالمنفذ مباشرةً. المحرّك يسحب تيّارًا أكبر بكثير،
-        فيتلف المنفذ. ضع بينهما سائق محرّك أو مرحّلًا.
+        فيتلف المنفذ. ضع بينهما دارة قيادة المحرّك أو مرحّلًا.
       </div>
     </div>
 
@@ -240,7 +242,7 @@ digitalWrite(13, HIGH);</code></pre>
           <button class="quiz__opt" data-right>تيّاره أكبر ممّا يحتمل المنفذ</button>
         </div>
         <div class="quiz__why">
-          صحيح. السائق أو المرحّل يأخذ التيّار الكبير عن اللوحة.
+          صحيح. دارة القيادة أو المرحّل يأخذ التيّار الكبير عن اللوحة.
         </div>
       </div>
     </div>
