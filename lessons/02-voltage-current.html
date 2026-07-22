@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدرس 2 — الدفع والجريان | Voltage &amp; Current</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/deck.css">
+</head>
+<body data-lesson="e02" data-title="الدرس 2 — الدفع والجريان · Voltage and Current">
+<div class="deck">
+
+<!-- ══════ 1 · الغلاف — مفارقة الرقمين ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:clamp(4.4rem,14vw,7.6rem)">🔋</div>
+    <h1 class="title">رقمان على كل جهاز</h1>
+    <p class="en-title">Voltage &amp; Current</p>
+    <p class="big dim mt">
+      على البطارية مكتوب <strong>1.5V</strong>.<br>
+      وعلى الشاحن مكتوب <strong>2A</strong>.<br>
+      رقمان مختلفان يصفان شيئًا واحدًا.
+    </p>
+    <p class="mute mt">تابع بـ <kbd>◀</kbd> لتفرّق بينهما.</p>
+  </div>
+</section>
+
+<!-- ══════ 2 · نموذج الماء ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">نموذج الماء يوضّح الفكرة <span class="en-sub">The Water Model</span></h2>
+
+    <div class="anim" data-anim="water"></div>
+
+    <p class="big center mt">
+      في كل أنبوب شيئان مختلفان تمامًا:<br>
+      <strong>قوّة الضغط</strong> التي تدفع الماء،<br>
+      و<strong>كمّية الماء</strong> التي تعبر كل ثانية.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 3 · الجهد ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">قوّة الدفع تُسمّى الجهد <span class="en-sub">Voltage</span></h2>
+
+    <div class="anim" data-anim="push-weak-strong"></div>
+
+    <p class="big center mt">
+      البطارية تدفع الإلكترونات في السلك.<br>
+      مقدار هذا الدفع اسمه <strong>الجهد</strong>،<br>
+      ونقيسه بوحدة اسمها <strong>الفولت</strong>.
+    </p>
+
+    <p class="center mt">
+      بالإنجليزية: <span class="term">voltage</span> 🔊
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 4 · التيّار ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">وكمّية ما يعبر تُسمّى التيّار <span class="en-sub">Current</span></h2>
+
+    <div class="grid g2">
+      <div class="card card--v center">
+        <div style="font-size:2.8rem">💪</div>
+        <p class="card__body big">
+          <strong>الجهد</strong><br>
+          قوّة الدفع · بالفولت
+        </p>
+      </div>
+      <div class="card card--c center">
+        <div style="font-size:2.8rem">🌊</div>
+        <p class="card__body big">
+          <strong>التيّار</strong><br>
+          كمّية ما يمرّ · بالأمبير
+        </p>
+      </div>
+    </div>
+
+    <p class="center mt">
+      بالإنجليزية: <span class="term">current</span> 🔊
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 5 · الرقم على البطارية ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">ماذا يعني الرقم المطبوع؟ <span class="en-sub">Reading the Label</span></h2>
+
+    <div class="part" data-part="battery"></div>
+
+    <p class="big center mt">
+      على كل بطارية قلمية: ١٫٥ فولت.<br>
+      هذا مقدار <strong>دفعها</strong>، لا كمّية ما تعطيه.
+    </p>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> القلمية ١٫٥ فولت، والمربّعة ٩ فولت،
+        وبطارية الهاتف نحو ٣٫٧ فولت.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 6 · القياس ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="guide">
+      <div class="guide__face">⚡</div>
+      <div class="guide__bubble">
+        <p class="mb0">أنا <strong>فولت</strong>. الجهد لا يُرى بالعين،
+           ولا يُسمع، ولا يُلمس. فكيف نتأكّد من وجوده؟</p>
+      </div>
+    </div>
+
+    <div class="circ" data-circ="measure-volt"></div>
+
+    <p class="big center mt">
+      بجهاز يقرؤه رقمًا على شاشته.<br>
+      اضغط المفتاح، وراقب ما يتغيّر.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 7 · جهد واحد وتيّاران ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">البطارية نفسها… وسحبان مختلفان <span class="en-sub">Same Push, Different Draw</span></h2>
+
+    <div class="grid g2">
+      <div class="card card--o center">
+        <div style="font-size:2.8rem">💡</div>
+        <p class="card__body big">
+          مصباح ليد صغير<br>
+          يسحب تيّارًا ضئيلًا.
+        </p>
+      </div>
+      <div class="card card--r center">
+        <div style="font-size:2.8rem">⚙️</div>
+        <p class="card__body big">
+          محرّك لعبة<br>
+          يسحب تيّارًا أكبر بكثير.
+        </p>
+      </div>
+    </div>
+
+    <p class="big center mt">
+      الدفع واحد، والكمّية تختلف.<br>
+      كل عنصر يأخذ ما يلزم لعمله.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 8 · تحقّق ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">سؤالان يكشفان الفرق <span class="en-sub">Check Yourself</span></h2>
+
+    <div style="font-size:3.2rem;text-align:center">⚖️</div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">بطارية ١٫٥ فولت وأخرى ٩ فولت. أيّهما أقوى دفعًا؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">ذات ١٫٥ فولت</button>
+          <button class="quiz__opt" data-right>ذات ٩ فولت</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. الرقم الأكبر يعني دفعًا أقوى،<br>
+          وليس بالضرورة عمرًا أطول.
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">وصّلنا مصباحًا ثم محرّكًا بالبطارية نفسها. أيّهما يسحب تيّارًا أكبر؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt" data-right>المحرّك</button>
+          <button class="quiz__opt">المصباح</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. إدارة قطعة معدنية تحتاج طاقة أكبر<br>
+          من إضاءة ليد صغير.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 9 · فرز ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">هذه العبارة عن ماذا؟ <span class="en-sub">Sort Them Out</span></h2>
+
+    <div style="font-size:3rem;text-align:center">🗂️</div>
+
+    <div class="sortq mt">
+      <div class="sortq__item" data-answer="yes">
+        <div class="sortq__row">
+          <span class="sortq__label big">🔢 مطبوع على غلاف البطارية</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">جهد</button>
+            <button class="sortq__btn" data-val="no">تيّار</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — الرقم المطبوع يصف قوّة الدفع.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="no">
+        <div class="sortq__row">
+          <span class="sortq__label big">🔥 كلّما زاد سخن السلك</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">جهد</button>
+            <button class="sortq__btn" data-val="no">تيّار</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — الحرارة تتبع كمّية ما يمرّ فعلًا.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="no">
+        <div class="sortq__row">
+          <span class="sortq__label big">⚙️ المحرّك يأخذ منه أكثر</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">جهد</button>
+            <button class="sortq__btn" data-val="no">تيّار</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — الأجهزة تختلف في التيّار لا في الجهد.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 10 · ما الذي يحدّ التيّار ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">وهل يكبر التيّار بلا نهاية؟ <span class="en-sub">What Holds It Back</span></h2>
+
+    <div class="grid g2">
+      <div class="card card--r center">
+        <div style="font-size:2.6rem">📈</div>
+        <p class="card__body big">
+          دفع أقوى على الطريق نفسه<br>
+          يعني تيّارًا أكبر.
+        </p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.6rem">🧱</div>
+        <p class="card__body big">
+          لكن في كل طريق شيء<br>
+          يعارض المرور دائمًا.
+        </p>
+      </div>
+    </div>
+
+    <p class="big center mt">
+      لولا هذا المعارض لاحترق كل شيء في لحظة واحدة.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 11 · الخاتمة — سؤال يفتح الدرس التالي ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:4rem">🧭</div>
+    <h2 class="title">كلمتان ترافقانك بقيّة الكورس</h2>
+    <p class="en-title">Two Words to Keep</p>
+
+    <div class="grid g2 mt">
+      <div class="card card--v center">
+        <div style="font-size:2.4rem">⚡</div>
+        <p class="card__body big">فولت = مقدار الدفع</p>
+      </div>
+      <div class="card card--c center">
+        <div style="font-size:2.4rem">🌊</div>
+        <p class="card__body big">أمبير = مقدار الجريان</p>
+      </div>
+    </div>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">➡️</div>
+      <div class="note__body big">
+        سؤال الدرس القادم: <strong>ما الذي يقف في وجه التيّار فيحدّه؟</strong>
+        الجواب يفسّر لماذا يدفأ الشاحن في يدك.
+      </div>
+    </div>
+
+    <div class="row row--center mt" style="margin-top:24px">
+      <a class="btn" href="03-resistance.html" style="text-decoration:none">الدرس التالي ◀</a>
+      <a class="btn btn--ghost" href="../index.html" style="text-decoration:none">🏠 كل الدروس</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script src="../assets/js/words.js"></script>
+<script src="../assets/js/parts.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/circuit.js"></script>
+<script src="../assets/js/uses.js"></script>
+<script src="../assets/js/uses-basic.js"></script>
+<script src="../assets/js/uses-sensors.js"></script>
+<script src="../assets/js/uses-robot.js"></script>
+<script src="../assets/js/logic.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/board.js"></script>
+<script src="../assets/js/deck.js"></script>
+</body>
+</html>

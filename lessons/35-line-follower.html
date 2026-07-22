@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدرس 35 — روبوت يتبع الخط | Line Follower</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/deck.css">
+</head>
+<body data-lesson="e35" data-title="الدرس 35 — روبوت يتبع الخط · Line Follower">
+<div class="deck">
+
+<!-- ══════ 1 · الغلاف — قصّة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:clamp(4.6rem,15vw,8rem)">⬛</div>
+    <h1 class="title">شريط لاصق على أرض المستودع</h1>
+    <p class="en-title">Line Follower</p>
+    <p class="big dim mt">
+      عربات صغيرة تحمل الطرود من الرفّ إلى الباب.<br>
+      لا سائق فيها، وكل ما تتبعه شريط أسود.
+    </p>
+    <p class="mute mt">اضغط <kbd>◀</kbd> لنرى كيف تلتزم به.</p>
+  </div>
+</section>
+
+<!-- ══════ 2 · لماذا خطّ ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">لماذا خطّ على الأرض لا خريطة؟ <span class="en-sub">Why a Line at All</span></h2>
+
+    <div class="anim" data-anim="line-follow"></div>
+
+    <p class="big center mt">
+      الخريطة تحتاج حاسوبًا كبيرًا وتحديد موقع.<br>
+      أمّا الشريط فثمنه زهيد، ويُنقل في دقائق.<br>
+      وتغيير المسار لا يحتاج برنامجًا جديدًا.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 3 · الحسّاس ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">حسّاس يقيس ما ارتدّ من الضوء <span class="en-sub">Measuring Reflection</span></h2>
+
+    <div class="part" data-part="ir-line"></div>
+
+    <p class="big center mt">
+      فيه باعث يرسل ضوءًا لا تراه العين،<br>
+      ومستقبِل يقيس ما ارتدّ إليه من الأرض.
+    </p>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> السطح الأبيض يعكس معظم الضوء،
+        والأسود يمتصّ معظمه. فالفرق بين القراءتين كبير وواضح.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 4 · لماذا حسّاسان ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">حسّاس واحد لا يكفي <span class="en-sub">Two Eyes, Not One</span></h2>
+
+    <div class="grid g2">
+      <div class="card card--r center">
+        <div style="font-size:2.8rem">👁️</div>
+        <p class="card__body big">
+          <strong>بحسّاس واحد</strong><br>
+          يعرف أنه فارق الخط، ولا يعرف إلى أي جهة مال.
+        </p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.8rem">👀</div>
+        <p class="card__body big">
+          <strong>بحسّاسين</strong><br>
+          يقارن اليمين باليسار، فيعرف جهة الميل ويصحّحها.
+        </p>
+      </div>
+    </div>
+
+    <p class="big center mt">
+      يوضع الحسّاسان على جانبَي الخط، لا فوقه.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 5 · جدول القرارات ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">أربع قراءات وأربعة قرارات <span class="en-sub">Four Cases</span></h2>
+
+    <div style="font-size:3.2rem;text-align:center">🧭</div>
+
+    <div class="grid g2 mt">
+      <div class="card card--c center">
+        <div style="font-size:2.2rem">⬜⬜</div>
+        <p class="card__body big">الجانبان أبيضان: الخط في المنتصف — تقدَّم</p>
+      </div>
+      <div class="card card--v center">
+        <div style="font-size:2.2rem">⬛⬜</div>
+        <p class="card__body big">اليسار أسود: ملتَ يمينًا — لُفَّ يسارًا</p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.2rem">⬜⬛</div>
+        <p class="card__body big">اليمين أسود: ملتَ يسارًا — لُفَّ يمينًا</p>
+      </div>
+      <div class="card card--r center">
+        <div style="font-size:2.2rem">⬛⬛</div>
+        <p class="card__body big">الجانبان أسودان: تقاطع أو نهاية — قِف</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 6 · التصحيح ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">مال عن مساره فأعاد نفسه <span class="en-sub">Self Correction</span></h2>
+
+    <div class="anim" data-anim="line-turn"></div>
+
+    <p class="big center mt">
+      لا أحد يوجّهه من بعيد.<br>
+      يقيس، فيجد نفسه مائلًا، فيصحّح.<br>
+      وهذه هي التغذية الراجعة.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 7 · الكود ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">القرار كلّه في ثلاثة أسطر <span class="en-sub">Three Lines of Judgement</span></h2>
+
+    <div style="font-size:2.8rem;text-align:center">⬛ ➜ ↩️</div>
+
+    <div class="code">
+      <div class="code__bar"><span class="code__dots"><i></i><i></i><i></i></span><span>line.ino</span></div>
+<pre><code><span class="k">if</span> (left == BLACK)       <span class="f">turnLeft</span>();
+<span class="k">else if</span> (right == BLACK) <span class="f">turnRight</span>();
+<span class="k">else</span>                    <span class="f">goForward</span>();</code></pre>
+    </div>
+
+    <p class="big center mt">
+      ثلاثة أسطر تُعاد مئات المرّات كل دقيقة.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 8 · معرض تطبيقات حسّاس الخط ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="uses" data-uses="ir-line"></div>
+  </div>
+</section>
+
+<!-- ══════ 9 · التمايل ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="guide">
+      <div class="guide__face">⚡</div>
+      <div class="guide__bubble">
+        <p class="mb0">
+          انظر إليه وهو يسير: يتمايل يمينًا ويسارًا قليلًا.
+          <br>وهذا ليس عيبًا، بل هو الدليل على أنه يصحّح.
+        </p>
+      </div>
+    </div>
+
+    <h2 style="text-align:center">لماذا يهتزّ حول الخط؟ <span class="en-sub">The Wobble</span></h2>
+
+    <div style="font-size:3.4rem;text-align:center">〽️</div>
+
+    <p class="big center mt">
+      لا يعرف أنه مائل إلّا بعد أن يميل فعلًا.<br>
+      فيصحّح فيتجاوز قليلًا، ثم يصحّح ثانيةً.<br>
+      وكلّما أبطأتَه قلّ تمايله.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 10 · ما يخدع الحسّاس ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">أشياء تُفسد القراءة <span class="en-sub">What Fools the Sensor</span></h2>
+
+    <div class="grid g3">
+      <div class="card card--r center">
+        <div style="font-size:2.4rem">✨</div>
+        <p class="card__body big">أرضية لامعة تشتّت الضوء في كل اتجاه</p>
+      </div>
+      <div class="card card--v center">
+        <div style="font-size:2.4rem">🌑</div>
+        <p class="card__body big">ظلّ ثقيل يجعل الأبيض يبدو داكنًا</p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.4rem">📐</div>
+        <p class="card__body big">حسّاس مرتفع عن الأرض تضعف قراءته</p>
+      </div>
+    </div>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> يُثبَّت الحسّاس على بُعد ٣ إلى ١٠ ملّيمترات
+        من الأرض، ثم يُضبَط مقياسه على أرضية العمل نفسها.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 11 · تحقّق ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">هل تتوقّع حركته الصحيحة؟ <span class="en-sub">Predict the Move</span></h2>
+
+    <div style="font-size:3.2rem;text-align:center">🔮</div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">الحسّاس الأيمن يرى أسود والأيسر يرى أبيض. ماذا يفعل؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt" data-right>يلفّ يمينًا ليعود إلى الخط</button>
+          <button class="quiz__opt">يستمرّ إلى الأمام</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. الخط صار إلى يمينه، فالتصحيح نحو اليمين.
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">لماذا لا يصلح خطّ أبيض على أرض بيضاء؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">لأن اللون الأبيض يعكس قليلًا</button>
+          <button class="quiz__opt" data-right>لأن القراءتين تتساويان فلا يميّز</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. الحسّاس يعمل على الفرق. بلا فرق لا قرار.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 12 · الخاتمة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:4rem">🛣️</div>
+    <h2 class="title">أوّل روبوت يصحّح نفسه</h2>
+    <p class="en-title">It Corrects Itself</p>
+
+    <div class="grid g3 mt">
+      <div class="card card--c center">
+        <div style="font-size:2.3rem">👀</div>
+        <p class="card__body big">حسّاسان على جانبَي الخط</p>
+      </div>
+      <div class="card card--v center">
+        <div style="font-size:2.3rem">⚖️</div>
+        <p class="card__body big">مقارنة بين اليمين واليسار</p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.3rem">↩️</div>
+        <p class="card__body big">لفّة صغيرة تعيده إلى مساره</p>
+      </div>
+    </div>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">➡️</div>
+      <div class="note__body big">
+        هذا الروبوت يعرف الأرض تحته، ولا يعرف ما أمامه.
+        <strong>فماذا لو وقف في طريقه جدار؟</strong>
+      </div>
+    </div>
+
+    <div class="row row--center mt" style="margin-top:24px">
+      <a class="btn" href="36-obstacle-robot.html" style="text-decoration:none">الدرس التالي ◀</a>
+      <a class="btn btn--ghost" href="../index.html" style="text-decoration:none">🏠 كل الدروس</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script src="../assets/js/words.js"></script>
+<script src="../assets/js/parts.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/circuit.js"></script>
+<script src="../assets/js/uses.js"></script>
+<script src="../assets/js/uses-basic.js"></script>
+<script src="../assets/js/uses-sensors.js"></script>
+<script src="../assets/js/uses-robot.js"></script>
+<script src="../assets/js/logic.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/board.js"></script>
+<script src="../assets/js/deck.js"></script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدرس 9 — المفتاح | Switch</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/deck.css">
+</head>
+<body data-lesson="e09" data-title="الدرس 9 — المفتاح · Switch">
+<div class="deck">
+
+<!-- ══════ 1 · الغلاف — مشهد يومي ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:clamp(4.4rem,14vw,7.6rem)">🛗</div>
+    <h1 class="title">زرّ يعود ومفتاح يبقى</h1>
+    <p class="en-title">The Switch</p>
+    <p class="big dim mt">
+      في المصعد زرّ تضغطه فيرجع وحده.<br>
+      وفي الغرفة مفتاح يبقى كما تركته.<br>
+      الاثنان يفعلان الشيء نفسه بطريقتين.
+    </p>
+    <p class="mute mt">تعرّف على الفرق <kbd>◀</kbd></p>
+  </div>
+</section>
+
+<!-- ══════ 2 · ما هو المفتاح ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">فجوة نصنعها لنتحكّم فيها <span class="en-sub">A Gap You Control</span></h2>
+
+    <div class="anim" data-anim="press-light"></div>
+
+    <p class="big center mt">
+      المفتاح ليس أكثر من قطعتين معدنيتين.<br>
+      متباعدتان: الطريق مفتوح ولا مرور.<br>
+      متلامستان: الطريق مغلق فيمرّ التيّار.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 3 · شكله ورمزه ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">انظر إليه وإلى علامته <span class="en-sub">Switch Shape &amp; Symbol</span></h2>
+
+    <div class="part" data-part="switch"></div>
+
+    <p class="big center mt">
+      لاحظ الرمز: خطّ مائل يترك فجوة.<br>
+      حين يُغلق ينطبق الخطّ فيتّصل الطرفان.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 4 · الزرّ اللحظي ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">نوع أوّل: يعمل ما دام إصبعك عليه <span class="en-sub">Momentary Push</span></h2>
+
+    <div class="part" data-part="button"></div>
+
+    <p class="big center mt">
+      داخله نابض صغير يعيده فور أن ترفع إصبعك.<br>
+      نستعمله حين نريد أمرًا لحظيًّا: رنّة، أو قفزة في اللعبة.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 5 · المفتاح الثابت ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">نوع ثانٍ: يبقى حيث تتركه <span class="en-sub">Latching Slide</span></h2>
+
+    <div class="part" data-part="slideswitch"></div>
+
+    <p class="big center mt">
+      لا نابض فيه، فيحفظ وضعه بعد أن ترفع يدك.<br>
+      نستعمله حين نريد حالة تدوم: تشغيل جهاز، أو إطفاؤه.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 6 · معرض التطبيقات ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="uses" data-uses="switch"></div>
+  </div>
+</section>
+
+<!-- ══════ 7 · جرس الباب ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">أبسط جهاز فيه مفتاح <span class="en-sub">The Doorbell</span></h2>
+
+    <div class="circ" data-circ="buzzer-button"></div>
+
+    <p class="big center mt">
+      زرّ عند الباب، وسلك طويل، وطنّان في الداخل.<br>
+      الزرّ لا يصنع الصوت، بل يغلق الحلقة فحسب.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 8 · أين يوضع ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="guide">
+      <div class="guide__face">⚡</div>
+      <div class="guide__bubble">
+        <p class="mb0">أنا <strong>فولت</strong>. سؤال دقيق:
+           هل يهمّ في أي موضع من الحلقة نضع المفتاح؟</p>
+      </div>
+    </div>
+
+    <div style="font-size:3.4rem;text-align:center">⭕✂️</div>
+
+    <p class="big center mt">
+      في الدائرة البسيطة: لا يهمّ.<br>
+      الفجوة في أي موضع توقف الحلقة كلّها.<br>
+      لكن في أجهزة البيت يُقطع الطرف الحيّ تحديدًا، للأمان.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 9 · تحقّق ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">سؤالان عن التحكّم <span class="en-sub">Control Check</span></h2>
+
+    <div style="font-size:3.2rem;text-align:center">🤔</div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">تريد مفتاحًا يُبقي المروحة دائرة بعد رفع يدك. أيّهما تختار؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">زرًّا لحظيًّا</button>
+          <button class="quiz__opt" data-right>مفتاحًا انزلاقيًّا</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. اللحظي يقطع فور رفع الإصبع،<br>
+          والانزلاقي يحفظ الوضع.
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">هل يصنع المفتاح كهرباء؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">نعم، يُنتجها عند الضغط</button>
+          <button class="quiz__opt" data-right>لا، يفتح الطريق أو يغلقه</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. البطارية وحدها هي التي تدفع،<br>
+          والمفتاح يسمح بالمرور أو يمنعه.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 10 · فرز ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">لحظي أم ثابت؟ <span class="en-sub">Momentary or Latching</span></h2>
+
+    <div style="font-size:3rem;text-align:center">👆</div>
+
+    <div class="sortq mt">
+      <div class="sortq__item" data-answer="yes">
+        <div class="sortq__row">
+          <span class="sortq__label big">🔔 زرّ جرس الباب</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">لحظي</button>
+            <button class="sortq__btn" data-val="no">ثابت</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — يرنّ ما دمت ضاغطًا فقط.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="no">
+        <div class="sortq__row">
+          <span class="sortq__label big">💡 مفتاح نور الغرفة</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">لحظي</button>
+            <button class="sortq__btn" data-val="no">ثابت</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — يبقى مضاءً حتى تعود فتطفئه.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="yes">
+        <div class="sortq__row">
+          <span class="sortq__label big">🎮 زرّ القفز في يد التحكّم</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">لحظي</button>
+            <button class="sortq__btn" data-val="no">ثابت</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — أمر واحد سريع ثم يعود مكانه.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 11 · حين يخذلك المفتاح ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">لماذا يتعطّل المفتاح أحيانًا؟ <span class="en-sub">When It Fails</span></h2>
+
+    <div class="grid g2">
+      <div class="card card--r center">
+        <div style="font-size:2.6rem">🕸️</div>
+        <p class="card__body big">
+          <strong>تلامس متّسخ</strong><br>
+          طبقة رقيقة تمنع المرور رغم الضغط.
+        </p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.6rem">⚡</div>
+        <p class="card__body big">
+          <strong>تلامس محترق</strong><br>
+          شرارة صغيرة تتكرّر عند الفصل فتُتلف الطرفين.
+        </p>
+      </div>
+    </div>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> عند الضغط يرتدّ التلامس مرّات في أجزاء من الألف
+        من الثانية. تُسمّى ظاهرة الارتداد، ويعالجها المبرمجون في الدرس ٣١.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 12 · الخاتمة — سؤال يفتح الدرس التالي ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:4rem">🔘</div>
+    <h2 class="title">تحكّمتَ في المرور… فماذا عن مقداره؟</h2>
+    <p class="en-title">From On/Off to How Much</p>
+
+    <p class="big dim mt">
+      المفتاح يعرف حالتين فقط: يمرّ أو لا يمرّ.<br>
+      لكن دائرتك تحتاج أحيانًا إلى مرور <strong>محسوب</strong>.
+    </p>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">➡️</div>
+      <div class="note__body big">
+        القطعة التالية لا تفتح ولا تغلق،
+        بل تقرّر <strong>كم</strong> يمرّ. وبدونها يحترق الليد بعد ثوانٍ.
+      </div>
+    </div>
+
+    <div class="row row--center mt" style="margin-top:24px">
+      <a class="btn" href="10-resistor.html" style="text-decoration:none">الدرس التالي ◀</a>
+      <a class="btn btn--ghost" href="../index.html" style="text-decoration:none">🏠 كل الدروس</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script src="../assets/js/words.js"></script>
+<script src="../assets/js/parts.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/circuit.js"></script>
+<script src="../assets/js/uses.js"></script>
+<script src="../assets/js/uses-basic.js"></script>
+<script src="../assets/js/uses-sensors.js"></script>
+<script src="../assets/js/uses-robot.js"></script>
+<script src="../assets/js/logic.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/board.js"></script>
+<script src="../assets/js/deck.js"></script>
+</body>
+</html>

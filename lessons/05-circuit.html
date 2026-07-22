@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدرس 5 — الطريق المغلق | The Circuit</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/deck.css">
+</head>
+<body data-lesson="e05" data-title="الدرس 5 — الطريق المغلق · The Circuit">
+<div class="deck">
+
+<!-- ══════ 1 · الغلاف — قصّة قصيرة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:clamp(4.4rem,14vw,7.6rem)">🔁</div>
+    <h1 class="title">سلك واحد لم يكفِه</h1>
+    <p class="en-title">The Circuit</p>
+    <p class="big dim mt">
+      وصّل طفل سلكًا من البطارية إلى المصباح.<br>
+      انتظر… ولم يحدث شيء.<br>
+      كان ينقصه سلك العودة.
+    </p>
+    <p class="mute mt">اعرف لماذا مع <kbd>◀</kbd></p>
+  </div>
+</section>
+
+<!-- ══════ 2 · الحلقة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">تخرج من طرف وتعود إلى الآخر <span class="en-sub">Out and Back</span></h2>
+
+    <div class="anim" data-anim="trace-path"></div>
+
+    <p class="big center mt">
+      للبطارية طرفان، والكهرباء تخرج من أحدهما.<br>
+      لا تتحرّك الإلكترونات إلّا إذا وجدت طريق عودة<br>
+      إلى الطرف الآخر. هذه الحلقة اسمها <strong>الدائرة</strong>.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 3 · الأجزاء الأربعة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">أربعة أجزاء لا يُستغنى عنها <span class="en-sub">Four Essentials</span></h2>
+
+    <div class="grid g4">
+      <div class="card card--v center">
+        <div style="font-size:2.6rem">🔋</div>
+        <p class="card__body big">
+          <strong>مصدر</strong><br>
+          يدفع
+        </p>
+      </div>
+      <div class="card card--c center">
+        <div style="font-size:2.6rem">🧵</div>
+        <p class="card__body big">
+          <strong>طريق</strong><br>
+          يوصّل
+        </p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.6rem">💡</div>
+        <p class="card__body big">
+          <strong>حِمل</strong><br>
+          يشتغل
+        </p>
+      </div>
+      <div class="card card--r center">
+        <div style="font-size:2.6rem">🔘</div>
+        <p class="card__body big">
+          <strong>مفتاح</strong><br>
+          يتحكّم
+        </p>
+      </div>
+    </div>
+
+    <p class="big center mt">
+      انزع واحدًا منها، وتتوقّف الدائرة عن العمل.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 4 · السلك ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">الطريق نفسه: نُحاس داخل بلاستيك <span class="en-sub">Copper and Cover</span></h2>
+
+    <div class="part" data-part="wire"></div>
+
+    <p class="big center mt">
+      اللبّ نحاس ليمرّ فيه التيّار.<br>
+      والغلاف بلاستيك لئلّا يمرّ إلى يدك،<br>
+      ولئلّا يلمس سلكًا آخر.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 5 · جرّب الدائرة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">أغلِق الحلقة وراقب النقاط <span class="en-sub">Close It and Watch</span></h2>
+
+    <div class="circ" data-circ="basic"></div>
+
+    <p class="big center mt">
+      المفتاح مفتوح: في الطريق فجوة، فلا حركة.<br>
+      المفتاح مغلق: تكتمل الحلقة، فتسير النقاط.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 6 · معرض التطبيقات ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">مَن يغلق الحلقة في حياتك؟ <span class="en-sub">Who Closes the Loop</span></h2>
+    <div class="uses" data-uses="button"></div>
+  </div>
+</section>
+
+<!-- ══════ 7 · أين ينقطع الطريق ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">أربعة مواضع يتوقّف عندها كل شيء <span class="en-sub">Where It Breaks</span></h2>
+
+    <div class="grid g2">
+      <div class="card card--r center">
+        <div style="font-size:2.5rem">🪫</div>
+        <p class="card__body big">بطارية فرغت، فلم يبقَ ما يدفع.</p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.5rem">🔌</div>
+        <p class="card__body big">سلك مفكوك من طرفه.</p>
+      </div>
+      <div class="card card--v center">
+        <div style="font-size:2.5rem">✂️</div>
+        <p class="card__body big">سلك مقطوع في منتصفه.</p>
+      </div>
+      <div class="card card--c center">
+        <div style="font-size:2.5rem">🧽</div>
+        <p class="card__body big">تلامس متّسخ لا ينقل التيّار.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 8 · تحقّق ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">هل تكتمل الحلقة هنا؟ <span class="en-sub">Complete or Not</span></h2>
+
+    <div style="font-size:3.2rem;text-align:center">🧩</div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">سلك واحد فقط من البطارية إلى المصباح. هل يعمل؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">نعم</button>
+          <button class="quiz__opt" data-right>لا، ينقصه طريق العودة</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. الطرف الثاني للبطارية بقي وحيدًا،<br>
+          فلا حلقة ولا حركة.
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">دائرة كاملة، لكن المفتاح مفتوح. أين المشكلة؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt" data-right>المفتاح نفسه فجوة في الطريق</button>
+          <button class="quiz__opt">البطارية ضعيفة</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. المفتاح المفتوح فراغ مقصود،<br>
+          نصنعه لنتحكّم في الحلقة.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 9 · فرز ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">هذه الدائرة تعمل أم لا؟ <span class="en-sub">Working or Not</span></h2>
+
+    <div style="font-size:3rem;text-align:center">🔎</div>
+
+    <div class="sortq mt">
+      <div class="sortq__item" data-answer="yes">
+        <div class="sortq__row">
+          <span class="sortq__label big">🔋➡️💡➡️🔋 حلقة كاملة</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">تعمل</button>
+            <button class="sortq__btn" data-val="no">لا تعمل</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — خروج وعودة، وهذا كل الشرط.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="no">
+        <div class="sortq__row">
+          <span class="sortq__label big">🔋➡️💡 وطرف معلّق في الهواء</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">تعمل</button>
+            <button class="sortq__btn" data-val="no">لا تعمل</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — الهواء لا يوصّل، فالحلقة مفتوحة.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="no">
+        <div class="sortq__row">
+          <span class="sortq__label big">🪵 مسطرة خشب مكان السلك</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">تعمل</button>
+            <button class="sortq__btn" data-val="no">لا تعمل</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — الخشب عازل، فالطريق مقطوع فعليًّا.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 10 · حلقة بلا حِمل ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">حلقة بلا حِمل — الخطأ الخطر <span class="en-sub">A Loop With No Job</span></h2>
+
+    <div style="font-size:3.4rem;text-align:center">🚫🔋</div>
+
+    <p class="big center mt">
+      لو أغلقتَ الحلقة بسلك وحده، بلا مصباح ولا محرّك،<br>
+      فلا شيء يستهلك الطاقة في الطريق.
+    </p>
+
+    <div class="danger mt">
+      <div class="danger__title">قاعدة تُحفظ</div>
+      <ul style="font-size:1.08em">
+        <li>كل حلقة تحتاج حِملًا يعمل فيها 💡</li>
+        <li>لا تصل طرفي البطارية بسلك مباشر ⛔</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 11 · الخاتمة — سؤال يفتح الدرس التالي ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:4rem">🛤️</div>
+    <h2 class="title">حلقة واحدة… وماذا لو أردنا اثنتين؟</h2>
+    <p class="en-title">One Loop, Then More</p>
+
+    <div class="grid g3 mt">
+      <div class="card card--v center">
+        <div style="font-size:2.3rem">↩️</div>
+        <p class="card__body big">خروج وعودة</p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.3rem">💡</div>
+        <p class="card__body big">حِمل يعمل</p>
+      </div>
+      <div class="card card--r center">
+        <div style="font-size:2.3rem">🔘</div>
+        <p class="card__body big">مفتاح يتحكّم</p>
+      </div>
+    </div>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">➡️</div>
+      <div class="note__body big">
+        في غرفتك مصابيح كثيرة على حلقة واحدة؟ أم لكل واحد حلقته؟
+        الدرس القادم يجيب، ويشرح زينة العيد.
+      </div>
+    </div>
+
+    <div class="row row--center mt" style="margin-top:24px">
+      <a class="btn" href="06-series-parallel.html" style="text-decoration:none">الدرس التالي ◀</a>
+      <a class="btn btn--ghost" href="../index.html" style="text-decoration:none">🏠 كل الدروس</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script src="../assets/js/words.js"></script>
+<script src="../assets/js/parts.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/circuit.js"></script>
+<script src="../assets/js/uses.js"></script>
+<script src="../assets/js/uses-basic.js"></script>
+<script src="../assets/js/uses-sensors.js"></script>
+<script src="../assets/js/uses-robot.js"></script>
+<script src="../assets/js/logic.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/board.js"></script>
+<script src="../assets/js/deck.js"></script>
+</body>
+</html>

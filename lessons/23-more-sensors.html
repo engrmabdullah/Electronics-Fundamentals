@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدرس 23 — حواسّ أخرى كثيرة! | More Sensors</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/deck.css">
+</head>
+<body data-lesson="e23" data-title="الدرس 23 — حواسّ أخرى كثيرة! · More Sensors">
+<div class="deck">
+
+<!-- ══════ 1 · الغلاف — سؤال محيّر ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:clamp(4.6rem,15vw,8rem)">📱</div>
+    <h1 class="title">حواسّ أخرى كثيرة!</h1>
+    <p class="en-title">More Sensors</p>
+    <p class="big dim mt">
+      هاتف أبيك يعرف أنّك قلبتَه.<br>
+      ويعرف أنّك قرّبتَه من أذنك.<br>
+      كل معرفة من هذه لها حسّاس خاصّ.
+    </p>
+    <p class="mute mt">اضغط <kbd>◀</kbd> لتتعرّف عليها.</p>
+  </div>
+</section>
+
+<!-- ══════ 2 · لمس وصوت ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">لمسة إصبع، واهتزاز هواء <span class="en-sub">A Finger and a Sound</span></h2>
+
+    <div class="parts-grid">
+      <div class="part" data-part="touch"></div>
+      <div class="part" data-part="mic"></div>
+    </div>
+
+    <p class="big center mt">
+      الأوّل يلتقط قُرب إصبعك دون أن ينضغط شيء.<br>
+      والثاني يترجم اهتزاز الهواء إلى إشارة.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 3 · ماء ودخان ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">ماء في التربة، ودخان في الهواء <span class="en-sub">Soil and Smoke</span></h2>
+
+    <div class="parts-grid">
+      <div class="part" data-part="soil"></div>
+      <div class="part" data-part="gas"></div>
+    </div>
+
+    <p class="big center mt">
+      الأوّل يُغرس في التراب ليقيس رطوبته.<br>
+      والثاني يراقب الهواء ويلتقط ما لا نشمّه بسرعة.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 4 · ماذا لو غاب ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">ليلة في بيت بلا حسّاس دخان <span class="en-sub">A Night Without It</span></h2>
+
+    <div class="grid g2">
+      <div class="card card--v center">
+        <div style="font-size:2.8rem">🔔</div>
+        <p class="card__body big">
+          معه: يبدأ الصفير مع أوّل خيط دخان، في جوف الليل.
+        </p>
+      </div>
+      <div class="card card--r center">
+        <div style="font-size:2.8rem">🌙</div>
+        <p class="card__body big">
+          بدونه: لا ينتبه أحد إلّا بعد أن تمتلئ الغرفة.
+        </p>
+      </div>
+    </div>
+
+    <div class="note note--warn mt">
+      <div class="note__ico">🏠</div>
+      <div class="note__body big">
+        ابحث عن العلبة البيضاء في سقف بيتكم.
+        هذه القطعة الصغيرة أنقذت أُسرًا كثيرة.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 5 · الميل ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">قطعة تعرف أنّ الجهاز انقلب <span class="en-sub">Which Way Up</span></h2>
+
+    <div class="part" data-part="tilt"></div>
+
+    <p class="big center mt">
+      كرة معدنية صغيرة تتدحرّج في الداخل.<br>
+      إن مالت العلبة وصلت الكرة بين الطرفين.<br>
+      وإن اعتدلت ابتعدت عنهما.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 6 · عين تقرأ الأرض ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">عين تقرأ لون الأرض <span class="en-sub">Reading the Floor</span></h2>
+
+    <div class="part" data-part="ir-line" data-job="off"></div>
+
+    <div class="anim" data-anim="line-follow"></div>
+
+    <p class="big center mt">
+      ترسل ضوءًا تحت أحمر إلى الأرض وتقيس المرتدّ.<br>
+      الأبيض يردّ كثيرًا، والأسود يبتلع أكثره.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 7 · أنت أيضًا مدخل ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="guide">
+      <div class="guide__face">⚡</div>
+      <div class="guide__bubble">
+        <p class="mb0">الحسّاس يقرأ العالم.<br>وأنت أيضًا مصدر خبر للدائرة.</p>
+      </div>
+    </div>
+
+    <h2 style="text-align:center">وأنت أيضًا مصدر خبر <span class="en-sub">You Are an Input Too</span></h2>
+
+    <div class="grid g2">
+      <div class="card card--o center">
+        <div style="font-size:2.8rem">👆</div>
+        <p class="card__body big">إصبعك على الزرّ خبر يصل إلى الدائرة.</p>
+      </div>
+      <div class="card card--c center">
+        <div style="font-size:2.8rem">🎛️</div>
+        <p class="card__body big">ولفّة المقبض خبر آخر، لكنّه متدرّج.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 8 · معرض الزرّ ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="uses" data-uses="button"></div>
+  </div>
+</section>
+
+<!-- ══════ 9 · حالتان أم تدرّج ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">حالتان فقط… أو ألف حالة <span class="en-sub">Two States or Many</span></h2>
+
+    <div class="parts-grid">
+      <div class="part" data-part="button" data-job="off"></div>
+      <div class="part" data-part="potentiometer" data-job="off"></div>
+    </div>
+
+    <div class="grid g2 mt">
+      <div class="card card--o center">
+        <div style="font-size:2.2rem">⏻</div>
+        <p class="card__body big">الزرّ: مضغوط أو مرفوع. لا ثالث لهما.</p>
+      </div>
+      <div class="card card--c center">
+        <div style="font-size:2.2rem">🔆</div>
+        <p class="card__body big">المقبض: يتدرّج من أدنى الطرف إلى أقصاه.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 10 · معرض المقبض ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="uses" data-uses="pot"></div>
+  </div>
+</section>
+
+<!-- ══════ 11 · ركّب ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">اجمع ما تعلّمته في دائرة واحدة <span class="en-sub">Put It Together</span></h2>
+
+    <div class="circ" data-circ="ldr-lamp"></div>
+
+    <p class="big center mt">
+      حسّاس يقرأ، ومقاومة تحمي، وليد يضيء.<br>
+      ثلاث قطع، ودرسٌ كامل في راحة يدك.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 12 · سؤالان ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">آخر سؤالين في هذا القسم <span class="en-sub">Two Last Questions</span></h2>
+
+    <div style="font-size:3.2rem;text-align:center">🎓</div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">تريد جهازًا يسقي نبتتك عند الحاجة. أي حسّاس تختار؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt" data-right>حسّاس رطوبة التربة</button>
+          <button class="quiz__opt">حسّاس الميل</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. السؤال هنا: كم الماء في التراب؟<br>
+          ولكل سؤال حسّاسه الذي يجيب عنه.
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">أيّهما يصلح للتحكّم في شدّة إضاءة غرفتك؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">زرّ لحظي</button>
+          <button class="quiz__opt" data-right>مقاومة متغيّرة</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. الزرّ يعطي حالتين لا غير.<br>
+          والشدّة تحتاج قيمًا كثيرة بينهما.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 13 · الخاتمة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:4.2rem">🗺️</div>
+    <h2 class="title">أتممتَ خريطة الحواسّ</h2>
+    <p class="en-title">Your Map of the Senses</p>
+
+    <div class="grid g3 mt">
+      <div class="card card--v center">
+        <div style="font-size:2.3rem">👆👂</div>
+        <p class="card__body big">لمس وصوت</p>
+      </div>
+      <div class="card card--b center">
+        <div style="font-size:2.3rem">💧🔥</div>
+        <p class="card__body big">رطوبة ودخان</p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.3rem">🎛️⏻</div>
+        <p class="card__body big">وميل، وزرّ، ومقبض</p>
+      </div>
+    </div>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🔬</div>
+      <div class="note__body big">
+        <strong>سؤال يفتح الدرس التالي:</strong> الحسّاسات تقرأ العالم كلّه.
+        فمن يقرأ الكهرباء نفسها ويخبرنا بمقدارها؟
+      </div>
+    </div>
+
+    <div class="row row--center mt" style="margin-top:24px">
+      <a class="btn" href="24-multimeter.html" style="text-decoration:none">الدرس التالي ◀</a>
+      <a class="btn btn--ghost" href="../index.html" style="text-decoration:none">🏠 كل الدروس</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script src="../assets/js/words.js"></script>
+<script src="../assets/js/parts.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/circuit.js"></script>
+<script src="../assets/js/uses.js"></script>
+<script src="../assets/js/uses-basic.js"></script>
+<script src="../assets/js/uses-sensors.js"></script>
+<script src="../assets/js/uses-robot.js"></script>
+<script src="../assets/js/logic.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/board.js"></script>
+<script src="../assets/js/deck.js"></script>
+</body>
+</html>

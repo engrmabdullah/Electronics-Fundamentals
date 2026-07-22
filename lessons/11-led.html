@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدرس 11 — الليد | LED</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/deck.css">
+</head>
+<body data-lesson="e11" data-title="الدرس 11 — الليد · LED">
+<div class="deck">
+
+<!-- ══════ 1 · الغلاف — مفارقة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:clamp(4.6rem,15vw,8rem)">💡</div>
+    <h1 class="title">أصغر من حبّة أرز</h1>
+    <p class="en-title">LED — Light Emitting Diode</p>
+    <p class="big dim mt">
+      ومع ذلك تراه من آخر الشارع.<br>
+      وفي شاشة التلفاز منه ملايين.
+    </p>
+    <p class="mute mt">اضغط <kbd>◀</kbd> لتعرف كيف.</p>
+  </div>
+</section>
+
+<!-- ══════ 2 · شكله ورمزه ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">تعرَّف عليه <span class="en-sub">Shape &amp; Symbol</span></h2>
+
+    <div class="part" data-part="led"></div>
+
+    <div class="grid g2 mt">
+      <div class="card card--o center">
+        <div style="font-size:2.4rem">📏</div>
+        <p class="card__body big">
+          له قدمان: <strong>الطويلة</strong> للطرف الموجب.
+        </p>
+      </div>
+      <div class="card card--v center">
+        <div style="font-size:2.4rem">🎨</div>
+        <p class="card__body big">
+          لونه من مادّته، لا من لون غلافه.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 3 · سرّه: اتجاه واحد ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">لا يعمل إلّا في اتجاه واحد <span class="en-sub">One Direction Only</span></h2>
+
+    <div class="anim" data-anim="one-way"></div>
+
+    <p class="big center mt">
+      وصِّله صحيحًا — يضيء.<br>
+      اقلِبه — لا تمرّ الكهرباء، فيبقى مُطفأً.<br>
+      لذلك هو <strong>دايود</strong> يُصدر ضوءًا.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 4 · معرض التطبيقات ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="uses" data-uses="led"></div>
+  </div>
+</section>
+
+<!-- ══════ 5 · لماذا يحتاج مقاومة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">لماذا نضع معه مقاومة؟ <span class="en-sub">Why a Resistor?</span></h2>
+
+    <div class="grid g2">
+      <div class="card card--r center">
+        <div style="font-size:2.6rem">🔥</div>
+        <p class="card__body big">
+          <strong>بدونها</strong><br>
+          يمرّ تيّار أكبر ممّا يحتمل، فيتلف في لحظات.
+        </p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.6rem">🛡️</div>
+        <p class="card__body big">
+          <strong>معها</strong><br>
+          تُقلّل التيّار إلى القدر المناسب، فيعمل سنوات.
+        </p>
+      </div>
+    </div>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> الليد الأحمر يعمل عند نحو ٢ فولت وتيّار ٢٠ ملّي أمبير.
+        مع بطارية ٥ فولت تُستعمل مقاومة ١٥٠–٢٢٠ أوم.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 6 · جرّب ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">ركِّب الدائرة بنفسك <span class="en-sub">Build It</span></h2>
+
+    <div class="circ" data-circ="led-resistor"></div>
+
+    <p class="big center mt">
+      بطارية، ثم مقاومة، ثم ليد، ثم عودة إلى البطارية.<br>
+      هذا كل ما يلزم.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 7 · اختبار الفهم ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">فكّر قبل أن تُجيب <span class="en-sub">Think First</span></h2>
+
+    <div style="font-size:3.4rem;text-align:center">🔄</div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">ركّبتَ الليد بالمقلوب. ماذا يحدث؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">يتلف فورًا</button>
+          <button class="quiz__opt" data-right>لا يضيء، ولا يتلف</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. الدايود يمنع المرور في الاتجاه المعكوس،<br>
+          فلا يمرّ تيّار أصلًا. اقلِبه فحسب.
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">نسيتَ المقاومة ووصّلتَ الليد مباشرةً بالبطارية؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt" data-right>يضيء بشدّة ثم يتلف</button>
+          <button class="quiz__opt">لا يحدث شيء</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. التيّار الكبير يُتلف الليد في ثوانٍ.<br>
+          المقاومة ليست اختيارية.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 8 · لماذا حلّ محلّ المصباح القديم ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">لماذا استبدلنا به المصابيح القديمة؟ <span class="en-sub">Why LEDs Won</span></h2>
+
+    <div class="anim" data-anim="hot-wire"></div>
+
+    <div class="grid g2 mt">
+      <div class="card card--r center">
+        <div style="font-size:2.4rem">🕯️</div>
+        <p class="card__body big">
+          <strong>المصباح القديم</strong><br>
+          يُسخّن سلكًا حتى يتوهّج. معظم الطاقة تذهب حرارةً.
+        </p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.4rem">💡</div>
+        <p class="card__body big">
+          <strong>الليد</strong><br>
+          يُصدر الضوء مباشرةً، فيبقى باردًا ويوفّر الكهرباء.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 9 · فرز ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">أين يوجد ليد؟ <span class="en-sub">Spot the LED</span></h2>
+
+    <div style="font-size:3rem;text-align:center">🔎</div>
+
+    <div class="sortq mt">
+      <div class="sortq__item" data-answer="yes">
+        <div class="sortq__row">
+          <span class="sortq__label big">📺 شاشة التلفاز</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">فيها ليد</button>
+            <button class="sortq__btn" data-val="no">ليس فيها</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — ملايين الليدات الصغيرة تُكوّن الصورة.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="yes">
+        <div class="sortq__row">
+          <span class="sortq__label big">🚦 إشارة المرور</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">فيها ليد</button>
+            <button class="sortq__btn" data-val="no">ليس فيها</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — تعمل سنوات دون تبديل.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="no">
+        <div class="sortq__row">
+          <span class="sortq__label big">🕯️ شمعة</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">فيها ليد</button>
+            <button class="sortq__btn" data-val="no">ليس فيها</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — الشمعة تحترق، ولا كهرباء فيها.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 10 · الخاتمة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:4.2rem">🏁</div>
+    <h2 class="title">ثلاث قواعد للّيد</h2>
+    <p class="en-title">Three Rules to Remember</p>
+
+    <div class="grid g3 mt">
+      <div class="card card--v center">
+        <div style="font-size:2.3rem">➡️</div>
+        <p class="card__body big">اتجاه واحد فقط</p>
+      </div>
+      <div class="card card--r center">
+        <div style="font-size:2.3rem">🛡️</div>
+        <p class="card__body big">مقاومة دائمًا معه</p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.3rem">❄️</div>
+        <p class="card__body big">يبقى باردًا ويوفّر</p>
+      </div>
+    </div>
+
+    <div class="note note--fun mt">
+      <div class="note__ico">🧪</div>
+      <div class="note__body big">
+        <strong>تحدٍّ منزلي:</strong> ابحث في بيتك عن خمسة أجهزة فيها ليد.
+        انظر إلى الشاحن، والريموت، والميكروويف، وجهاز الإنترنت.
+      </div>
+    </div>
+
+    <div class="row row--center mt" style="margin-top:24px">
+      <a class="btn" href="12-diode.html" style="text-decoration:none">الدرس التالي ◀</a>
+      <a class="btn btn--ghost" href="../index.html" style="text-decoration:none">🏠 كل الدروس</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script src="../assets/js/words.js"></script>
+<script src="../assets/js/parts.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/circuit.js"></script>
+<script src="../assets/js/uses.js"></script>
+<script src="../assets/js/uses-basic.js"></script>
+<script src="../assets/js/uses-sensors.js"></script>
+<script src="../assets/js/uses-robot.js"></script>
+<script src="../assets/js/logic.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/board.js"></script>
+<script src="../assets/js/deck.js"></script>
+</body>
+</html>

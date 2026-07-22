@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدرس 8 — الأسلاك ولوحة التجارب | Wires &amp; Breadboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/deck.css">
+</head>
+<body data-lesson="e08" data-title="الدرس 8 — الأسلاك ولوحة التجارب · Wires and Breadboard">
+<div class="deck">
+
+<!-- ══════ 1 · الغلاف — مشكلة عملية ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:clamp(4.4rem,14vw,7.6rem)">🧷</div>
+    <h1 class="title">يدان اثنتان وأربعة أطراف</h1>
+    <p class="en-title">Wires &amp; Breadboard</p>
+    <p class="big dim mt">
+      تمسك السلكين بأصابعك فيضيء المصباح.<br>
+      تتركهما لتلتقط قطعة ثالثة… فينطفئ.<br>
+      المهندسون واجهوا المشكلة نفسها.
+    </p>
+    <p class="mute mt">وصنعوا لها حلًّا أنيقًا <kbd>◀</kbd></p>
+  </div>
+</section>
+
+<!-- ══════ 2 · مشكلة التلامس ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">الوصلة الضعيفة تُفسد كل شيء <span class="en-sub">The Loose Contact</span></h2>
+
+    <div style="font-size:3.4rem;text-align:center">🤏⚡</div>
+
+    <p class="big center mt">
+      الطرفان يجب أن يتلامسا تلامسًا حقيقيًّا.<br>
+      شعرة من الغبار أو انزلاق بسيط،<br>
+      فتنفتح الحلقة وتتوقّف الدائرة.
+    </p>
+
+    <div class="note note--warn mt">
+      <div class="note__ico">🔍</div>
+      <div class="note__body big">
+        أكثر أعطال المبتدئين ليست في القطع،
+        بل في وصلة لم تُحكَم.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 3 · سرّ اللوحة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">تحت الثقوب شرائط معدنية <span class="en-sub">Hidden Metal Strips</span></h2>
+
+    <div class="anim" data-anim="board-link"></div>
+
+    <p class="big center mt">
+      كل خمسة ثقوب في صفّ واحد متّصلة معًا.<br>
+      ضع رجل القطعة في ثقب، وسلكًا في ثقب مجاور،<br>
+      فقد وصّلتهما دون لحام.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 4 · شكل اللوحة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">اقرأ اللوحة قبل أن تستعملها <span class="en-sub">Reading the Board</span></h2>
+
+    <div class="part" data-part="breadboard"></div>
+
+    <p class="big center mt">
+      الخطّان الطويلان على الحافّتين للتغذية.<br>
+      والصفوف القصيرة في الوسط للقطع.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 5 · أسلاك التوصيل ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">أسلاك قصيرة بأطراف صلبة <span class="en-sub">Jumper Wires</span></h2>
+
+    <div class="part" data-part="jumper"></div>
+
+    <p class="big center mt">
+      طرفها المعدني مستقيم ليدخل الثقب بإحكام.<br>
+      واللون لا يغيّر شيئًا في الكهرباء،<br>
+      لكنه يساعدك على تتبّع دائرتك.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 6 · هل الثقبان متّصلان ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">أي ثقبين يجمعهما شريط واحد؟ <span class="en-sub">Which Holes Connect</span></h2>
+
+    <div style="font-size:3rem;text-align:center">🕳️🕳️</div>
+
+    <div class="sortq mt">
+      <div class="sortq__item" data-answer="yes">
+        <div class="sortq__row">
+          <span class="sortq__label big">↔️ ثقبان في الصفّ القصير نفسه</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">متّصلان</button>
+            <button class="sortq__btn" data-val="no">منفصلان</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — يجمعهما شريط واحد تحت اللوحة.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="no">
+        <div class="sortq__row">
+          <span class="sortq__label big">⬍ ثقبان يفصل بينهما الأخدود الأوسط</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">متّصلان</button>
+            <button class="sortq__btn" data-val="no">منفصلان</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — الأخدود يفصل الجانبين عمدًا.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="yes">
+        <div class="sortq__row">
+          <span class="sortq__label big">➕ ثقبان على خطّ التغذية الأحمر</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">متّصلان</button>
+            <button class="sortq__btn" data-val="no">منفصلان</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — الخطّ الطويل موصول من أوّله إلى آخره.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 7 · معرض التطبيقات ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="uses" data-uses="breadboard"></div>
+  </div>
+</section>
+
+<!-- ══════ 8 · اختبار السلك ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">اتّهم السلك قبل أن تتّهم القطعة <span class="en-sub">Test the Wire First</span></h2>
+
+    <div class="anim" data-anim="beep-test"></div>
+
+    <p class="big center mt">
+      داخل السلك نحاس قد ينكسر والغلاف سليم.<br>
+      جهاز الفحص يصفر إن كان الطريق متّصلًا،<br>
+      ويصمت إن كان مقطوعًا.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 9 · ركّب دائرة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">انقل هذه الدائرة إلى لوحتك <span class="en-sub">Move It to the Board</span></h2>
+
+    <div class="circ" data-circ="motor"></div>
+
+    <p class="big center mt">
+      بطارية، ثم مفتاح، ثم محرّك صغير، ثم عودة.<br>
+      أربع وصلات فقط، وكلّها بلا لحام.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 10 · تحقّق ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">سؤالان عن اللوحة <span class="en-sub">Board Check</span></h2>
+
+    <div style="font-size:3.2rem;text-align:center">❓</div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">وضعتَ رجلي المقاومة في ثقبين من الصفّ نفسه. ماذا يحدث؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">تعمل عملها المعتاد</button>
+          <button class="quiz__opt" data-right>يتجاوزها التيّار كأنّها غير موجودة</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. الشريط تحت الصفّ يصل الرجلين،<br>
+          فيمرّ التيّار في المعدن لا في المقاومة.
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">دائرتك سليمة الشكل ولا تعمل. ما أوّل ما تفحصه؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt" data-right>إحكام كل سلك في ثقبه</button>
+          <button class="quiz__opt">لون الأسلاك</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. الوصلة المرتخية أشهر سبب،<br>
+          واللون لا أثر له إطلاقًا.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 11 · أخطاء شائعة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">ثلاثة أخطاء تُفشل التركيب <span class="en-sub">Three Common Slips</span></h2>
+
+    <div class="grid g3">
+      <div class="card card--r center">
+        <div style="font-size:2.6rem">↔️</div>
+        <p class="card__body big">
+          رجلا القطعة في الصفّ نفسه، فتلامستا وأُلغِيت القطعة.
+        </p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.6rem">📍</div>
+        <p class="card__body big">
+          السلك في الثقب المجاور بالخطأ، فالحلقة غير مكتملة.
+        </p>
+      </div>
+      <div class="card card--v center">
+        <div style="font-size:2.6rem">🔄</div>
+        <p class="card__body big">
+          طرفا البطارية معكوسان، فلا يعمل ما له اتجاه.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 11 · الخاتمة — تحدٍّ منزلي ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:4rem">🧰</div>
+    <h2 class="title">تمرين اليد قبل الدرس القادم</h2>
+    <p class="en-title">Hands-On Warm-Up</p>
+
+    <div class="note note--fun mt">
+      <div class="note__ico">✋</div>
+      <div class="note__body big">
+        <strong>تدرَّب:</strong> أدخل سلكًا في ثقب، ثم اسحبه، ثم أعده.
+        اعرف بأصابعك متى يدخل بإحكام ومتى يبقى مرتخيًا.
+      </div>
+    </div>
+
+    <div class="grid g2 mt">
+      <div class="card card--c center">
+        <div style="font-size:2.4rem">🔗</div>
+        <p class="card__body big">الصفّ الواحد وصلة واحدة</p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.4rem">🧭</div>
+        <p class="card__body big">والأخدود حدّ يفصل</p>
+      </div>
+    </div>
+
+    <div class="row row--center mt" style="margin-top:24px">
+      <a class="btn" href="09-switch.html" style="text-decoration:none">الدرس التالي ◀</a>
+      <a class="btn btn--ghost" href="../index.html" style="text-decoration:none">🏠 كل الدروس</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script src="../assets/js/words.js"></script>
+<script src="../assets/js/parts.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/circuit.js"></script>
+<script src="../assets/js/uses.js"></script>
+<script src="../assets/js/uses-basic.js"></script>
+<script src="../assets/js/uses-sensors.js"></script>
+<script src="../assets/js/uses-robot.js"></script>
+<script src="../assets/js/logic.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/board.js"></script>
+<script src="../assets/js/deck.js"></script>
+</body>
+</html>

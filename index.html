@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>أساسيات الإلكترونيات والروبوتات | Electronics &amp; Robotics Fundamentals</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/deck.css">
+<style>
+  body { background: var(--bg); overflow: auto; }
+  .hub { max-width: 1180px; margin: 0 auto; padding: 40px 22px 80px; }
+
+  .hero {
+    text-align: center; padding: 46px 24px 40px;
+    background: linear-gradient(150deg, #EEF4FF, #FFF7E8 55%, #F3EDFF);
+    border: 2px solid var(--line); border-radius: var(--r-lg);
+    box-shadow: var(--sh); margin-bottom: 34px; position: relative; overflow: hidden;
+  }
+  .hero::after {
+    content: ''; position: absolute; inset-inline-start: -40px; inset-block-start: -40px;
+    width: 190px; height: 190px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(250,204,21,.30), transparent 68%);
+  }
+  .hero__ico { font-size: clamp(3.4rem, 11vw, 5.4rem); line-height: 1; }
+  .hero h1 { font-size: clamp(1.7rem, 5.4vw, 2.9rem); margin: 12px 0 6px; color: var(--ink); }
+  .hero__en {
+    direction: ltr; unicode-bidi: isolate; font-family: var(--mono);
+    font-weight: 600; color: var(--volt); font-size: clamp(.9rem, 2.6vw, 1.12rem);
+  }
+  .hero__lead { color: var(--ink-2); max-width: 640px; margin: 16px auto 0; font-size: 1.06rem; }
+
+  .stats { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 24px; }
+  .stat {
+    background: var(--paper); border: 2px solid var(--line); border-radius: 999px;
+    padding: 8px 18px; font-weight: 700; font-size: .94rem; color: var(--ink-2);
+  }
+  .stat b { color: var(--volt); font-family: var(--mono); }
+
+  .unit { margin-bottom: 34px; }
+  .unit__head {
+    display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    margin: 0 0 15px; padding-inline-start: 14px;
+    border-inline-start: 6px solid var(--acc); border-radius: 3px;
+  }
+  .unit__n {
+    font-family: var(--mono); font-weight: 700; font-size: .82rem;
+    background: var(--acc); color: #fff; padding: 3px 11px; border-radius: 7px;
+  }
+  .unit__t { font-size: 1.28rem; font-weight: 800; color: var(--ink); margin: 0; }
+  .unit__en {
+    direction: ltr; unicode-bidi: isolate; font-family: var(--mono);
+    font-size: .82rem; color: var(--ink-3); font-weight: 600;
+  }
+  .unit--a { --acc: #2563EB; } .unit--b { --acc: #F59E0B; }
+  .unit--c { --acc: #16A34A; } .unit--d { --acc: #DC2626; }
+  .unit--e { --acc: #0891B2; } .unit--f { --acc: #7C3AED; }
+
+  .lessons { display: grid; grid-template-columns: repeat(auto-fill, minmax(255px, 1fr)); gap: 13px; }
+  .ls {
+    display: flex; align-items: center; gap: 13px; text-decoration: none;
+    background: var(--paper); border: 2px solid var(--line);
+    border-radius: var(--r-sm); padding: 13px 15px;
+    transition: transform .16s var(--ease), border-color .16s, box-shadow .16s;
+  }
+  .ls:hover {
+    transform: translateY(-3px); border-color: var(--acc); box-shadow: var(--sh-lg);
+  }
+  .ls__n {
+    flex-shrink: 0; width: 36px; height: 36px; border-radius: 10px;
+    background: var(--acc); color: #fff; display: grid; place-items: center;
+    font-family: var(--mono); font-weight: 700; font-size: .92rem;
+  }
+  .ls__txt { min-width: 0; }
+  .ls__ar { display: block; font-weight: 700; color: var(--ink); font-size: .99rem; }
+  .ls__en {
+    display: block; direction: ltr; unicode-bidi: isolate;
+    font-family: var(--mono); font-size: .74rem; color: var(--ink-3);
+    margin-top: 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+
+  .foot {
+    margin-top: 46px; padding: 24px; text-align: center;
+    background: var(--paper); border: 2px solid var(--line); border-radius: var(--r);
+    color: var(--ink-2);
+  }
+  .foot__row { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .chip2 {
+    background: var(--bg); border: 2px solid var(--line); border-radius: 999px;
+    padding: 6px 15px; font-size: .88rem; font-weight: 700;
+  }
+</style>
+</head>
+<body>
+<div class="hub">
+
+  <header class="hero">
+    <div class="hero__ico">⚡🤖</div>
+    <h1>أساسيات الإلكترونيات والروبوتات</h1>
+    <p class="hero__en">Electronics &amp; Robotics Fundamentals</p>
+    <p class="hero__lead">
+      رحلة من أوّل شرارة كهرباء إلى روبوت يتحرّك وحده.
+      كل عنصر برسمه، ورمزه، وتطبيقاته في حياتك.
+    </p>
+    <div class="stats">
+      <span class="stat"><b>37</b> درسًا</span>
+      <span class="stat"><b>45+</b> عنصرًا مرسومًا</span>
+      <span class="stat"><b>60+</b> مشهدًا متحرّكًا</span>
+      <span class="stat">سبّورة على كل شريحة 🖊️</span>
+    </div>
+  </header>
+
+  <!-- ══════════ الوحدة ١ ══════════ -->
+  <section class="unit unit--a">
+    <div class="unit__head">
+      <span class="unit__n">01</span>
+      <h2 class="unit__t">الكهرباء — كيف تعمل؟</h2>
+      <span class="unit__en">Electricity Basics</span>
+    </div>
+    <div class="lessons">
+      <a class="ls" href="lessons/01-what-is-electricity.html"><span class="ls__n">1</span><span class="ls__txt"><span class="ls__ar">ما الكهرباء؟</span><span class="ls__en">What is Electricity?</span></span></a>
+      <a class="ls" href="lessons/02-voltage-current.html"><span class="ls__n">2</span><span class="ls__txt"><span class="ls__ar">الدفع والجريان</span><span class="ls__en">Voltage &amp; Current</span></span></a>
+      <a class="ls" href="lessons/03-resistance.html"><span class="ls__n">3</span><span class="ls__txt"><span class="ls__ar">ما الذي يُبطئ الكهرباء؟</span><span class="ls__en">Resistance</span></span></a>
+      <a class="ls" href="lessons/04-ohms-law.html"><span class="ls__n">4</span><span class="ls__txt"><span class="ls__ar">العلاقة بين الثلاثة</span><span class="ls__en">Ohm's Law</span></span></a>
+      <a class="ls" href="lessons/05-circuit.html"><span class="ls__n">5</span><span class="ls__txt"><span class="ls__ar">الطريق المغلق</span><span class="ls__en">The Circuit</span></span></a>
+      <a class="ls" href="lessons/06-series-parallel.html"><span class="ls__n">6</span><span class="ls__txt"><span class="ls__ar">طريق واحد أم طريقان؟</span><span class="ls__en">Series &amp; Parallel</span></span></a>
+      <a class="ls" href="lessons/07-battery.html"><span class="ls__n">7</span><span class="ls__txt"><span class="ls__ar">البطارية</span><span class="ls__en">Battery</span></span></a>
+      <a class="ls" href="lessons/08-wires-breadboard.html"><span class="ls__n">8</span><span class="ls__txt"><span class="ls__ar">الأسلاك ولوحة التجارب</span><span class="ls__en">Wires &amp; Breadboard</span></span></a>
+    </div>
+  </section>
+
+  <!-- ══════════ الوحدة ٢ ══════════ -->
+  <section class="unit unit--b">
+    <div class="unit__head">
+      <span class="unit__n">02</span>
+      <h2 class="unit__t">العناصر الإلكترونية</h2>
+      <span class="unit__en">Components</span>
+    </div>
+    <div class="lessons">
+      <a class="ls" href="lessons/09-switch.html"><span class="ls__n">9</span><span class="ls__txt"><span class="ls__ar">المفتاح</span><span class="ls__en">Switch</span></span></a>
+      <a class="ls" href="lessons/10-resistor.html"><span class="ls__n">10</span><span class="ls__txt"><span class="ls__ar">المقاومة</span><span class="ls__en">Resistor</span></span></a>
+      <a class="ls" href="lessons/11-led.html"><span class="ls__n">11</span><span class="ls__txt"><span class="ls__ar">الليد</span><span class="ls__en">LED</span></span></a>
+      <a class="ls" href="lessons/12-diode.html"><span class="ls__n">12</span><span class="ls__txt"><span class="ls__ar">الدايود</span><span class="ls__en">Diode</span></span></a>
+      <a class="ls" href="lessons/13-capacitor.html"><span class="ls__n">13</span><span class="ls__txt"><span class="ls__ar">المكثّف</span><span class="ls__en">Capacitor</span></span></a>
+      <a class="ls" href="lessons/14-transistor.html"><span class="ls__n">14</span><span class="ls__txt"><span class="ls__ar">الترانزستور</span><span class="ls__en">Transistor</span></span></a>
+      <a class="ls" href="lessons/15-ic.html"><span class="ls__n">15</span><span class="ls__txt"><span class="ls__ar">الرقاقة وبوّابات المنطق</span><span class="ls__en">IC &amp; Logic Gates</span></span></a>
+      <a class="ls" href="lessons/16-relay.html"><span class="ls__n">16</span><span class="ls__txt"><span class="ls__ar">المرحّل</span><span class="ls__en">Relay</span></span></a>
+      <a class="ls" href="lessons/17-buzzer-speaker.html"><span class="ls__n">17</span><span class="ls__txt"><span class="ls__ar">الطنّان والسمّاعة</span><span class="ls__en">Buzzer &amp; Speaker</span></span></a>
+    </div>
+  </section>
+
+  <!-- ══════════ الوحدة ٣ ══════════ -->
+  <section class="unit unit--c">
+    <div class="unit__head">
+      <span class="unit__n">03</span>
+      <h2 class="unit__t">الحسّاسات — كيف يحسّ الجهاز؟</h2>
+      <span class="unit__en">Sensors</span>
+    </div>
+    <div class="lessons">
+      <a class="ls" href="lessons/18-what-is-sensor.html"><span class="ls__n">18</span><span class="ls__txt"><span class="ls__ar">ما الحسّاس؟</span><span class="ls__en">What is a Sensor?</span></span></a>
+      <a class="ls" href="lessons/19-light-sensor.html"><span class="ls__n">19</span><span class="ls__txt"><span class="ls__ar">حسّاس الضوء</span><span class="ls__en">Light Sensor</span></span></a>
+      <a class="ls" href="lessons/20-temp-sensor.html"><span class="ls__n">20</span><span class="ls__txt"><span class="ls__ar">حسّاس الحرارة</span><span class="ls__en">Temperature Sensor</span></span></a>
+      <a class="ls" href="lessons/21-distance-sensor.html"><span class="ls__n">21</span><span class="ls__txt"><span class="ls__ar">حسّاس المسافة</span><span class="ls__en">Distance Sensor</span></span></a>
+      <a class="ls" href="lessons/22-motion-sensor.html"><span class="ls__n">22</span><span class="ls__txt"><span class="ls__ar">حسّاس الحركة</span><span class="ls__en">Motion Sensor</span></span></a>
+      <a class="ls" href="lessons/23-more-sensors.html"><span class="ls__n">23</span><span class="ls__txt"><span class="ls__ar">حسّاسات أخرى</span><span class="ls__en">More Sensors</span></span></a>
+    </div>
+  </section>
+
+  <!-- ══════════ الوحدة ٤ ══════════ -->
+  <section class="unit unit--d">
+    <div class="unit__head">
+      <span class="unit__n">04</span>
+      <h2 class="unit__t">الأدوات والمخطّطات</h2>
+      <span class="unit__en">Tools &amp; Schematics</span>
+    </div>
+    <div class="lessons">
+      <a class="ls" href="lessons/24-multimeter.html"><span class="ls__n">24</span><span class="ls__txt"><span class="ls__ar">الملتيميتر</span><span class="ls__en">Multimeter</span></span></a>
+      <a class="ls" href="lessons/25-tools-safety.html"><span class="ls__n">25</span><span class="ls__txt"><span class="ls__ar">الأدوات والسلامة</span><span class="ls__en">Tools &amp; Safety</span></span></a>
+      <a class="ls" href="lessons/26-reading-schematics.html"><span class="ls__n">26</span><span class="ls__txt"><span class="ls__ar">قراءة المخطّط</span><span class="ls__en">Reading Schematics</span></span></a>
+    </div>
+  </section>
+
+  <!-- ══════════ الوحدة ٥ ══════════ -->
+  <section class="unit unit--e">
+    <div class="unit__head">
+      <span class="unit__n">05</span>
+      <h2 class="unit__t">لوحة التحكّم والبرمجة</h2>
+      <span class="unit__en">Microcontroller &amp; Code</span>
+    </div>
+    <div class="lessons">
+      <a class="ls" href="lessons/27-microcontroller.html"><span class="ls__n">27</span><span class="ls__txt"><span class="ls__ar">لوحة التحكّم</span><span class="ls__en">Microcontroller</span></span></a>
+      <a class="ls" href="lessons/28-digital-io.html"><span class="ls__n">28</span><span class="ls__txt"><span class="ls__ar">مفتوح أم مغلق؟</span><span class="ls__en">Digital I/O</span></span></a>
+      <a class="ls" href="lessons/29-analog-pwm.html"><span class="ls__n">29</span><span class="ls__txt"><span class="ls__ar">بين المفتوح والمغلق</span><span class="ls__en">Analog &amp; PWM</span></span></a>
+      <a class="ls" href="lessons/30-first-sketch.html"><span class="ls__n">30</span><span class="ls__txt"><span class="ls__ar">أوّل برنامج</span><span class="ls__en">First Sketch</span></span></a>
+      <a class="ls" href="lessons/31-read-button.html"><span class="ls__n">31</span><span class="ls__txt"><span class="ls__ar">قراءة الزرّ</span><span class="ls__en">Reading a Button</span></span></a>
+      <a class="ls" href="lessons/32-sensor-code.html"><span class="ls__n">32</span><span class="ls__txt"><span class="ls__ar">برمجة الحسّاس</span><span class="ls__en">Sensor Code</span></span></a>
+      <a class="ls" href="lessons/33-motors.html"><span class="ls__n">33</span><span class="ls__txt"><span class="ls__ar">تشغيل المحرّكات</span><span class="ls__en">Driving Motors</span></span></a>
+    </div>
+  </section>
+
+  <!-- ══════════ الوحدة ٦ ══════════ -->
+  <section class="unit unit--f">
+    <div class="unit__head">
+      <span class="unit__n">06</span>
+      <h2 class="unit__t">الروبوتات</h2>
+      <span class="unit__en">Robotics</span>
+    </div>
+    <div class="lessons">
+      <a class="ls" href="lessons/34-what-is-robot.html"><span class="ls__n">34</span><span class="ls__txt"><span class="ls__ar">ما الروبوت؟</span><span class="ls__en">What is a Robot?</span></span></a>
+      <a class="ls" href="lessons/35-line-follower.html"><span class="ls__n">35</span><span class="ls__txt"><span class="ls__ar">روبوت يتبع الخطّ</span><span class="ls__en">Line Follower</span></span></a>
+      <a class="ls" href="lessons/36-obstacle-robot.html"><span class="ls__n">36</span><span class="ls__txt"><span class="ls__ar">روبوت يتجنّب الجدار</span><span class="ls__en">Obstacle Robot</span></span></a>
+      <a class="ls" href="lessons/37-final-project.html"><span class="ls__n">37</span><span class="ls__txt"><span class="ls__ar">مشروعك أنت</span><span class="ls__en">Your Own Project</span></span></a>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <strong>كيف تستعمل الكورس؟</strong>
+    <div class="foot__row">
+      <span class="chip2">◀ ▶ للتنقّل</span>
+      <span class="chip2">اضغط أي كلمة إنجليزية لتسمعها 🔊</span>
+      <span class="chip2">B للسبّورة 🖊️</span>
+      <span class="chip2">F ملء الشاشة</span>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدرس 6 — طريق واحد أم طريقان؟ | Series &amp; Parallel</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/deck.css">
+</head>
+<body data-lesson="e06" data-title="الدرس 6 — طريق واحد أم طريقان؟ · Series and Parallel">
+<div class="deck">
+
+<!-- ══════ 1 · الغلاف — مشهد يومي ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:clamp(4.4rem,14vw,7.6rem)">🎇</div>
+    <h1 class="title">لمبة واحدة أطفأت السلسلة</h1>
+    <p class="en-title">Series &amp; Parallel</p>
+    <p class="big dim mt">
+      في زينة العيد تحترق لمبة صغيرة،<br>
+      فينطفئ الخيط كلّه.<br>
+      ولا يحدث هذا في مصابيح بيتك أبدًا.
+    </p>
+    <p class="mute mt">السبب في طريقة التوصيل <kbd>◀</kbd></p>
+  </div>
+</section>
+
+<!-- ══════ 2 · الطريقتان ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">طريقتان لا ثالث لهما <span class="en-sub">Two Ways to Wire</span></h2>
+
+    <div class="anim" data-anim="series-vs-parallel"></div>
+
+    <p class="big center mt">
+      إمّا أن تصطفّ القطع في طريق واحد،<br>
+      وإمّا أن يكون لكل قطعة طريقها الخاصّ.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 3 · التوالي ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">مصباحان يقتسمان طريقًا واحدًا <span class="en-sub">In Series</span></h2>
+
+    <div class="circ" data-circ="two-lamps-series"></div>
+
+    <p class="big center mt">
+      التيّار يمرّ في الأوّل ثم يدخل الثاني.<br>
+      الدفع نفسه يتوزّع عليهما، فيضعف ضوء كلٍّ منهما.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 4 · التوالي المكسور ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">اقطع واحدًا فيتوقّف الاثنان <span class="en-sub">One Out, All Out</span></h2>
+
+    <div class="circ" data-circ="series-one-broken"></div>
+
+    <p class="big center mt">
+      لا يوجد طريق بديل يلتفّ حول العطل.<br>
+      هذا ما يحدث في خيط زينة العيد.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 5 · التوازي ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">ولكل مصباح طريق يخصّه <span class="en-sub">In Parallel</span></h2>
+
+    <div class="circ" data-circ="two-lamps-parallel"></div>
+
+    <p class="big center mt">
+      كل مصباح موصول بطرفي البطارية مباشرةً.<br>
+      فينال كلٌّ منهما الدفع كاملًا.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 6 · التوازي المكسور ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">اقطع واحدًا فيبقى الآخر <span class="en-sub">One Out, Others Stay</span></h2>
+
+    <div class="circ" data-circ="parallel-one-broken"></div>
+
+    <p class="big center mt">
+      الطريق الثاني ما زال مكتملًا.<br>
+      ولهذا لا تُظلم غرفتك حين تحترق لمبة واحدة.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 7 · معرض التطبيقات ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="uses" data-uses="lamp"></div>
+  </div>
+</section>
+
+<!-- ══════ 8 · لماذا يختار المهندس ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">متى يختار المهندس كلًّا منهما؟ <span class="en-sub">Which to Pick</span></h2>
+
+    <div class="grid g2">
+      <div class="card card--o center">
+        <div style="font-size:2.6rem">🔗</div>
+        <p class="card__body big">
+          <strong>توالٍ</strong><br>
+          حين نريد أن يعمل الجميع معًا أو يتوقّف الجميع معًا.
+        </p>
+      </div>
+      <div class="card card--c center">
+        <div style="font-size:2.6rem">🔱</div>
+        <p class="card__body big">
+          <strong>توازٍ</strong><br>
+          حين نريد استقلال كل جهاز عن الآخر.
+        </p>
+      </div>
+    </div>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> على التوالي يتقاسم المصباحان الجهد،
+        وعلى التوازي ينال كلٌّ منهما الجهد كاملًا ويزيد مجموع التيّار.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 9 · تحقّق ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">قرارات مهندس صغير <span class="en-sub">Your Call</span></h2>
+
+    <div style="font-size:3.2rem;text-align:center">🧠</div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">تريد أن ينطفئ مصباح المطبخ وحده دون بقيّة البيت. كيف توصّله؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">على التوالي</button>
+          <button class="quiz__opt" data-right>على التوازي</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. الطريق المستقلّ يجعل كل مصباح<br>
+          غير معتمد على جاره.
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">وصّلنا مصباحين على التوالي ببطارية واحدة. كيف يبدو ضوءهما؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt" data-right>أضعف من مصباح وحده</button>
+          <button class="quiz__opt">أقوى من مصباح وحده</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. الدفع نفسه يتوزّع على اثنين،<br>
+          فيقلّ نصيب كلٍّ منهما.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 10 · فرز ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">في أي وضع هذه الأشياء؟ <span class="en-sub">Spot the Wiring</span></h2>
+
+    <div style="font-size:3rem;text-align:center">🏠</div>
+
+    <div class="sortq mt">
+      <div class="sortq__item" data-answer="no">
+        <div class="sortq__row">
+          <span class="sortq__label big">💡 مصابيح غرف البيت</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">توالٍ</button>
+            <button class="sortq__btn" data-val="no">توازٍ</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — كل غرفة تُطفأ وحدها.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="yes">
+        <div class="sortq__row">
+          <span class="sortq__label big">🔦 بطاريتان داخل الكشّاف</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">توالٍ</button>
+            <button class="sortq__btn" data-val="no">توازٍ</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — تصطفّان لتجمعا دفعهما.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="no">
+        <div class="sortq__row">
+          <span class="sortq__label big">🔌 أجهزة موصولة بمشترك واحد</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">توالٍ</button>
+            <button class="sortq__btn" data-val="no">توازٍ</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — كل جهاز يعمل ويتوقّف مستقلًّا.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 11 · الخاتمة — تحدٍّ منزلي ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:4rem">🏡</div>
+    <h2 class="title">تحقيق مسائي في بيتك</h2>
+    <p class="en-title">Tonight's Investigation</p>
+
+    <div class="note note--fun mt">
+      <div class="note__ico">🕵️</div>
+      <div class="note__body big">
+        أطفئ مصباح غرفتك. هل انطفأ مصباح المطبخ معه؟
+        سجّل النتيجة، ثم قرّر: البيت موصول على أي وضع؟
+      </div>
+    </div>
+
+    <div class="grid g2 mt">
+      <div class="card card--o center">
+        <div style="font-size:2.4rem">⛓️</div>
+        <p class="card__body big">توالٍ: مصير واحد للجميع</p>
+      </div>
+      <div class="card card--c center">
+        <div style="font-size:2.4rem">🔱</div>
+        <p class="card__body big">توازٍ: لكلٍّ مصيره</p>
+      </div>
+    </div>
+
+    <div class="row row--center mt" style="margin-top:24px">
+      <a class="btn" href="07-battery.html" style="text-decoration:none">الدرس التالي ◀</a>
+      <a class="btn btn--ghost" href="../index.html" style="text-decoration:none">🏠 كل الدروس</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script src="../assets/js/words.js"></script>
+<script src="../assets/js/parts.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/circuit.js"></script>
+<script src="../assets/js/uses.js"></script>
+<script src="../assets/js/uses-basic.js"></script>
+<script src="../assets/js/uses-sensors.js"></script>
+<script src="../assets/js/uses-robot.js"></script>
+<script src="../assets/js/logic.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/board.js"></script>
+<script src="../assets/js/deck.js"></script>
+</body>
+</html>

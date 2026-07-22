@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدرس 15 — حبّة فيها مدينة | The Chip</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/deck.css">
+</head>
+<body data-lesson="e15" data-title="الدرس 15 — حبّة فيها مدينة · The Chip">
+<div class="deck">
+
+<!-- ══════ 1 · الغلاف — جواب سؤال أمس ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:clamp(4.4rem,14vw,7.6rem)">🏙️</div>
+    <h1 class="title">لا نلحمها واحدًا واحدًا</h1>
+    <p class="en-title">IC &amp; Logic Gates</p>
+    <p class="big dim mt">
+      سألناك أمس: كيف نجمع مليون ترانزستور؟<br>
+      الجواب: نصنعها كلّها معًا على قطعة واحدة.
+    </p>
+    <p class="mute mt">اضغط <kbd>◀</kbd> لتفتح الحبّة السوداء.</p>
+  </div>
+</section>
+
+<!-- ══════ 2 · شكلها ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">حبّة سوداء بأرجل مرتّبة <span class="en-sub">The Package</span></h2>
+
+    <div class="part" data-part="ic"></div>
+
+    <div class="grid g2 mt">
+      <div class="card card--v center">
+        <div style="font-size:2.4rem">🌙</div>
+        <p class="card__body big">
+          الحزّ في طرفها يدلّ على <strong>الرجل الأولى</strong>.
+        </p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.4rem">🔢</div>
+        <p class="card__body big">
+          ثم تُعدّ الأرجل بالترتيب حول الحبّة.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 3 · ماذا بداخلها ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">تحت الغطاء الأسود <span class="en-sub">Under the Lid</span></h2>
+
+    <div class="anim" data-anim="chip-city"></div>
+
+    <p class="big center mt">
+      قطعة سيليكون أصغر من ظفرك.<br>
+      عليها ترانزستورات ومقاومات لا تُعدّ،<br>
+      موصولة بمسارات أرقّ من الشعرة.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 4 · قبل الرقاقة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">حاسوب كان يملأ غرفة <span class="en-sub">Before the Chip</span></h2>
+
+    <div class="anim" data-anim="tube-to-chip"></div>
+
+    <p class="big center mt">
+      قديمًا كان كل مفتاح أنبوبًا زجاجيًّا ساخنًا.<br>
+      ألف مفتاح تحتاج غرفة كاملة ومروحة كبيرة.<br>
+      واليوم تسع الملايين منها في حبّة.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 5 · البوّابة و ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">البوّابة الأولى: لا بدّ من الاثنين <span class="en-sub">The AND Gate</span></h2>
+
+    <div class="gate" data-gate="and"></div>
+
+    <p class="big center mt">
+      اضغط A وحده: لا شيء.<br>
+      اضغط B وحده: لا شيء.<br>
+      اضغطهما معًا: يضيء.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 6 · البوّابة أو ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">البوّابة الثانية: يكفي أحدهما <span class="en-sub">The OR Gate</span></h2>
+
+    <div class="gate" data-gate="or"></div>
+
+    <p class="big center mt">
+      جرّب A وحده، ثم B وحده، ثم الاثنين.<br>
+      يضيء في الحالات الثلاث.<br>
+      ولا ينطفئ إلّا حين تتركهما معًا.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 7 · البوّابة ليس ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">البوّابة الثالثة: تقلب الحال <span class="en-sub">The NOT Gate</span></h2>
+
+    <div class="gate" data-gate="not"></div>
+
+    <p class="big center mt">
+      لها مدخل واحد فقط.<br>
+      اتركه فيضيء، واضغطه فينطفئ.<br>
+      الدائرة الصغيرة في الرمز تعني: اقلِب.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 8 · الرقائق الحقيقية ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">هذه البوّابات تُباع في حبّات <span class="en-sub">Real Logic Chips</span></h2>
+
+    <div class="chip" data-chip="7408"></div>
+    <div class="chip mt" data-chip="7432"></div>
+    <div class="chip mt" data-chip="7404"></div>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> هذه من عائلة 74 المشهورة.
+        الرجل ١٤ للتغذية، والرجل ٧ للأرضي، في الثلاث جميعًا.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 9 · معرض التطبيقات ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="uses" data-uses="ic"></div>
+  </div>
+</section>
+
+<!-- ══════ 10 · جرّب ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">ركّب الحبّة في دائرة <span class="en-sub">Wire the Chip</span></h2>
+
+    <div class="circ" data-circ="chip-kid"></div>
+
+    <p class="big center mt">
+      الرقاقة تحتاج تغذية أوّلًا، ثم مداخل.<br>
+      وبعدها تُخرج قرارها إلى المصباح.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 11 · المنطق حولنا ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">أين تختبئ هذه القرارات؟ <span class="en-sub">Logic Around You</span></h2>
+
+    <div class="grid g3">
+      <div class="card card--v center">
+        <div style="font-size:2.6rem">🛗</div>
+        <p class="card__body big">
+          <strong>و</strong><br>
+          المصعد يتحرّك إذا أُغلق الباب وضُغط الزرّ.
+        </p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.6rem">🪜</div>
+        <p class="card__body big">
+          <strong>أو</strong><br>
+          مصباح السلّم له زرّان: أيّهما يكفي.
+        </p>
+      </div>
+      <div class="card card--c center">
+        <div style="font-size:2.6rem">🧊</div>
+        <p class="card__body big">
+          <strong>ليس</strong><br>
+          ضوء الثلّاجة يعمل حين لا يُضغط زرّ الباب.
+        </p>
+      </div>
+    </div>
+
+    <p class="big center mt">
+      كل قرار في الأجهزة يُبنى من هذه الثلاث.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 12 · اختبار ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">اقرأ الجدول ثم أجب <span class="en-sub">Read the Table</span></h2>
+
+    <div style="font-size:3.4rem;text-align:center">🔢</div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">بوّابة مدخلاها مضغوطان والمخرج مطفأ. أيّ بوّابة هذه؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">بوّابة «و»</button>
+          <button class="quiz__opt" data-right>ليست «و»، لأنّ «و» تضيء هنا</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. «و» تضيء حين يُضغط الاثنان معًا.
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">لماذا نصنع مليون ترانزستور داخل حبّة واحدة؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">ليصير الجهاز أثقل</button>
+          <button class="quiz__opt" data-right>لتصغر المسافات فيسرع العمل ويقلّ الثمن</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. مسارات أقصر تعني تبديلًا أسرع وثمنًا أقلّ.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 13 · فرز ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">أيّ بوّابة تحلّ المسألة؟ <span class="en-sub">Pick the Gate</span></h2>
+
+    <div style="font-size:3rem;text-align:center">🧩</div>
+
+    <div class="sortq mt">
+      <div class="sortq__item" data-answer="and">
+        <div class="sortq__row">
+          <span class="sortq__label big">🔐 خزنة لا تُفتح إلّا بمفتاحين معًا</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="and">و</button>
+            <button class="sortq__btn" data-val="or">أو</button>
+            <button class="sortq__btn" data-val="not">ليس</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — شرطان لا بدّ منهما معًا.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="or">
+        <div class="sortq__row">
+          <span class="sortq__label big">🚨 إنذار يعمل من أيّ باب من بابين</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="and">و</button>
+            <button class="sortq__btn" data-val="or">أو</button>
+            <button class="sortq__btn" data-val="not">ليس</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — يكفي أن يُفتح أحد البابين.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="not">
+        <div class="sortq__row">
+          <span class="sortq__label big">🌙 مصباح يعمل حين ينقطع الضوء</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="and">و</button>
+            <button class="sortq__btn" data-val="or">أو</button>
+            <button class="sortq__btn" data-val="not">ليس</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — المخرج معكوس للمدخل تمامًا.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 14 · الخاتمة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:4rem">🚪</div>
+    <h2 class="title">ثلاث بوّابات تكفي لبناء حاسوب</h2>
+    <p class="en-title">Three Gates, Endless Machines</p>
+
+    <p class="big dim mt">
+      «و» و«أو» و«ليس».<br>
+      رتّبها بأعداد كافية، فتحصل على آلة تحسب.
+    </p>
+
+    <div class="grid g3 mt">
+      <div class="card card--v center">
+        <div style="font-size:2.3rem">🔐</div>
+        <p class="card__body big">7408 تحمل أربع بوّابات «و»</p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.3rem">🪜</div>
+        <p class="card__body big">7432 تحمل أربع بوّابات «أو»</p>
+      </div>
+      <div class="card card--c center">
+        <div style="font-size:2.3rem">🔄</div>
+        <p class="card__body big">7404 تحمل ستّ بوّابات «ليس»</p>
+      </div>
+    </div>
+
+    <div class="note note--fun mt">
+      <div class="note__ico">✍️</div>
+      <div class="note__body big">
+        <strong>تحدٍّ منزلي:</strong> اختر جهازًا في بيتك، واكتب شرط تشغيله
+        بكلمتَي «و» و«أو». الغسّالة مثال جيّد.
+      </div>
+    </div>
+
+    <div class="row row--center mt" style="margin-top:24px">
+      <a class="btn" href="16-relay.html" style="text-decoration:none">الدرس التالي ◀</a>
+      <a class="btn btn--ghost" href="../index.html" style="text-decoration:none">🏠 كل الدروس</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script src="../assets/js/words.js"></script>
+<script src="../assets/js/parts.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/circuit.js"></script>
+<script src="../assets/js/uses.js"></script>
+<script src="../assets/js/uses-basic.js"></script>
+<script src="../assets/js/uses-sensors.js"></script>
+<script src="../assets/js/uses-robot.js"></script>
+<script src="../assets/js/logic.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/board.js"></script>
+<script src="../assets/js/deck.js"></script>
+</body>
+</html>

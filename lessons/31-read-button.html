@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدرس 31 — اللوحة تسمع الزرّ | The Button</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/deck.css">
+</head>
+<body data-lesson="e31" data-title="الدرس 31 — اللوحة تسمع الزرّ · The Button">
+<div class="deck">
+
+<!-- ══════ 1 · الغلاف — مشهد يومي ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:clamp(4.6rem,15vw,8rem)">👆</div>
+    <h1 class="title">في المصعد لوحة أزرار</h1>
+    <p class="en-title">Read a Button</p>
+    <p class="big dim mt">
+      تضغط رقم دورك، فيبدأ المصعد بالصعود.<br>
+      لكن كيف عرف أنّ إصبعك نزل على هذا الزرّ؟
+    </p>
+    <p class="mute mt">اضغط <kbd>◀</kbd> والجواب في الشاشة التالية.</p>
+  </div>
+</section>
+
+<!-- ══════ 2 · الزرّ نفسه ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">الزرّ اللحظي وما يفعله <span class="en-sub">The Push Button</span></h2>
+
+    <div class="part" data-part="button"></div>
+
+    <p class="big center mt">
+      داخله لوحان معدنيان متباعدان.<br>
+      إصبعك يقرّبهما، فيكتمل الطريق.<br>
+      ترفع إصبعك، فيفترقان من جديد.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 3 · الدائرة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">طرف يستمع وطرف يأمر <span class="en-sub">One Pin Listens, One Commands</span></h2>
+
+    <div class="circ" data-circ="button-led"></div>
+
+    <p class="big center mt">
+      الزرّ على الطرف ٢، والليد على الطرف ١٣.<br>
+      اضغط الزرّ في الرسم، وراقب السطر أسفله.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 4 · الرحلة من الإصبع إلى الضوء ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">رحلة قصيرة من الإصبع إلى الضوء <span class="en-sub">Finger to Light</span></h2>
+
+    <div class="anim" data-anim="press-steps"></div>
+
+    <p class="big center mt">
+      اللوحة لا تشعر بإصبعك أصلًا.<br>
+      هي تقيس جهد الطرف مرّات كثيرة كل ثانية.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 5 · حالتان لا ثالثة لهما ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">حالتان لا ثالثة لهما <span class="en-sub">HIGH or LOW</span></h2>
+
+    <div class="anim" data-anim="high-low"></div>
+
+    <p class="big center mt">
+      الطرف إمّا فيه جهد فهو <span class="term">high</span>،<br>
+      وإمّا بلا جهد فهو <span class="term">low</span>.<br>
+      ولا منزلة بينهما.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 6 · الطرف العائم ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="guide">
+      <div class="guide__face">⚡</div>
+      <div class="guide__bubble">
+        <p class="mb0">
+          سؤال يوقع كثيرين: زرّ غير مضغوط… فما جهد طرفه؟
+          <br>الجواب المزعج: لا أحد يدري.
+        </p>
+      </div>
+    </div>
+
+    <h2 style="text-align:center">طرف بلا رأي ثابت <span class="en-sub">The Floating Pin</span></h2>
+
+    <div style="font-size:3.4rem;text-align:center">🎲</div>
+
+    <p class="big center mt">
+      حين يُرفع الزرّ يبقى الطرف معلّقًا بلا وصلة.<br>
+      فتتأرجح قراءته بين الحالتين بلا معنى.
+    </p>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> العلاج <span class="term">input_pullup</span>؛
+        يربط مقاومة داخلية بين ٢٠ و٥٠ كيلو أوم بالموجب،
+        فتثبت القراءة عند HIGH حتى يُضغط الزرّ.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 7 · الكود ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">اقرأ… ثم قرّر <span class="en-sub">Read, Then Decide</span></h2>
+
+    <div style="font-size:2.8rem;text-align:center">👆 ➜ 💡</div>
+
+    <div class="code">
+      <div class="code__bar"><span class="code__dots"><i></i><i></i><i></i></span><span>button.ino</span></div>
+<pre><code><span class="k">if</span> (<span class="f">digitalRead</span>(<span class="n">2</span>) == <span class="k">LOW</span>) {
+  <span class="f">digitalWrite</span>(<span class="n">13</span>, <span class="k">HIGH</span>);
+} <span class="k">else</span> {
+  <span class="f">digitalWrite</span>(<span class="n">13</span>, <span class="k">LOW</span>);
+}</code></pre>
+    </div>
+
+    <p class="big center mt">
+      سطر يسأل، وسطران يجيبان.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 8 · سطرًا سطرًا ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">فكّ الأسطر كلمةً كلمة <span class="en-sub">Breaking It Down</span></h2>
+
+    <div class="anim" data-anim="button-press"></div>
+
+    <ol class="steps mt" style="--acc:var(--volt)">
+      <li><h4>digitalRead(2)</h4><p>انظر إلى الطرف ٢ وأعطني حالته الآن.</p></li>
+      <li><h4>== LOW</h4><p>أهي منخفضة؟ إذن الزرّ مضغوط.</p></li>
+      <li><h4>else</h4><p>وإن لم تكن كذلك، فالزرّ مرفوع.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══════ 9 · معرض تطبيقات الزرّ ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="uses" data-uses="button"></div>
+  </div>
+</section>
+
+<!-- ══════ 10 · الارتداد ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">ضغطة واحدة تُحسب ضغطات <span class="en-sub">Contact Bounce</span></h2>
+
+    <div style="font-size:3.4rem;text-align:center">〰️</div>
+
+    <p class="big center mt">
+      اللوحان يتلامسان ويفترقان مرّات سريعة<br>
+      في أوّل لحظة ضغط، قبل أن يستقرّا.<br>
+      فتعدّ اللوحة ضغطات، وأنت ضغطتَ مرّة.
+    </p>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> هذا الارتداد يستغرق نحو ٥ إلى ٢٠ ملّي ثانية،
+        وعلاجه <span class="term">debounce</span>: انتظار قصير بعد أوّل قراءة.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 11 · تحقّق ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">اختبر ما فهمتَه عن الأطراف <span class="en-sub">Check Your Pins</span></h2>
+
+    <div style="font-size:3.2rem;text-align:center">🧠</div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">لماذا لا نترك طرف الزرّ معلّقًا بلا مقاومة رفع؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">لأنه يسخن</button>
+          <button class="quiz__opt" data-right>لأن قراءته تتأرجح بلا معنى</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. الطرف العائم يلتقط تشويشًا، فيبدو مضغوطًا حينًا ومرفوعًا حينًا.
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">الزرّ مدخل أم مخرج بالنسبة إلى اللوحة؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt" data-right>مدخل، لأن اللوحة تقرأ منه</button>
+          <button class="quiz__opt">مخرج، لأن اللوحة تشغّله</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. <span class="term">input</span> يدخل الخبر منه،
+          و<span class="term">output</span> يخرج منه الأمر.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 12 · فرز ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">أيّها يحمل خبرًا وأيّها يحمل أمرًا؟ <span class="en-sub">Sort the Pins</span></h2>
+
+    <div style="font-size:3rem;text-align:center">↔️</div>
+
+    <div class="sortq mt">
+      <div class="sortq__item" data-answer="in">
+        <div class="sortq__row">
+          <span class="sortq__label big">🔘 زرّ الجرس</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="in">مدخل</button>
+            <button class="sortq__btn" data-val="out">مخرج</button>
+          </span>
+        </div>
+        <div class="sortq__why">مدخل — اللوحة تنتظر خبره ولا تأمره.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="out">
+        <div class="sortq__row">
+          <span class="sortq__label big">🔔 طنّان ينبّه</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="in">مدخل</button>
+            <button class="sortq__btn" data-val="out">مخرج</button>
+          </span>
+        </div>
+        <div class="sortq__why">مخرج — اللوحة هي التي تأمره بالصفير.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="in">
+        <div class="sortq__row">
+          <span class="sortq__label big">🌡️ حسّاس حرارة</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="in">مدخل</button>
+            <button class="sortq__btn" data-val="out">مخرج</button>
+          </span>
+        </div>
+        <div class="sortq__why">مدخل — يخبر اللوحة بحال الجوّ.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 13 · الخاتمة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:4rem">🔁</div>
+    <h2 class="title">صار بينك وبين اللوحة حوار</h2>
+    <p class="en-title">Now It Listens</p>
+
+    <div class="grid g2 mt">
+      <div class="card card--v center">
+        <div style="font-size:2.4rem">👆</div>
+        <p class="card__body big">أنت تضغط، واللوحة تقرأ الطرف</p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.4rem">💡</div>
+        <p class="card__body big">اللوحة تقرّر، فيستجيب الليد</p>
+      </div>
+    </div>
+
+    <div class="note note--fun mt">
+      <div class="note__ico">🕵️</div>
+      <div class="note__body big">
+        <strong>ابحث في بيتك:</strong> اضغط زرّ الميكروويف ضغطة واحدة برفق.
+        أارتفع الرقم درجة واحدة أم درجتين؟
+      </div>
+    </div>
+
+    <div class="row row--center mt" style="margin-top:24px">
+      <a class="btn" href="32-sensor-code.html" style="text-decoration:none">الدرس التالي ◀</a>
+      <a class="btn btn--ghost" href="../index.html" style="text-decoration:none">🏠 كل الدروس</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script src="../assets/js/words.js"></script>
+<script src="../assets/js/parts.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/circuit.js"></script>
+<script src="../assets/js/uses.js"></script>
+<script src="../assets/js/uses-basic.js"></script>
+<script src="../assets/js/uses-sensors.js"></script>
+<script src="../assets/js/uses-robot.js"></script>
+<script src="../assets/js/logic.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/board.js"></script>
+<script src="../assets/js/deck.js"></script>
+</body>
+</html>

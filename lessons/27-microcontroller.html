@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدرس 27 — لوحة التحكّم | Microcontroller</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/deck.css">
+</head>
+<body data-lesson="e27" data-title="الدرس 27 — لوحة التحكّم · Microcontroller">
+<div class="deck">
+
+<!-- ══════ 1 · الغلاف — مفارقة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:clamp(4.6rem,15vw,8rem)">🧠</div>
+    <h1 class="title">لوحة واحدة، وأعمال لا تُحصى</h1>
+    <p class="en-title">Microcontroller</p>
+    <p class="big dim mt">
+      دائرة المصباح تفعل شيئًا واحدًا إلى الأبد.<br>
+      وهذه اللوحة تُغيّر عملها بلا لحام ولا مقصّ.
+    </p>
+    <p class="mute mt">اضغط <kbd>◀</kbd> لترى كيف.</p>
+  </div>
+</section>
+
+<!-- ══════ 2 · ما هي ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">حاسوب صغير على لوحة <span class="en-sub">A Computer on a Board</span></h2>
+
+    <div class="anim" data-anim="board-hello"></div>
+
+    <p class="big center mt">
+      في وسطها رقاقة تنفّذ أوامرك بالترتيب.<br>
+      وحولها منافذ تصلها بالعالم.
+    </p>
+
+    <p class="center mt">اسمها بالإنجليزية: <span class="term">microcontroller</span> 🔊</p>
+  </div>
+</section>
+
+<!-- ══════ 3 · جولة على اللوحة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">جولة على أشهر لوحة <span class="en-sub">Around the Arduino</span></h2>
+
+    <div class="part" data-part="arduino"></div>
+
+    <p class="big center mt">
+      مقبس USB لإرسال البرنامج من الحاسوب،<br>
+      ورقاقة في الوسط، وصفّان من المنافذ على الحافّتين.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 4 · الأطراف ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">المنافذ المرقّمة على الحافّة <span class="en-sub">The Numbered Pins</span></h2>
+
+    <svg viewBox="0 0 340 180" width="100%" style="max-width:430px;display:block;margin:0 auto">
+      <rect x="30" y="52" width="280" height="80" rx="10" fill="#00838F"/>
+      <rect x="120" y="76" width="86" height="34" rx="5" fill="#212121"/>
+      <rect x="46" y="38" width="248" height="14" rx="3" fill="#1F2937"/>
+      <rect x="46" y="132" width="150" height="14" rx="3" fill="#1F2937"/>
+      <rect x="214" y="132" width="80" height="14" rx="3" fill="#7C2D12"/>
+      <text x="170" y="28" text-anchor="middle" style="font-size:16px;fill:#0F172A">أطراف رقمية</text>
+      <text x="120" y="166" text-anchor="middle" style="font-size:16px;fill:#0F172A">أطراف تناظرية</text>
+      <text x="254" y="166" text-anchor="middle" style="font-size:16px;fill:#7C2D12">طاقة</text>
+    </svg>
+
+    <p class="big center mt">
+      لكل منفذ رقم تناديه به في البرنامج.<br>
+      الرقمية للمفاتيح والمصابيح، والتناظرية للحسّاسات.
+    </p>
+
+    <p class="center mt">اسم المنفذ بالإنجليزية: <span class="term">pin</span> 🔊</p>
+  </div>
+</section>
+
+<!-- ══════ 5 · ثابتة أم مبرمَجة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="guide">
+      <div class="guide__face">⚡</div>
+      <div class="guide__bubble">
+        <p class="mb0">في دائرة المصباح، كيف تجعل الإضاءة تتوقّف كل ثانية؟<br>
+           بالأسلاك وحدها ستحتاج قطعًا كثيرة.</p>
+      </div>
+    </div>
+
+    <h2 style="text-align:center">أعِد التوصيل أم أعِد الكتابة؟ <span class="en-sub">Rewire or Rewrite</span></h2>
+
+    <div class="grid g2">
+      <div class="card card--r center">
+        <div style="font-size:2.6rem">🔩</div>
+        <p class="card__body big">
+          <strong>دائرة ثابتة</strong><br>
+          سلوكها في أسلاكها. لتغييره تفكّها وتبنيها من جديد.
+        </p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.6rem">💾</div>
+        <p class="card__body big">
+          <strong>لوحة تُبرمَج</strong><br>
+          سلوكها في برنامجها. تُبدّل السطور فيتبدّل العمل.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 6 · لماذا تُبرمَج ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">سطران يكفيان لأمر واحد <span class="en-sub">Two Lines Are Enough</span></h2>
+
+    <div style="font-size:2.6rem;text-align:center">⌨️</div>
+
+    <div class="code">
+      <div class="code__bar"><span class="code__dots"><i></i><i></i><i></i></span><span>pin</span></div>
+<pre><code>pinMode(13, OUTPUT);
+digitalWrite(13, HIGH);</code></pre>
+    </div>
+
+    <p class="big center mt">
+      السطر الأوّل يجعل المنفذ مخرَجًا.<br>
+      والثاني يرفع جهده، فيضيء الليد الموصول به.
+    </p>
+
+    <p class="center mt">اسم الأوامر بالإنجليزية: <span class="term">code</span> 🔊</p>
+  </div>
+</section>
+
+<!-- ══════ 7 · الدائرة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">منفذ واحد يقود مصباحًا <span class="en-sub">One Pin Drives a Lamp</span></h2>
+
+    <div class="circ" data-circ="pin13"></div>
+
+    <p class="big center mt">
+      اضغط الزرّ لترى الأمر ينتقل من الرقاقة إلى المنفذ.<br>
+      المقاومة بينهما تحمي المصباح.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 8 · حدود المنفذ ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">ما لا يقدر عليه المنفذ <span class="en-sub">Limits of a Single Pin</span></h2>
+
+    <div class="part" data-part="driver"></div>
+
+    <div class="note note--danger mt">
+      <div class="note__ico">⛔</div>
+      <div class="note__body big">
+        لا تصل محرّكًا بالمنفذ مباشرةً. المحرّك يسحب تيّارًا أكبر بكثير،
+        فيتلف المنفذ. ضع بينهما سائق محرّك أو مرحّلًا.
+      </div>
+    </div>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> منافذ أردوينو أونو تعمل عند ٥ فولت.
+        الحدّ الآمن للمنفذ الواحد ٢٠ ملّي أمبير، والحدّ الأقصى المطلق ٤٠.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 9 · معرض التطبيقات ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="uses" data-uses="microcontroller"></div>
+  </div>
+</section>
+
+<!-- ══════ 10 · أين تختبئ ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">لوحات تعمل ولا تراها <span class="en-sub">Boards You Never See</span></h2>
+
+    <div class="anim" data-anim="hidden-brains"></div>
+
+    <div class="sortq mt">
+      <div class="sortq__item" data-answer="yes">
+        <div class="sortq__row">
+          <span class="sortq__label big">🌀 غسّالة تختار البرنامج</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">فيها لوحة</button>
+            <button class="sortq__btn" data-val="no">بلا لوحة</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — كل برنامج غسيل سطور مكتوبة سلفًا.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="no">
+        <div class="sortq__row">
+          <span class="sortq__label big">🔦 كشّاف بمفتاح واحد</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">فيها لوحة</button>
+            <button class="sortq__btn" data-val="no">بلا لوحة</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — مفتاح وبطارية ومصباح، ولا قرار فيها.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 11 · اختبار ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">سؤالان يميّزان المهندس <span class="en-sub">Two Engineer Questions</span></h2>
+
+    <div style="font-size:3.4rem;text-align:center">🤔</div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">تريد المصباح يومض أسرع. ماذا تُغيّر؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt" data-right>سطرًا في البرنامج</button>
+          <button class="quiz__opt">سلكًا في الدائرة</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. هذا معنى «تُبرمَج»: السلوك يتغيّر والأسلاك مكانها.
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">وصّلتَ محرّكًا صغيرًا بالمنفذ مباشرةً؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">يدور بلا مشكلة</button>
+          <button class="quiz__opt" data-right>تيّاره أكبر ممّا يحتمل المنفذ</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. السائق أو المرحّل يأخذ التيّار الكبير عن اللوحة.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 12 · الخاتمة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:4.2rem">🗝️</div>
+    <h2 class="title">من دائرة تعمل إلى دائرة تُطيع</h2>
+    <p class="en-title">From Wiring to Instructions</p>
+
+    <div class="grid g3 mt">
+      <div class="card card--v center">
+        <div style="font-size:2.3rem">🔢</div>
+        <p class="card__body big">لكل منفذ رقم تناديه به</p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.3rem">✍️</div>
+        <p class="card__body big">السلوك في البرنامج لا في الأسلاك</p>
+      </div>
+      <div class="card card--r center">
+        <div style="font-size:2.3rem">⚖️</div>
+        <p class="card__body big">للمنفذ حدّ لا يتجاوزه</p>
+      </div>
+    </div>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">➡️</div>
+      <div class="note__body big">
+        في الدرس التالي سؤال واحد:
+        <strong>كم حالة يعرفها المنفذ الرقمي؟</strong>
+      </div>
+    </div>
+
+    <div class="row row--center mt" style="margin-top:24px">
+      <a class="btn" href="28-digital-io.html" style="text-decoration:none">الدرس التالي ◀</a>
+      <a class="btn btn--ghost" href="../index.html" style="text-decoration:none">🏠 كل الدروس</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script src="../assets/js/words.js"></script>
+<script src="../assets/js/parts.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/circuit.js"></script>
+<script src="../assets/js/uses.js"></script>
+<script src="../assets/js/uses-basic.js"></script>
+<script src="../assets/js/uses-sensors.js"></script>
+<script src="../assets/js/uses-robot.js"></script>
+<script src="../assets/js/logic.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/board.js"></script>
+<script src="../assets/js/deck.js"></script>
+</body>
+</html>

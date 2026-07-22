@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدرس 16 — مفتاح تضغطه الكهرباء | The Relay</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/deck.css">
+</head>
+<body data-lesson="e16" data-title="الدرس 16 — مفتاح تضغطه الكهرباء · The Relay">
+<div class="deck">
+
+<!-- ══════ 1 · الغلاف — تجربة مباشرة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:clamp(4.4rem,14vw,7.6rem)">👂</div>
+    <h1 class="title">أنصت إلى الثلّاجة قبل أن تعمل</h1>
+    <p class="en-title">Relay — Listen for the Click</p>
+    <p class="big dim mt">
+      ستسمع «طَقّة» قصيرة قبل الهدير.<br>
+      تلك طقّة قطعة تعمل الآن في مطبخك.
+    </p>
+    <p class="mute mt">اضغط <kbd>◀</kbd> لتعرف صاحبة الصوت.</p>
+  </div>
+</section>
+
+<!-- ══════ 2 · شكله ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">علبة زرقاء لها جانبان <span class="en-sub">Two Sides, One Box</span></h2>
+
+    <div class="part" data-part="relay"></div>
+
+    <div class="grid g2 mt">
+      <div class="card card--v center">
+        <div style="font-size:2.4rem">🪶</div>
+        <p class="card__body big">
+          <strong>الجانب الصغير</strong><br>
+          يدخله تيّار ضعيف من لوحة التحكّم.
+        </p>
+      </div>
+      <div class="card card--r center">
+        <div style="font-size:2.4rem">💪</div>
+        <p class="card__body big">
+          <strong>الجانب القويّ</strong><br>
+          يمرّ فيه تيّار المصباح أو المحرّك.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 3 · ما بداخله ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">ارفع الغطاء وانظر <span class="en-sub">Look Inside</span></h2>
+
+    <div class="part" data-part="relay-inside"></div>
+
+    <p class="big center mt">
+      سلك ملفوف حول قطعة حديد، وذراع قريبة منه.<br>
+      وفي طرف الذراع تلامسان معدنيّان.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 4 · كيف يعمل ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">كهرباء تصنع مغناطيسًا <span class="en-sub">Coil Becomes a Magnet</span></h2>
+
+    <div class="anim" data-anim="coil-arm"></div>
+
+    <p class="big center mt">
+      يمرّ التيّار الضعيف في الملفّ فيصير مغناطيسًا.<br>
+      المغناطيس يجذب الذراع، فيلتقي التلامسان.<br>
+      وهنا تُسمع الطقّة، ويمرّ التيّار الكبير.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 5 · العزل بين الجانبين ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">لا سلك يصل بين الجانبين <span class="en-sub">Full Separation</span></h2>
+
+    <div class="anim" data-anim="two-sides"></div>
+
+    <p class="big center mt">
+      الجذب يعبر بالمغناطيسية لا بالسلك.<br>
+      فيبقى الجانب القويّ بعيدًا عن يدك ولوحتك.<br>
+      هذه أهمّ فائدة في المرحّل.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 6 · معرض التطبيقات ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="uses" data-uses="relay"></div>
+  </div>
+</section>
+
+<!-- ══════ 7 · جرّب ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">اضغط الصغير ليعمل الكبير <span class="en-sub">Small Press, Big Load</span></h2>
+
+    <div class="circ" data-circ="relay-kid"></div>
+
+    <p class="big center mt">
+      مفتاحك يتحكّم في الملفّ وحده.<br>
+      والملفّ هو الذي يُغلق الطريق الكبير.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 8 · الدائرتان ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">دائرتان منفصلتان في رسم واحد <span class="en-sub">Two Circuits</span></h2>
+
+    <div class="circ" data-circ="relay-lamp"></div>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> ملفّ مرحّل ٥ فولت يسحب نحو ٧٠ ملّي أمبير،
+        وتلامساته تحتمل نحو ١٠ أمبير. ويُوضع دايود فوق الملفّ ليمتصّ نبضة الفصل.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 9 · المرحّل أم الترانزستور ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">متى نختاره بدل الترانزستور؟ <span class="en-sub">Relay or Transistor?</span></h2>
+
+    <div class="grid g2">
+      <div class="card card--r center">
+        <div style="font-size:2.6rem">🧲</div>
+        <p class="card__body big">
+          <strong>المرحّل</strong><br>
+          ذراع معدنية تتحرّك. بطيء وله صوت، لكنه يحتمل تيّارات كبيرة ويعزل تمامًا.
+        </p>
+      </div>
+      <div class="card card--c center">
+        <div style="font-size:2.6rem">⚡</div>
+        <p class="card__body big">
+          <strong>الترانزستور</strong><br>
+          بلا حركة ولا صوت، وسريع جدًّا. لكنه لا يفصل الجانبين، ولا يحتمل مثل ذلك.
+        </p>
+      </div>
+    </div>
+
+    <div class="note note--warn mt">
+      <div class="note__ico">⛔</div>
+      <div class="note__body big">
+        الجانب القويّ في البيت هو كهرباء الجدار.
+        تجاربك بالبطارية الصغيرة فقط، ومع أحد الكبار.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 10 · اختبار ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">سؤالان عن الذراع <span class="en-sub">Two on the Armature</span></h2>
+
+    <div style="font-size:3.4rem;text-align:center">🧲</div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">ما الذي يجذب الذراع داخل المرحّل؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">التيّار الكبير في الجانب الآخر</button>
+          <button class="quiz__opt" data-right>الملفّ حين يصير مغناطيسًا</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. التيّار الضعيف في الملفّ هو مصدر الجذب.
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">لماذا يُستعمل مع الأجهزة القويّة تحديدًا؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt" data-right>يفصل الجانب القويّ عن جانب التحكّم</button>
+          <button class="quiz__opt">لأنه الأسرع</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. لا سلك بين الجانبين،<br>
+          فلا يصل الخطر إلى لوحتك.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 11 · فرز ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">لهذه المهمّة: مرحّل أم ترانزستور؟ <span class="en-sub">Choose the Switch</span></h2>
+
+    <div style="font-size:3rem;text-align:center">🔧</div>
+
+    <div class="sortq mt">
+      <div class="sortq__item" data-answer="rel">
+        <div class="sortq__row">
+          <span class="sortq__label big">💡 تشغيل مصباح الغرفة من كهرباء الجدار</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="rel">مرحّل</button>
+            <button class="sortq__btn" data-val="tr">ترانزستور</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — نحتاج فصلًا تامًّا عن الجهد العالي.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="tr">
+        <div class="sortq__row">
+          <span class="sortq__label big">✨ إطفاء ليد وإشعاله ألف مرّة في الثانية</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="rel">مرحّل</button>
+            <button class="sortq__btn" data-val="tr">ترانزستور</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — الذراع المعدنية لا تلحق بهذه السرعة.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="rel">
+        <div class="sortq__row">
+          <span class="sortq__label big">🔥 تشغيل سخّان ماء كبير</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="rel">مرحّل</button>
+            <button class="sortq__btn" data-val="tr">ترانزستور</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — تيّار كبير جدًّا، والتلامسان يحتملانه.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 12 · الخاتمة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:4rem">🔊</div>
+    <h2 class="title">صار للطقّة معنى</h2>
+    <p class="en-title">Now You Know That Sound</p>
+
+    <p class="big dim mt">
+      كلّما سمعتها في الثلّاجة أو المكيّف،<br>
+      فاعلم أنّ ذراعًا صغيرة تحرّكت الآن.
+    </p>
+
+    <div class="grid g3 mt">
+      <div class="card card--v center">
+        <div style="font-size:2.3rem">🪶</div>
+        <p class="card__body big">تيّار صغير في الملفّ</p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.3rem">🧲</div>
+        <p class="card__body big">مغناطيس يجذب الذراع</p>
+      </div>
+      <div class="card card--r center">
+        <div style="font-size:2.3rem">💪</div>
+        <p class="card__body big">تيّار كبير يمرّ في الجانب الآخر</p>
+      </div>
+    </div>
+
+    <div class="note note--fun mt">
+      <div class="note__ico">🕵️</div>
+      <div class="note__body big">
+        <strong>مهمّة استماع:</strong> راقب المكيّف والغسّالة وفرن الكهرباء.
+        أحصِ كم طقّة تسمع في ساعة واحدة.
+      </div>
+    </div>
+
+    <div class="row row--center mt" style="margin-top:24px">
+      <a class="btn" href="17-buzzer-speaker.html" style="text-decoration:none">الدرس التالي ◀</a>
+      <a class="btn btn--ghost" href="../index.html" style="text-decoration:none">🏠 كل الدروس</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script src="../assets/js/words.js"></script>
+<script src="../assets/js/parts.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/circuit.js"></script>
+<script src="../assets/js/uses.js"></script>
+<script src="../assets/js/uses-basic.js"></script>
+<script src="../assets/js/uses-sensors.js"></script>
+<script src="../assets/js/uses-robot.js"></script>
+<script src="../assets/js/logic.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/board.js"></script>
+<script src="../assets/js/deck.js"></script>
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدرس 12 — الطريق باتجاه واحد | The Diode</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/deck.css">
+</head>
+<body data-lesson="e12" data-title="الدرس 12 — الطريق باتجاه واحد · The Diode">
+<div class="deck">
+
+<!-- ══════ 1 · الغلاف — مشهد يومي ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:clamp(4.4rem,14vw,7.6rem)">🚇</div>
+    <h1 class="title">بوّابة تسمح بجهة وتمنع الأخرى</h1>
+    <p class="en-title">Diode — The One-Way Gate</p>
+    <p class="big dim mt">
+      بوّابة المترو تُدخلك، ولا تدعك ترجع منها.<br>
+      وفي الدائرة قطعة تفعل هذا بالتيّار.
+    </p>
+    <p class="mute mt">اضغط <kbd>◀</kbd> لتتعرّف عليها.</p>
+  </div>
+</section>
+
+<!-- ══════ 2 · شكله ورمزه ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">حبّة سوداء عليها شريط <span class="en-sub">The Stripe Tells You</span></h2>
+
+    <div class="part" data-part="diode"></div>
+
+    <div class="grid g2 mt">
+      <div class="card card--v center">
+        <div style="font-size:2.4rem">🎗️</div>
+        <p class="card__body big">
+          الشريط الفاتح يُعلِّم <strong>طرف الخروج</strong>.
+        </p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.4rem">📐</div>
+        <p class="card__body big">
+          الرمز مثلّث يشير إلى خطّ. رأس المثلّث جهة المرور.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 3 · كيف يعمل ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">جهة سالكة وجهة مغلقة <span class="en-sub">Pass or Block</span></h2>
+
+    <div class="anim" data-anim="one-way"></div>
+
+    <p class="big center mt">
+      داخله مادّتان مختلفتان تلتقيان عند حدّ.<br>
+      عند هذا الحدّ يعبر التيّار في جهة واحدة،<br>
+      ويُصدّ في الجهة المقابلة.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 4 · معرض التطبيقات ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="uses" data-uses="diode"></div>
+  </div>
+</section>
+
+<!-- ══════ 5 · التوصيل الأمامي ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">وصِّله في جهته فيسلك التيّار <span class="en-sub">Forward Bias</span></h2>
+
+    <div class="circ" data-circ="diode-forward"></div>
+
+    <p class="big center mt">
+      الشريط ناحية الطرف السالب.<br>
+      أغلِق المفتاح: النقاط تجري، والمصباح يعمل.
+    </p>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> الدايود السيليكوني لا يبدأ التمرير قبل نحو ٠٫٧ فولت.
+        هذا الفرق يبقى عليه دائمًا، ويظهر حرارةً خفيفة.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 6 · التوصيل العكسي ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">اقلِبه فيُسدّ الطريق <span class="en-sub">Reverse Bias</span></h2>
+
+    <div class="circ" data-circ="diode-reverse"></div>
+
+    <p class="big center mt">
+      الشريط صار ناحية الطرف الموجب.<br>
+      المفتاح مغلق، والدائرة كاملة… ولا تيّار.<br>
+      الدايود وحده أوقف كل شيء.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 7 · ماذا لو غاب ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">حارس البطارية المقلوبة <span class="en-sub">Reverse Protection</span></h2>
+
+    <div class="grid g2">
+      <div class="card card--r center">
+        <div style="font-size:2.6rem">💥</div>
+        <p class="card__body big">
+          <strong>بلا دايود</strong><br>
+          تُركَّب البطارية بالمقلوب، فيدخل التيّار معكوسًا ويُتلف اللوحة.
+        </p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.6rem">🛡️</div>
+        <p class="card__body big">
+          <strong>مع دايود</strong><br>
+          التيّار المعكوس لا يمرّ، فلا يصل إلى شيء. الجهاز يصمت فقط.
+        </p>
+      </div>
+    </div>
+
+    <div class="note note--fun mt">
+      <div class="note__ico">🎮</div>
+      <div class="note__body big">
+        افتح بيت البطارية في لعبة قديمة.
+        كثير منها يحمل دايودًا صغيرًا لهذا السبب وحده.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 8 · التقويم ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">كيف يُرتِّب الشاحن كهرباء الجدار؟ <span class="en-sub">Rectification</span></h2>
+
+    <div class="grid g2">
+      <div class="card card--c center">
+        <div style="font-size:2.8rem">🔌</div>
+        <p class="card__body big">
+          كهرباء المقبس تُبدِّل جهتها عشرات المرّات في الثانية.
+        </p>
+      </div>
+      <div class="card card--v center">
+        <div style="font-size:2.8rem">📱</div>
+        <p class="card__body big">
+          والهاتف يحتاج تيّارًا في جهة ثابتة لا تتبدّل.
+        </p>
+      </div>
+    </div>
+
+    <p class="big center mt">
+      داخل الشاحن أربعة دايودات ترتّب الجهة.<br>
+      اسم هذا العمل: <strong>التقويم</strong>.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 9 · اختبار ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">سؤالان عن الجهة <span class="en-sub">Which Way?</span></h2>
+
+    <div style="font-size:3.4rem;text-align:center">🧭</div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">وصّلتَ الدايود معكوسًا في دائرة سليمة. ماذا يحدث؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">يمرّ التيّار كالمعتاد</button>
+          <button class="quiz__opt" data-right>لا يمرّ تيّار إطلاقًا</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. الجهة العكسية مسدودة،<br>
+          فتبقى الدائرة كاملة بلا تيّار.
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">ما صلة الليد بالدايود؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt" data-right>الليد دايود يُصدر ضوءًا أيضًا</button>
+          <button class="quiz__opt">لا صلة بينهما</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. كلاهما يمرّر في جهة واحدة،<br>
+          والليد يزيد الضوء.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 10 · فرز ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">هل يمرّ التيّار هنا؟ <span class="en-sub">Will It Conduct?</span></h2>
+
+    <div style="font-size:3rem;text-align:center">🔀</div>
+
+    <div class="sortq mt">
+      <div class="sortq__item" data-answer="yes">
+        <div class="sortq__row">
+          <span class="sortq__label big">🎗️ الشريط ناحية السالب</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">يمرّ</button>
+            <button class="sortq__btn" data-val="no">لا يمرّ</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — هذه جهته الأمامية، فيسلك التيّار.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="no">
+        <div class="sortq__row">
+          <span class="sortq__label big">🎗️ الشريط ناحية الموجب</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">يمرّ</button>
+            <button class="sortq__btn" data-val="no">لا يمرّ</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — جهة عكسية، فيُسدّ الطريق.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="no">
+        <div class="sortq__row">
+          <span class="sortq__label big">🪫 بطارية فرغت تمامًا</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">يمرّ</button>
+            <button class="sortq__btn" data-val="no">لا يمرّ</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — لا دافع، فلا تيّار مهما كانت الجهة.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 11 · الخاتمة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:4rem">➡️</div>
+    <h2 class="title">الدايود في سطر واحد</h2>
+    <p class="en-title">One Line to Keep</p>
+
+    <p class="big dim mt">
+      يمرّر في جهة، ويمنع في الجهة المقابلة.
+    </p>
+
+    <div class="grid g3 mt">
+      <div class="card card--v center">
+        <div style="font-size:2.3rem">🎗️</div>
+        <p class="card__body big">الشريط يدلّ على جهة الخروج</p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.3rem">🛡️</div>
+        <p class="card__body big">يحمي من البطارية المقلوبة</p>
+      </div>
+      <div class="card card--c center">
+        <div style="font-size:2.3rem">🔌</div>
+        <p class="card__body big">يرتّب كهرباء الشاحن</p>
+      </div>
+    </div>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">➡️</div>
+      <div class="note__body big">
+        الدايود يفتح الطريق ويغلقه.
+        وفي الدرس التالي قطعة أخرى:
+        <strong>تحتفظ بالشحنة لحظةً، ثم تُطلقها دفعة واحدة.</strong>
+      </div>
+    </div>
+
+    <div class="row row--center mt" style="margin-top:24px">
+      <a class="btn" href="13-capacitor.html" style="text-decoration:none">الدرس التالي ◀</a>
+      <a class="btn btn--ghost" href="../index.html" style="text-decoration:none">🏠 كل الدروس</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script src="../assets/js/words.js"></script>
+<script src="../assets/js/parts.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/circuit.js"></script>
+<script src="../assets/js/uses.js"></script>
+<script src="../assets/js/uses-basic.js"></script>
+<script src="../assets/js/uses-sensors.js"></script>
+<script src="../assets/js/uses-robot.js"></script>
+<script src="../assets/js/logic.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/board.js"></script>
+<script src="../assets/js/deck.js"></script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدرس 32 — عين ترى الظلام | The Sensor Decides</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/deck.css">
+</head>
+<body data-lesson="e32" data-title="الدرس 32 — عين ترى الظلام · The Sensor Decides">
+<div class="deck">
+
+<!-- ══════ 1 · الغلاف — تجربة مباشرة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:clamp(4.6rem,15vw,8rem)">🌗</div>
+    <h1 class="title">غطِّ الحسّاس بإبهامك</h1>
+    <p class="en-title">The Sensor Decides</p>
+    <p class="big dim mt">
+      الزرّ يعطي خبرين اثنين: مضغوط أو مرفوع.<br>
+      أمّا الحسّاس فيعطي رقمًا يتغيّر باستمرار.
+    </p>
+    <p class="mute mt">اضغط <kbd>◀</kbd> لنقرأ ذلك الرقم.</p>
+  </div>
+</section>
+
+<!-- ══════ 2 · الحسّاس ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">قطعة تترجم الضوء إلى مقاومة <span class="en-sub">Light Becomes Resistance</span></h2>
+
+    <div class="part" data-part="ldr"></div>
+
+    <p class="big center mt">
+      في الضوء تصغر مقاومته، وفي الظلام تكبر.<br>
+      واللوحة لا تقيس الضوء، بل تقيس الجهد الناتج.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 3 · مدى القراءة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">رقم بين صفر وألف وثلاثة وعشرين <span class="en-sub">The Reading Range</span></h2>
+
+    <div style="font-size:3.4rem;text-align:center">🔢</div>
+
+    <div class="stats mt">
+      <div class="stat"><b>0</b><span>ظلام تامّ</span></div>
+      <div class="stat"><b>500</b><span>غرفة عادية</span></div>
+      <div class="stat"><b>1023</b><span>شمس مباشرة</span></div>
+    </div>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> <span class="term">analogread</span> يعطي رقمًا
+        من ٠ إلى ١٠٢٣، لأنه يقسّم مدى الجهد إلى ١٠٢٤ درجة.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 4 · الدائرة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">إنارة تشتغل وحدها <span class="en-sub">The Automatic Lamp</span></h2>
+
+    <div class="circ" data-circ="night-light"></div>
+
+    <p class="big center mt">
+      أطفئ ضوء الغرفة في الرسم.<br>
+      الحسّاس يخبر اللوحة، واللوحة تُشعل الليد.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 5 · الرقم يتبع الضوء ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">ينزل الضوء فينزل الرقم معه <span class="en-sub">The Number Follows the Light</span></h2>
+
+    <div class="anim" data-anim="day-night"></div>
+
+    <p class="big center mt">
+      لا قفزة مفاجئة بين نهار وليل.<br>
+      الرقم ينحدر ببطء مع غروب الشمس.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 6 · العتبة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="guide">
+      <div class="guide__face">⚡</div>
+      <div class="guide__bubble">
+        <p class="mb0">
+          الرقم متدرّج، والليد ليس متدرّجًا: يضيء أو ينطفئ.
+          <br>فمن يفصل بين الحالتين؟ أنت.
+        </p>
+      </div>
+    </div>
+
+    <h2 style="text-align:center">خطّ تختاره أنت بين حالتين <span class="en-sub">Choosing a Threshold</span></h2>
+
+    <div style="font-size:3.4rem;text-align:center">📏</div>
+
+    <p class="big center mt">
+      نختار رقمًا، وليكن ٣٠٠.<br>
+      ما دونه نعدّه ظلامًا، وما فوقه نعدّه ضوءًا.<br>
+      هذا الرقم اسمه <span class="term">threshold</span>.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 7 · الكود ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">سطر يقيس وسطران يحكمان <span class="en-sub">Measure, Then Judge</span></h2>
+
+    <div style="font-size:2.8rem;text-align:center">🌙 ➜ 💡</div>
+
+    <div class="code">
+      <div class="code__bar"><span class="code__dots"><i></i><i></i><i></i></span><span>nightlight.ino</span></div>
+<pre><code><span class="t">int</span> x = <span class="f">analogRead</span>(<span class="n">A0</span>);
+<span class="k">if</span> (x &lt; <span class="n">300</span>) <span class="f">digitalWrite</span>(<span class="n">13</span>, <span class="k">HIGH</span>);
+<span class="k">else</span>        <span class="f">digitalWrite</span>(<span class="n">13</span>, <span class="k">LOW</span>);</code></pre>
+    </div>
+
+    <p class="big center mt">
+      ثلاثة أسطر تصنع مصباح ممرّ حقيقيًّا.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 8 · شرح الأسطر ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">ثلاثة أسطر تحت المجهر <span class="en-sub">Under the Microscope</span></h2>
+
+    <div style="font-size:3.4rem;text-align:center">🔬</div>
+
+    <ol class="steps mt" style="--acc:var(--ok)">
+      <li><h4>int x = analogRead(A0)</h4><p>خذ قراءة الحسّاس واحفظها في صندوق اسمه x.</p></li>
+      <li><h4>if (x &lt; 300)</h4><p>أصغر من العتبة؟ إذن المكان مظلم.</p></li>
+      <li><h4>else</h4><p>وإلّا فالضوء كافٍ، ولا حاجة إلى الإنارة.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══════ 9 · معرض تطبيقات حسّاس الضوء ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="uses" data-uses="ldr"></div>
+  </div>
+</section>
+
+<!-- ══════ 10 · المعايرة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">لا تخمّن الرقم… قِسه <span class="en-sub">Measure Before You Choose</span></h2>
+
+    <div style="font-size:3.4rem;text-align:center">📋</div>
+
+    <p class="big center mt">
+      اقرأ الحسّاس نهارًا، ثم اقرأه ليلًا.<br>
+      وضع العتبة بين القراءتين، لا في أوّل رقم يخطر لك.
+    </p>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> هذه <span class="term">calibration</span>.
+        القيم تختلف باختلاف الغرفة والحسّاس والمقاومة المرافقة له.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 11 · تحقّق ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">قرارات صغيرة لها سبب <span class="en-sub">Reason It Out</span></h2>
+
+    <div style="font-size:3.2rem;text-align:center">💭</div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">مصباح الممرّ يبقى مضيئًا نهارًا. ما العلاج؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">نكبّر العتبة كثيرًا</button>
+          <button class="quiz__opt" data-right>نصغّر العتبة حتى تناسب ضوء النهار</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. عتبة عالية تجعل النهار نفسه يُعدّ ظلامًا.
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">لماذا نستعمل analogRead لا digitalRead هنا؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt" data-right>لأن الضوء درجات، لا حالتين</button>
+          <button class="quiz__opt">لأنه أسرع</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. الزرّ حالتان، والضوء مدى متّصل من العتمة إلى الوهج.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 12 · الخاتمة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:4rem">🌃</div>
+    <h2 class="title">أوّل قرار تتّخذه اللوحة وحدها</h2>
+    <p class="en-title">Its First Decision</p>
+
+    <div class="grid g3 mt">
+      <div class="card card--c center">
+        <div style="font-size:2.3rem">👁️</div>
+        <p class="card__body big">تقرأ رقمًا من الحسّاس</p>
+      </div>
+      <div class="card card--v center">
+        <div style="font-size:2.3rem">📏</div>
+        <p class="card__body big">تقارنه بعتبة اخترتَها</p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.3rem">💡</div>
+        <p class="card__body big">تنفّذ ما يوافق النتيجة</p>
+      </div>
+    </div>
+
+    <div class="note note--fun mt">
+      <div class="note__ico">🌆</div>
+      <div class="note__body big">
+        <strong>راقب المساء:</strong> أعمدة إنارة الشارع تشتغل واحدًا بعد آخر.
+        لأن لكل عمود حسّاسه وعتبته الخاصّة به.
+      </div>
+    </div>
+
+    <div class="row row--center mt" style="margin-top:24px">
+      <a class="btn" href="33-motors.html" style="text-decoration:none">الدرس التالي ◀</a>
+      <a class="btn btn--ghost" href="../index.html" style="text-decoration:none">🏠 كل الدروس</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script src="../assets/js/words.js"></script>
+<script src="../assets/js/parts.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/circuit.js"></script>
+<script src="../assets/js/uses.js"></script>
+<script src="../assets/js/uses-basic.js"></script>
+<script src="../assets/js/uses-sensors.js"></script>
+<script src="../assets/js/uses-robot.js"></script>
+<script src="../assets/js/logic.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/board.js"></script>
+<script src="../assets/js/deck.js"></script>
+</body>
+</html>

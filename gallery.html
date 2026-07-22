@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>معرض الرسوم — مراجعة بصرية | Drawing Gallery</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/deck.css">
+<style>
+  body { background: var(--bg); overflow: auto; }
+  .g { max-width: 1280px; margin: 0 auto; padding: 34px 20px 70px; }
+  .g h1 { margin: 0 0 6px; }
+  .lead { color: var(--ink-2); margin: 0 0 22px; }
+  .bar {
+    position: sticky; top: 0; z-index: 5; display: flex; flex-wrap: wrap; gap: 10px;
+    background: var(--paper); border: 2px solid var(--line); border-radius: var(--r);
+    padding: 12px 16px; margin-bottom: 24px; box-shadow: var(--sh); align-items: center;
+  }
+  .bar b { font-family: var(--mono); color: var(--volt); }
+  .sec { margin-bottom: 34px; }
+  .sec > h2 {
+    font-size: 1.2rem; margin: 0 0 13px; padding-inline-start: 12px;
+    border-inline-start: 5px solid var(--volt); border-radius: 3px;
+  }
+  .parts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 13px; }
+  .dupe { outline: 3px solid var(--res); outline-offset: 3px; }
+  #report {
+    background: var(--paper); border: 2px solid var(--line); border-radius: var(--r);
+    padding: 16px 20px; margin-bottom: 24px; font-size: .95rem;
+  }
+  #report li { margin: 4px 0; }
+  .ok { color: var(--ok); font-weight: 800; }
+  .bad { color: var(--res); font-weight: 800; }
+</style>
+</head>
+<body>
+<div class="g">
+  <h1>معرض الرسوم — مراجعة بصرية</h1>
+  <p class="lead">كل رسم في الكورس على صفحة واحدة. أي رسم مكرّر يُحاط بإطار أحمر تلقائيًّا.</p>
+
+  <div class="bar" id="bar">جارٍ التحميل…</div>
+  <div id="report"></div>
+  <div id="out"></div>
+</div>
+
+<script src="assets/js/parts.js"></script>
+<script src="assets/js/uses.js"></script>
+<script src="assets/js/uses-basic.js"></script>
+<script src="assets/js/uses-sensors.js"></script>
+<script src="assets/js/uses-robot.js"></script>
+<script src="assets/js/logic.js"></script>
+<script>
+(function () {
+  const out = document.getElementById('out');
+  const seen = new Map();          // بصمة الرسم → أوّل موضع
+  const dupes = [];
+  let total = 0;
+
+  /* بصمة: نطبّع المسافات فقط — أي رسمين متطابقين شكلًا لهما البصمة نفسها */
+  const fp = (svg) => String(svg).replace(/\s+/g, ' ').trim();
+
+  function track(svg, where) {
+    total++;
+    const k = fp(svg);
+    if (seen.has(k)) { dupes.push({ a: seen.get(k), b: where }); return true; }
+    seen.set(k, where);
+    return false;
+  }
+
+  /* ─── معارض التطبيقات ─── */
+  const U = window.USES || {};
+  const keys = Object.keys(U).sort();
+  for (const k of keys) {
+    const u = U[k];
+    const sec = document.createElement('section');
+    sec.className = 'sec';
+    sec.innerHTML = `<h2>${u.ar} <span style="font-family:var(--mono);font-size:.8rem;color:var(--ink-3)">${u.en} · ${u.items.length} تطبيق</span></h2>`;
+
+    const box = document.createElement('div');
+    box.className = 'uses';
+    const cells = u.items.map((it) => {
+      const dup = track(it.svg, `${u.ar} › ${it.ar}`);
+      return `<figure class="use${dup ? ' dupe' : ''}">
+          <div class="use__svg">${it.svg}</div>
+          <figcaption class="use__cap">
+            <span class="use__ar">${it.ar}</span>
+            <span class="use__en">${it.en}</span>
+            <span class="use__line">${it.line}</span>
+          </figcaption></figure>`;
+    }).join('');
+    box.innerHTML = `<div class="uses__head">${u.ar} <span class="uses__en">${u.en}</span></div>
+                     <div class="uses__grid">${cells}</div>`;
+    sec.appendChild(box);
+    out.appendChild(sec);
+  }
+
+  /* ─── رسوم العناصر ─── */
+  const P = window.PARTS || {};
+  const pk = Object.keys(P).sort();
+  if (pk.length) {
+    const sec = document.createElement('section');
+    sec.className = 'sec';
+    sec.innerHTML = `<h2>رسوم العناصر <span style="font-family:var(--mono);font-size:.8rem;color:var(--ink-3)">Components · ${pk.length}</span></h2>`;
+    const grid = document.createElement('div');
+    grid.className = 'parts-grid';
+    for (const k of pk) {
+      const p = P[k];
+      if (p.real) track(p.real, `عنصر › ${p.ar} (شكل)`);
+      if (p.sym)  track(p.sym,  `عنصر › ${p.ar} (رمز)`);
+      const d = document.createElement('div');
+      d.className = 'part';
+      d.dataset.part = k;
+      d.innerHTML =
+        `<div class="part__head"><span class="part__ar">${p.ar}</span>
+           <span class="part__en">${p.en}</span></div>
+         <div class="part__figs">
+           ${p.real ? `<figure class="part__fig"><div class="part__svg">${p.real}</div><figcaption>شكله</figcaption></figure>` : ''}
+           ${p.sym  ? `<figure class="part__fig"><div class="part__svg part__svg--sym">${p.sym}</div><figcaption>رمزه</figcaption></figure>` : ''}
+         </div>`;
+      grid.appendChild(d);
+    }
+    sec.appendChild(grid);
+    out.appendChild(sec);
+  }
+
+  /* ─── بوّابات المنطق ─── */
+  const G = window.GATES || {};
+  const gk = Object.keys(G);
+  if (gk.length) {
+    const sec = document.createElement('section');
+    sec.className = 'sec';
+    sec.innerHTML = `<h2>بوّابات المنطق <span style="font-family:var(--mono);font-size:.8rem;color:var(--ink-3)">Logic Gates · ${gk.length}</span></h2>`;
+    for (const k of gk) {
+      const d = document.createElement('div');
+      d.className = 'gate';
+      d.dataset.gate = k;
+      sec.appendChild(d);
+    }
+    out.appendChild(sec);
+    if (window.document.readyState !== 'loading') {
+      document.querySelectorAll('.gate[data-gate]').forEach(() => {});
+    }
+  }
+
+  /* ─── التقرير ─── */
+  document.getElementById('bar').innerHTML =
+    `<span>معارض: <b>${keys.length}</b></span>
+     <span>رسوم تطبيقات: <b>${keys.reduce((n, k) => n + U[k].items.length, 0)}</b></span>
+     <span>عناصر: <b>${pk.length}</b></span>
+     <span>إجمالي الرسوم المفحوصة: <b>${total}</b></span>
+     <span>${dupes.length ? `<span class="bad">مكرّر: ${dupes.length}</span>` : '<span class="ok">✓ لا تكرار</span>'}</span>`;
+
+  const rep = document.getElementById('report');
+  if (dupes.length) {
+    rep.innerHTML = '<strong class="bad">رسوم مكرّرة — يجب تغييرها:</strong><ul>' +
+      dupes.map((d) => `<li>«${d.b}» يطابق «${d.a}»</li>`).join('') + '</ul>';
+  } else {
+    rep.innerHTML = '<span class="ok">✓ كل رسم في الكورس فريد — لا تكرار.</span>';
+  }
+})();
+</script>
+</body>
+</html>

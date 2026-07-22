@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدرس 33 — عضلات الروبوت | Motors</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/deck.css">
+</head>
+<body data-lesson="e33" data-title="الدرس 33 — عضلات الروبوت · Motors">
+<div class="deck">
+
+<!-- ══════ 1 · الغلاف — مفارقة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:clamp(4.6rem,15vw,8rem)">⚙️</div>
+    <h1 class="title">طرف يُشعل مصباحًا ولا يُدير عجلة</h1>
+    <p class="en-title">Motors</p>
+    <p class="big dim mt">
+      الطرف نفسه الذي أضاء الليد بسهولة<br>
+      يعجز عن إدارة محرّك أصغر من إبهامك.
+    </p>
+    <p class="mute mt">اضغط <kbd>◀</kbd> والسبب رقم واحد.</p>
+  </div>
+</section>
+
+<!-- ══════ 2 · المحرّك ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">قطعة تحوّل الكهرباء دورانًا <span class="en-sub">Electricity Into Spin</span></h2>
+
+    <div class="part" data-part="motor"></div>
+
+    <p class="big center mt">
+      داخله ملفّ ومغناطيس.<br>
+      يمرّ التيّار في الملفّ فيُدفع ويُجذب،<br>
+      فيدور المحور دورة بعد دورة.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 3 · عكس الاتجاه ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">بدِّل الطرفين ينعكس الدوران <span class="en-sub">Swap the Leads</span></h2>
+
+    <div class="anim" data-anim="wheel-turn"></div>
+
+    <p class="big center mt">
+      لا تحتاج قطعة جديدة كي يرجع الروبوت.<br>
+      يكفي أن يعكس السائق اتجاه التيّار.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 4 · المحرّك والسيرفو ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">أحدهما يدور بلا نهاية والآخر يقف حيث تأمره <span class="en-sub">DC Motor vs Servo</span></h2>
+
+    <div class="part" data-part="servo"></div>
+
+    <div class="grid g2 mt">
+      <div class="card card--c center">
+        <div style="font-size:2.4rem">🚗</div>
+        <p class="card__body big">
+          <strong>المحرّك العادي</strong><br>
+          تعطيه كهرباء فيدور. لا يعرف موضعه ولا كم دار.
+        </p>
+      </div>
+      <div class="card card--v center">
+        <div style="font-size:2.4rem">🦾</div>
+        <p class="card__body big">
+          <strong>السيرفو</strong><br>
+          تعطيه زاوية فيذهب إليها ويثبت عندها.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 5 · كيف يعرف السيرفو موضعه ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">كيف يعرف السيرفو أنه وصل؟ <span class="en-sub">Inside the Servo</span></h2>
+
+    <div class="part" data-part="stepper"></div>
+
+    <p class="big center mt">
+      داخل السيرفو محرّك ومقياس زاوية معًا.<br>
+      يقيس موضعه، فإن جاوز الهدف صحّح نفسه.<br>
+      وهذا المحرّك الثالث يمشي خطوات محسوبة.
+    </p>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> سيرفو الهواة يدور بين ٠ و١٨٠ درجة،
+        ويُؤمَر بنبضة يتراوح عرضها بين ١ و٢ ملّي ثانية.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 6 · السبب: التيّار ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="guide">
+      <div class="guide__face">⚡</div>
+      <div class="guide__bubble">
+        <p class="mb0">
+          الليد يكتفي بعشرين ملّي أمبير.
+          <br>والمحرّك يطلب أضعاف ذلك. وهنا تقع الكارثة.
+        </p>
+      </div>
+    </div>
+
+    <h2 style="text-align:center">لماذا يتلف طرف اللوحة؟ <span class="en-sub">Why the Pin Burns</span></h2>
+
+    <div class="anim" data-anim="motor-help"></div>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> طرف Arduino Uno يعطي ٥ فولت،
+        وتيّاره الآمن ٢٠ ملّي أمبير، وحدّه الأقصى ٤٠.
+        والمحرّك الصغير يسحب نحو ٢٠٠ ملّي أمبير، ويتجاوز الأمبير عند تعثّره.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 7 · القاعدة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">قاعدة لا تُخالَف مع أي حِمل ثقيل <span class="en-sub">The Rule</span></h2>
+
+    <div style="font-size:3.6rem;text-align:center">⛔</div>
+
+    <div class="danger mt">
+      <div class="danger__title">لا توصّل المحرّك بطرف اللوحة</div>
+      <ul style="font-size:1.08em">
+        <li>الطرف يعطي إشارة، لا قوّة.</li>
+        <li>التيّار الكبير يحرق الطرف، وقد يتلف اللوحة كلّها.</li>
+        <li>قوّة المحرّك تأتي من البطارية عبر سائق محرّك أو مرحّل.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 8 · سائق المحرّك ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">بوّابة بين إشارة ضعيفة وتيّار قويّ <span class="en-sub">The Motor Driver</span></h2>
+
+    <div class="part" data-part="driver"></div>
+
+    <p class="big center mt">
+      اللوحة تقول للسائق: أدِر إلى الأمام.<br>
+      والسائق يفتح للمحرّك طريقًا من البطارية.<br>
+      فلا يمرّ التيّار الكبير في اللوحة أبدًا.
+    </p>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> داخل السائق <span class="term">h-bridge</span>،
+        وهو أربعة مفاتيح تعكس اتجاه التيّار في المحرّك بأمر من اللوحة.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 9 · جرّبها ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">أدِر المحور على الشاشة <span class="en-sub">Spin It Here</span></h2>
+
+    <div class="circ" data-circ="motor"></div>
+
+    <p class="big center mt">
+      أغلق المفتاح فيكتمل الطريق ويدور المحور.<br>
+      افتحه فيتوقّف بعد لحظة قصيرة.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 10 · معرض تطبيقات المحرّك ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="uses" data-uses="motor"></div>
+  </div>
+</section>
+
+<!-- ══════ 11 · معرض تطبيقات السيرفو ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="uses" data-uses="servo"></div>
+  </div>
+</section>
+
+<!-- ══════ 12 · اختيار وتحقّق ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">أي محرّك يصلح لأي عمل؟ <span class="en-sub">Pick the Right One</span></h2>
+
+    <div style="font-size:3rem;text-align:center">🎯</div>
+
+    <div class="sortq mt">
+      <div class="sortq__item" data-answer="dc">
+        <div class="sortq__row">
+          <span class="sortq__label big">🛞 عجلة تسير على الأرض</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="dc">محرّك عادي</button>
+            <button class="sortq__btn" data-val="servo">سيرفو</button>
+          </span>
+        </div>
+        <div class="sortq__why">محرّك عادي — المطلوب دوران متّصل لا زاوية محدّدة.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="servo">
+        <div class="sortq__row">
+          <span class="sortq__label big">🚧 حاجز موقف يرتفع ٩٠ درجة</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="dc">محرّك عادي</button>
+            <button class="sortq__btn" data-val="servo">سيرفو</button>
+          </span>
+        </div>
+        <div class="sortq__why">سيرفو — الزاوية معروفة، ويجب أن يثبت عندها.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="dc">
+        <div class="sortq__row">
+          <span class="sortq__label big">🌀 مروحة سقف تدور ساعات</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="dc">محرّك عادي</button>
+            <button class="sortq__btn" data-val="servo">سيرفو</button>
+          </span>
+        </div>
+        <div class="sortq__why">محرّك عادي — لا معنى للزاوية في مروحة.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 13 · الخاتمة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:4rem">🔧</div>
+    <h2 class="title">ثلاث حقائق تحمي لوحتك</h2>
+    <p class="en-title">Three Facts to Keep</p>
+
+    <div class="grid g3 mt">
+      <div class="card card--c center">
+        <div style="font-size:2.3rem">🔄</div>
+        <p class="card__body big">عكس التيّار يعكس الدوران</p>
+      </div>
+      <div class="card card--v center">
+        <div style="font-size:2.3rem">🦾</div>
+        <p class="card__body big">السيرفو يحفظ زاويته</p>
+      </div>
+      <div class="card card--r center">
+        <div style="font-size:2.3rem">🧰</div>
+        <p class="card__body big">القوّة من البطارية عبر سائق</p>
+      </div>
+    </div>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">➡️</div>
+      <div class="note__body big">
+        صار معك حسّاس يقرأ، ومحرّك يتحرّك، ولوحة تقرّر.
+        <strong>فمتى تُسمّى هذه القطع مجتمعةً روبوتًا؟</strong>
+      </div>
+    </div>
+
+    <div class="row row--center mt" style="margin-top:24px">
+      <a class="btn" href="34-what-is-robot.html" style="text-decoration:none">الدرس التالي ◀</a>
+      <a class="btn btn--ghost" href="../index.html" style="text-decoration:none">🏠 كل الدروس</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script src="../assets/js/words.js"></script>
+<script src="../assets/js/parts.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/circuit.js"></script>
+<script src="../assets/js/uses.js"></script>
+<script src="../assets/js/uses-basic.js"></script>
+<script src="../assets/js/uses-sensors.js"></script>
+<script src="../assets/js/uses-robot.js"></script>
+<script src="../assets/js/logic.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/board.js"></script>
+<script src="../assets/js/deck.js"></script>
+</body>
+</html>

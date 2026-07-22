@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدرس 22 — من يُشعل نور الممرّ وحده؟ | The Motion Sensor</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/deck.css">
+</head>
+<body data-lesson="e22" data-title="الدرس 22 — من يُشعل نور الممرّ وحده؟ · The Motion Sensor">
+<div class="deck">
+
+<!-- ══════ 1 · الغلاف — مفارقة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:clamp(4.6rem,15vw,8rem)">🚶</div>
+    <h1 class="title">من يُشعل نور الممرّ وحده؟</h1>
+    <p class="en-title">The Motion Sensor</p>
+    <p class="big dim mt">
+      هذه القبّة لا تُبصر شكلك.<br>
+      ولا تسمع صوت خطواتك.<br>
+      ومع ذلك تعرف أنّك دخلت.
+    </p>
+    <p class="mute mt">اضغط <kbd>◀</kbd> لتعرف بماذا عرفت.</p>
+  </div>
+</section>
+
+<!-- ══════ 2 · كل دافئ يبثّ ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">كل جسم دافئ يبثّ شيئًا لا تراه <span class="en-sub">Everything Warm Glows</span></h2>
+
+    <div class="grid g2">
+      <div class="card card--r center">
+        <div style="font-size:2.8rem">🧒</div>
+        <p class="card__body big">
+          جسمك أدفأ من الجدار،
+          فيخرج منه إشعاع تحت أحمر دائمًا.
+        </p>
+      </div>
+      <div class="card card--v center">
+        <div style="font-size:2.8rem">🪑</div>
+        <p class="card__body big">
+          الكرسي بحرارة الغرفة،
+          فإشعاعه ضعيف ولا يتغيّر.
+        </p>
+      </div>
+    </div>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> حرارة الجسم نحو سبع وثلاثين درجة،
+        وذروة إشعاعه عند طول موجيّ قريب من عشرة ميكرومترات — خارج ما تراه العين.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 3 · شكله ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">تحت القبّة البيضاء <span class="en-sub">Inside the Dome</span></h2>
+
+    <div class="part" data-part="pir"></div>
+
+    <p class="big center mt">
+      في الداخل قطعتان صغيرتان تتأثّران بالأشعّة تحت الحمراء.<br>
+      وهما تعملان معًا، وتقارنان ما يصل إلى كلٍّ منهما.
+    </p>
+
+    <p class="center mt">
+      اسمه بالإنجليزية: <span class="term">pir</span> 🔊
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 4 · العدسة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">القبّة عدسة، لا غطاء <span class="en-sub">The Lens Does the Work</span></h2>
+
+    <div class="anim" data-anim="warm-pass"></div>
+
+    <p class="big center mt">
+      تقسّم العدسة الغرفة إلى شرائح.<br>
+      وحين تعبر شريحة إلى شريحة يتبدّل ما تراه القطعتان.<br>
+      هذا التبدّل هو ما يُكتشف.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 5 · الثبات يخدعه ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">لماذا ينطفئ النور إن جلستَ ساكنًا؟ <span class="en-sub">Stillness Fools It</span></h2>
+
+    <div class="anim" data-anim="warm-walk"></div>
+
+    <p class="big center mt">
+      هو لا يقيس وجودك، بل يقيس تبدّل الإشعاع.<br>
+      اجلس بلا حركة، فيثبت الإشعاع، فلا يبقى ما يُبلَّغ عنه.<br>
+      لوّح بيدك، فيعود النور فورًا.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 6 · حسّاس أم كاميرا ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">هو يقول «تحرّك أحد»… والكاميرا تقول «مَن» <span class="en-sub">Sensor or Camera</span></h2>
+
+    <div class="grid g2">
+      <div class="card card--v center">
+        <div style="font-size:2.8rem">📡</div>
+        <p class="card__body big">
+          <strong>حسّاس الحركة</strong><br>
+          جواب من كلمة واحدة، ولا صورة فيه.
+        </p>
+      </div>
+      <div class="card card--c center">
+        <div style="font-size:2.8rem">📷</div>
+        <p class="card__body big">
+          <strong>الكاميرا</strong><br>
+          ملايين النقاط الملوّنة تُكوّن مشهدًا كاملًا.
+        </p>
+      </div>
+    </div>
+
+    <p class="big center mt">
+      كلاهما يستقبل. ولا واحد منهما يُصدر ضوءًا.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 7 · معرض التطبيقات ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="uses" data-uses="camera"></div>
+  </div>
+</section>
+
+<!-- ══════ 8 · جرّب ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="guide">
+      <div class="guide__face">⚡</div>
+      <div class="guide__bubble">
+        <p class="mb0">حرّك الشخص في الرسم،<br>ثم أوقفه وراقب المصباح.</p>
+      </div>
+    </div>
+
+    <h2 style="text-align:center">تحرّك… ثم اثبت <span class="en-sub">Move, Then Freeze</span></h2>
+
+    <div class="circ" data-circ="pir-light"></div>
+
+    <p class="big center mt">
+      الحركة تفتح الطريق مدّة قصيرة.<br>
+      ثم يُغلق وحده إن لم يتكرّر التبدّل.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 9 · ما لا يراه ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">ثلاثة أشياء تفوته <span class="en-sub">Its Blind Spots</span></h2>
+
+    <div class="grid g3">
+      <div class="card card--r center">
+        <div style="font-size:2.5rem">🪟</div>
+        <p class="card__body big">زجاج النافذة يحجب هذه الأشعّة، فلا يرى ما خلفها.</p>
+      </div>
+      <div class="card card--r center">
+        <div style="font-size:2.5rem">🚗</div>
+        <p class="card__body big">سيّارة لعبة باردة تتحرّك أمامه، فقد لا يلتقطها.</p>
+      </div>
+      <div class="card card--r center">
+        <div style="font-size:2.5rem">➡️</div>
+        <p class="card__body big">القادم نحوه مباشرةً أصعب عليه من العابر أمامه.</p>
+      </div>
+    </div>
+
+    <p class="big center mt">
+      لذلك يُعلَّق في السقف، ويُوجَّه عرضًا على الممرّ.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 10 · باب المتجر ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">وباب المتجر… أي حسّاس فيه؟ <span class="en-sub">The Shop Door</span></h2>
+
+    <div class="anim" data-anim="door-open"></div>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> كثير من أبواب المتاجر لا تستعمل الأشعّة تحت الحمراء،
+        بل ترسل موجات قصيرة وتراقب ارتدادها. الفكرة قريبة من حسّاس المسافة.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 11 · فرز ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">هل يلتقطه حسّاس الحركة؟ <span class="en-sub">Detected or Not?</span></h2>
+
+    <div style="font-size:3rem;text-align:center">🔦</div>
+
+    <div class="sortq mt">
+      <div class="sortq__item" data-answer="yes">
+        <div class="sortq__row">
+          <span class="sortq__label big">🐈 قطّة تعبر الممرّ</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">يلتقطه</button>
+            <button class="sortq__btn" data-val="no">لا يلتقطه</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — جسمها دافئ وهي تتحرّك. شرطان مكتملان.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="no">
+        <div class="sortq__row">
+          <span class="sortq__label big">🎈 بالون يتدحرج على الأرض</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">يلتقطه</button>
+            <button class="sortq__btn" data-val="no">لا يلتقطه</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — يتحرّك، لكنّه بحرارة الغرفة. لا تبدّل يُذكر.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="no">
+        <div class="sortq__row">
+          <span class="sortq__label big">🧍 شخص جالس بلا حراك</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">يلتقطه</button>
+            <button class="sortq__btn" data-val="no">لا يلتقطه</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — دافئ، لكن بلا حركة. ولهذا ينطفئ النور فوقه.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 12 · سؤالان ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">دقّق في الجواب <span class="en-sub">Look Closely</span></h2>
+
+    <div style="font-size:3.2rem;text-align:center">🔥</div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">ما الذي يلتقطه هذا الحسّاس تحديدًا؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">الحركة نفسها، أيًّا كان المتحرّك</button>
+          <button class="quiz__opt" data-right>تبدّل الأشعّة الآتية من جسم دافئ</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. لا بدّ من شرطين معًا:<br>
+          جسم دافئ، وحركة تُبدّل ما يصل إليه.
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">وجّهناه إلى النافذة. ماذا يلتقط خلف الزجاج؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">المارّة في الشارع</button>
+          <button class="quiz__opt" data-right>لا شيء إطلاقًا</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. الزجاج يمرّر الضوء ويحجز هذه الأشعّة.<br>
+          فالنافذة عنده جدار مُصمَت.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 13 · الخاتمة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:4.2rem">🏢</div>
+    <h2 class="title">شرطان معًا، لا شرط واحد</h2>
+    <p class="en-title">Warm and Moving</p>
+
+    <div class="grid g2 mt">
+      <div class="card card--r center">
+        <div style="font-size:2.3rem">🔥</div>
+        <p class="card__body big">جسم أدفأ ممّا حوله</p>
+      </div>
+      <div class="card card--c center">
+        <div style="font-size:2.3rem">↔️</div>
+        <p class="card__body big">وحركة تُبدّل الإشعاع</p>
+      </div>
+      <div class="card card--v center">
+        <div style="font-size:2.3rem">🔎</div>
+        <p class="card__body big">القبّة عدسة تقسّم المجال</p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.3rem">📷</div>
+        <p class="card__body big">والصورة عمل الكاميرا لا عمله</p>
+      </div>
+    </div>
+
+    <div class="note note--fun mt">
+      <div class="note__ico">⏳</div>
+      <div class="note__body big">
+        <strong>جرّبها الليلة:</strong> ادخل الممرّ ثم قف تمامًا.
+        احسب كم ثانية يصبر النور قبل أن ينطفئ.
+      </div>
+    </div>
+
+    <div class="row row--center mt" style="margin-top:24px">
+      <a class="btn" href="23-more-sensors.html" style="text-decoration:none">الدرس التالي ◀</a>
+      <a class="btn btn--ghost" href="../index.html" style="text-decoration:none">🏠 كل الدروس</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script src="../assets/js/words.js"></script>
+<script src="../assets/js/parts.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/circuit.js"></script>
+<script src="../assets/js/uses.js"></script>
+<script src="../assets/js/uses-basic.js"></script>
+<script src="../assets/js/uses-sensors.js"></script>
+<script src="../assets/js/uses-robot.js"></script>
+<script src="../assets/js/logic.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/board.js"></script>
+<script src="../assets/js/deck.js"></script>
+</body>
+</html>

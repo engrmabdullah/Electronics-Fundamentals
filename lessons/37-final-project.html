@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدرس 37 — مشروعك أنت | Your Own Project</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/deck.css">
+</head>
+<body data-lesson="e37" data-title="الدرس 37 — مشروعك أنت · Your Own Project">
+<div class="deck">
+
+<!-- ══════ 1 · الغلاف — دعوة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:clamp(4.6rem,15vw,8rem)">🛠️</div>
+    <h1 class="title">آخر درس… وأوّل صنعة</h1>
+    <p class="en-title">Your Own Project</p>
+    <p class="big dim mt">
+      ستّة وثلاثون درسًا مرّت وأنت تقرأ وتجرّب.<br>
+      واليوم تجتمع القطع كلّها في شيء واحد يتحرّك.
+    </p>
+    <p class="mute mt">اضغط <kbd>◀</kbd> ولنبدأ التركيب.</p>
+  </div>
+</section>
+
+<!-- ══════ 2 · ما سنبنيه ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">هذا ما ستصنعه يداك <span class="en-sub">What You Will Build</span></h2>
+
+    <div class="part" data-part="robot-car"></div>
+
+    <p class="big center mt">
+      عربة صغيرة تمشي وحدها،<br>
+      تقيس ما أمامها فتقف قبل الاصطدام،<br>
+      ثم تختار طريقًا آخر وتكمل.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 3 · المشروع اختياري ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">اقرأه ولو لم تبنِه <span class="en-sub">Optional, and Still Complete</span></h2>
+
+    <div style="font-size:3.6rem;text-align:center">🙂</div>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">📘</div>
+      <div class="note__body big">
+        <strong>هذا المشروع اختياري تمامًا.</strong>
+        إن لم تتوفّر القطع فاقرأ الخطوات وتخيّلها،
+        وارجع إلى الدوائر التفاعلية في الدروس السابقة. لن تفوتك فكرة واحدة.
+      </div>
+    </div>
+
+    <div class="danger mt">
+      <div class="danger__title">قاعدة قبل كل شيء</div>
+      <ul style="font-size:1.08em">
+        <li>لا تبدأ التركيب إلّا ومعك أحد الكبار.</li>
+        <li>بطارية صغيرة فقط. ولا اقتراب من مقابس الجدار.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 4 · قائمة القطع ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">ما الذي تحتاجه على الطاولة؟ <span class="en-sub">On Your Table</span></h2>
+
+    <div style="font-size:3.4rem;text-align:center">🧰</div>
+
+    <div class="bom mt">
+      <div class="bom__head">قطع المشروع · Bill of Materials</div>
+      <table>
+        <tr><th>القطعة</th><th>العدد</th><th>لماذا</th></tr>
+        <tr><td>هيكل بعجلتين وعجلة حرّة</td><td>1</td><td>قاعدة يُثبَّت عليها الباقي</td></tr>
+        <tr><td>محرّك مع صندوق تروس</td><td>2</td><td>يُدير العجلتين</td></tr>
+        <tr><td>سائق محرّك</td><td>1</td><td>يفتح للمحرّكين تيّار البطارية</td></tr>
+        <tr><td>لوحة تحكّم</td><td>1</td><td>تحمل البرنامج وتقرّر</td></tr>
+        <tr><td>حسّاس مسافة</td><td>1</td><td>يقيس ما أمام العربة</td></tr>
+        <tr><td>حاضنة بطاريات وأسلاك</td><td>1</td><td>مصدر الطاقة والتوصيل</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 5 · الخطوة الأولى ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">أوّلًا: الهيكل والعجلتان <span class="en-sub">Step One — The Body</span></h2>
+
+    <div class="part" data-part="wheel"></div>
+
+    <ol class="steps mt" style="--acc:var(--ok)">
+      <li><h4>ثبّت المحرّكين على الجانبين</h4><p>بحيث يتقابل المحوران على استقامة واحدة.</p></li>
+      <li><h4>ركّب عجلة على كل محور</h4><p>اضغطها حتى تجلس تمامًا ولا تهتزّ.</p></li>
+      <li><h4>ضع العجلة الحرّة خلفًا</h4><p>تحمل الوزن وتدور في كل اتجاه.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══════ 6 · الخطوة الثانية ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">ثانيًا: السائق بين اللوحة والمحرّكين <span class="en-sub">Step Two — The Driver</span></h2>
+
+    <div class="part" data-part="driver"></div>
+
+    <ol class="steps mt" style="--acc:var(--volt)">
+      <li><h4>وصّل كل محرّك بمخرجه في السائق</h4><p>سلكان لكل محرّك، ولا يهمّ ترتيبهما الآن.</p></li>
+      <li><h4>وصّل أطراف الأمر باللوحة</h4><p>هذه أسلاك رفيعة تحمل إشارة لا قوّة.</p></li>
+      <li><h4>أدخل البطارية في مدخل القدرة</h4><p>تيّار المحرّكين يأتي من هنا وحده.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══════ 7 · الخطوة الثالثة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">ثالثًا: العين إلى الأمام <span class="en-sub">Step Three — Eyes Forward</span></h2>
+
+    <div class="part" data-part="ultrasonic"></div>
+
+    <ol class="steps mt" style="--acc:var(--robot)">
+      <li><h4>ثبّت الحسّاس في المقدّمة</h4><p>مستويًا وموجّهًا إلى الأمام تمامًا.</p></li>
+      <li><h4>لا تدع سلكًا يمرّ أمام فتحتيه</h4><p>يرتدّ الصدى عن السلك فيخطئ القياس.</p></li>
+      <li><h4>وصّل طرفَي الإطلاق والصدى</h4><p>باللوحة، وسجّل رقم كل طرف عندك.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══════ 8 · الخطوة الرابعة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">رابعًا: الطاقة والفحص الأخير <span class="en-sub">Step Four — Power Up</span></h2>
+
+    <div class="part" data-part="battery9v"></div>
+
+    <ol class="steps mt" style="--acc:var(--curr)">
+      <li><h4>اربط سالب البطارية بسالب اللوحة</h4><p>بدون هذه الوصلة لا تتفاهم القطع.</p></li>
+      <li><h4>مرّر إصبعك على كل سلك</h4><p>راجع المسار قبل أن تضع البطارية.</p></li>
+      <li><h4>ارفع العربة عن الأرض ثم شغّلها</h4><p>لتدور العجلات في الهواء أوّل مرّة بأمان.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══════ 9 · عين الروبوت الحقيقية ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="uses" data-uses="camera"></div>
+  </div>
+</section>
+
+<!-- ══════ 10 · لم يتحرّك ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="guide">
+      <div class="guide__face">⚡</div>
+      <div class="guide__bubble">
+        <p class="mb0">
+          لم يعمل من أوّل مرّة؟ هذا هو الحال الطبيعي.
+          <br>ابحث بالترتيب، من الأسهل إلى الأصعب.
+        </p>
+      </div>
+    </div>
+
+    <h2 style="text-align:center">لم يتحرّك… ابحث بهذا الترتيب <span class="en-sub">Fix It Step by Step</span></h2>
+
+    <div class="grid g3">
+      <div class="card card--r center">
+        <div style="font-size:2.4rem">🔋</div>
+        <p class="card__body big">بطارية ضعيفة أو حاضنة غير مطبقة</p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.4rem">🔗</div>
+        <p class="card__body big">السالب المشترك بين اللوحة والبطارية مفقود</p>
+      </div>
+      <div class="card card--v center">
+        <div style="font-size:2.4rem">🔄</div>
+        <p class="card__body big">عجلة تدور عكس أختها: بدّل سلكَي محرّكها</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 11 · اضبطه ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">اضبطه حتى يستقيم سلوكه <span class="en-sub">Tuning</span></h2>
+
+    <div style="font-size:3.6rem;text-align:center">🎚️</div>
+
+    <p class="big center mt">
+      يصطدم؟ ارفع مسافة التوقّف قليلًا.<br>
+      يقف بلا سبب؟ افحص ما أمام الحسّاس.<br>
+      غيّر قيمة واحدة في كل تجربة، لا اثنتين.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 12 · وسّعه ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">وإذا أردت أن تزيد عليه <span class="en-sub">Take It Further</span></h2>
+
+    <div class="grid g3">
+      <div class="card card--c center">
+        <div style="font-size:2.4rem">🔔</div>
+        <p class="card__body big">طنّان يصفر عند اقترابه من جسم</p>
+      </div>
+      <div class="card card--v center">
+        <div style="font-size:2.4rem">⬛</div>
+        <p class="card__body big">حسّاسا خطّ ليجمع بين المهمّتين</p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.4rem">🦾</div>
+        <p class="card__body big">سيرفو يلفّ الحسّاس فيمسح ما حوله</p>
+      </div>
+    </div>
+
+    <div class="note note--fun mt">
+      <div class="note__ico">🚀</div>
+      <div class="note__body big">
+        <strong>هكذا يعمل المهندس:</strong> يبني أبسط نسخة تعمل،
+        ثم يضيف إليها ميزة واحدة في كل مرّة.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 13 · الخاتمة — نهاية الكورس ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <h2 class="title">من إلكترون واحد إلى روبوت كامل</h2>
+    <p class="en-title">The Whole Journey</p>
+
+    <div class="anim" data-anim="robot-done"></div>
+
+    <div class="grid g3 mt">
+      <div class="card card--c center">
+        <div style="font-size:2.3rem">⚡</div>
+        <p class="card__body big">عرفتَ ما الكهرباء وكيف تجري</p>
+      </div>
+      <div class="card card--v center">
+        <div style="font-size:2.3rem">🔩</div>
+        <p class="card__body big">وعرفتَ كل قطعة وما تفعله</p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.3rem">🤖</div>
+        <p class="card__body big">ثم جمعتها في آلة تقرّر</p>
+      </div>
+    </div>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🌱</div>
+      <div class="note__body big">
+        <strong>وماذا بعد؟</strong> افتح جهازًا قديمًا معطّلًا مع أحد الكبار،
+        وسمِّ كل قطعة تراها بداخله. ستعرف أكثرها.
+      </div>
+    </div>
+
+    <div class="row row--center mt" style="margin-top:24px">
+      <a class="btn" href="../index.html" style="text-decoration:none">🏠 كل الدروس</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script src="../assets/js/words.js"></script>
+<script src="../assets/js/parts.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/circuit.js"></script>
+<script src="../assets/js/uses.js"></script>
+<script src="../assets/js/uses-basic.js"></script>
+<script src="../assets/js/uses-sensors.js"></script>
+<script src="../assets/js/uses-robot.js"></script>
+<script src="../assets/js/logic.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/board.js"></script>
+<script src="../assets/js/deck.js"></script>
+</body>
+</html>

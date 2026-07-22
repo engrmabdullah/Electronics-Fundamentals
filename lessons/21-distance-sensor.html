@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدرس 21 — كيف يطير الخفّاش في الظلام؟ | The Distance Sensor</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/deck.css">
+</head>
+<body data-lesson="e21" data-title="الدرس 21 — كيف يطير الخفّاش في الظلام؟ · The Distance Sensor">
+<div class="deck">
+
+<!-- ══════ 1 · الغلاف — قصّة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:clamp(4.6rem,15vw,8rem)">🦇</div>
+    <h1 class="title">كيف يطير الخفّاش في الظلام؟</h1>
+    <p class="en-title">The Distance Sensor</p>
+    <p class="big dim mt">
+      قبل مئتي عام حار العلماء في هذا السؤال.<br>
+      فأجروا تجربة غريبة، وخرجوا بجواب<br>
+      صار اليوم في مؤخّرة كل سيّارة.
+    </p>
+    <p class="mute mt">اضغط <kbd>◀</kbd> لتعرف التجربة.</p>
+  </div>
+</section>
+
+<!-- ══════ 2 · التجربة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">التجربة التي حلّت اللغز <span class="en-sub">Eyes or Ears?</span></h2>
+
+    <div class="anim" data-anim="bat-ping"></div>
+
+    <p class="big center mt">
+      غطّوا عينيه، فطار بلا خطأ واحد.<br>
+      سدّوا أذنيه، فاصطدم بكل شيء.<br>
+      إذًا الدليل يدخل من الأذن، لا من العين.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 3 · الصدى ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">ما الصدى أصلًا؟ <span class="en-sub">What an Echo Is</span></h2>
+
+    <div class="anim" data-anim="echo-shout"></div>
+
+    <p class="big center mt">
+      الصوت موجة تسير في الهواء.<br>
+      فإذا لقيت سطحًا صلبًا ارتدّت راجعة.<br>
+      ذلك المرتدّ هو الصدى.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 4 · شكل الحسّاس ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">أسطوانتان: واحدة تُرسل وأخرى تستقبل <span class="en-sub">Sender and Receiver</span></h2>
+
+    <div class="part" data-part="ultrasonic"></div>
+
+    <p class="big center mt">
+      اليسرى تُطلق نبضة صوتية.<br>
+      واليمنى تنتظر عودتها.<br>
+      وهو <strong>صوت</strong>، وليس ضوءًا ولا حرارة.
+    </p>
+
+    <p class="center mt">
+      اسمه بالإنجليزية: <span class="term">ultrasonic</span> 🔊
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 5 · قياس الزمن ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">هو في الحقيقة يقيس زمنًا <span class="en-sub">Measuring Time</span></h2>
+
+    <div class="anim" data-anim="robot-ping"></div>
+
+    <p class="big center mt">
+      عاد الصدى سريعًا: الجسم قريب.<br>
+      تأخّر الصدى: الجسم بعيد.<br>
+      ثمّ نقسم على اثنين، فالصوت قطع الطريق مرّتين.
+    </p>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> نبضته عند أربعين كيلوهرتز، وأذننا تقف عند عشرين.
+        وسرعة الصوت نحو ٣٤٣ مترًا في الثانية، ومداه من سنتيمترين إلى أربعة أمتار.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 6 · معرض التطبيقات ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="uses" data-uses="ultrasonic"></div>
+  </div>
+</section>
+
+<!-- ══════ 7 · الدائرة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="guide">
+      <div class="guide__face">⚡</div>
+      <div class="guide__bubble">
+        <p class="mb0">أرسل النبضة، ثم عُدّ في نفسك<br>حتى ترى الصدى راجعًا.</p>
+      </div>
+    </div>
+
+    <h2 style="text-align:center">أرسل نبضة وتابع الصدى <span class="en-sub">Send and Listen</span></h2>
+
+    <div class="circ" data-circ="sonar"></div>
+
+    <p class="big center mt">
+      السهم الذاهب نبضة، والسهم العائد صدى.<br>
+      بينهما زمن، وفي ذلك الزمن المسافة.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 8 · متى يخطئ ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">ثلاثة أشياء تخدع هذا الحسّاس <span class="en-sub">When It Gets It Wrong</span></h2>
+
+    <div class="grid g3">
+      <div class="card card--r center">
+        <div style="font-size:2.5rem">🧸</div>
+        <p class="card__body big">القماش والإسفنج يبتلعان الصوت، فلا يعود صدى.</p>
+      </div>
+      <div class="card card--r center">
+        <div style="font-size:2.5rem">📐</div>
+        <p class="card__body big">السطح المائل يدفع الصدى جانبًا، بعيدًا عن الحسّاس.</p>
+      </div>
+      <div class="card card--r center">
+        <div style="font-size:2.5rem">🪡</div>
+        <p class="card__body big">الجسم الرفيع جدًّا يمرّ الصوت من حوله.</p>
+      </div>
+    </div>
+
+    <p class="big center mt">
+      لذلك يضع المهندسون أكثر من حسّاس في السيّارة.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 9 · بدونه ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">الركن إلى الخلف بلا مساعدة <span class="en-sub">Parking Without It</span></h2>
+
+    <div class="grid g2">
+      <div class="card card--v center">
+        <div style="font-size:2.8rem">🚗📡</div>
+        <p class="card__body big">
+          مع الحسّاس: صفير يتسارع كلّما اقتربتَ من الجدار.
+        </p>
+      </div>
+      <div class="card card--r center">
+        <div style="font-size:2.8rem">🚗💥</div>
+        <p class="card__body big">
+          بدونه: لا يرى السائق ما خلفه إلّا بعد الاصطدام.
+        </p>
+      </div>
+    </div>
+
+    <p class="big center mt">
+      الحسّاس هنا يحمي الناس، لا السيّارة وحدها.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 10 · فرز ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">هل يعود منه صدى واضح؟ <span class="en-sub">Will the Echo Return?</span></h2>
+
+    <div style="font-size:3rem;text-align:center">📡</div>
+
+    <div class="sortq mt">
+      <div class="sortq__item" data-answer="yes">
+        <div class="sortq__row">
+          <span class="sortq__label big">🧱 جدار مستوٍ أمامه</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">يعود</button>
+            <button class="sortq__btn" data-val="no">لا يعود</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — سطح صلب ومواجه، فيرتدّ الصوت كاملًا.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="no">
+        <div class="sortq__row">
+          <span class="sortq__label big">🧺 كومة ملابس</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">يعود</button>
+            <button class="sortq__btn" data-val="no">لا يعود</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — النسيج يمتصّ الموجة، فيضعف الصدى كثيرًا.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="yes">
+        <div class="sortq__row">
+          <span class="sortq__label big">🪟 لوح زجاج مواجه</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">يعود</button>
+            <button class="sortq__btn" data-val="no">لا يعود</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — الزجاج أملس وصلب، فيردّ الصوت جيّدًا.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 11 · سؤالان ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">سؤالان عن الصوت والزمن <span class="en-sub">Sound and Time</span></h2>
+
+    <div style="font-size:3.2rem;text-align:center">⏱️</div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">بماذا يقيس هذا الحسّاس المسافة؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">بشعاع ضوء يخرج منه</button>
+          <button class="quiz__opt" data-right>بنبضة صوت وصداها</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. لا ضوء في الأمر إطلاقًا.<br>
+          صوت يذهب، وصدى يعود، وزمن يُقاس.
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">هل يعمل هذا الحسّاس في الظلام التامّ؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt" data-right>نعم، بلا فرق</button>
+          <button class="quiz__opt">لا، يحتاج إضاءة</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. الظلام لا يؤثّر في الصوت.<br>
+          ولهذا يعمل الخفّاش في أعمق الكهوف.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 12 · الخاتمة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:4.2rem">🛳️</div>
+    <h2 class="title">من الكهف إلى قاع البحر</h2>
+    <p class="en-title">From the Cave to the Deep Sea</p>
+
+    <div class="grid g3 mt">
+      <div class="card card--o center">
+        <div style="font-size:2.3rem">🔊</div>
+        <p class="card__body big">نبضة صوت تخرج</p>
+      </div>
+      <div class="card card--c center">
+        <div style="font-size:2.3rem">↩️</div>
+        <p class="card__body big">صدى يرتدّ ويعود</p>
+      </div>
+      <div class="card card--v center">
+        <div style="font-size:2.3rem">⏱️</div>
+        <p class="card__body big">والزمن بينهما يعطي المسافة</p>
+      </div>
+    </div>
+
+    <div class="note note--fun mt">
+      <div class="note__ico">🌊</div>
+      <div class="note__body big">
+        <strong>وهل تعلم؟</strong> السفن تقيس عمق البحر بالطريقة نفسها.
+        تُرسل صوتًا إلى القاع وتنتظر رجوعه.
+      </div>
+    </div>
+
+    <div class="row row--center mt" style="margin-top:24px">
+      <a class="btn" href="22-motion-sensor.html" style="text-decoration:none">الدرس التالي ◀</a>
+      <a class="btn btn--ghost" href="../index.html" style="text-decoration:none">🏠 كل الدروس</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script src="../assets/js/words.js"></script>
+<script src="../assets/js/parts.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/circuit.js"></script>
+<script src="../assets/js/uses.js"></script>
+<script src="../assets/js/uses-basic.js"></script>
+<script src="../assets/js/uses-sensors.js"></script>
+<script src="../assets/js/uses-robot.js"></script>
+<script src="../assets/js/logic.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/board.js"></script>
+<script src="../assets/js/deck.js"></script>
+</body>
+</html>

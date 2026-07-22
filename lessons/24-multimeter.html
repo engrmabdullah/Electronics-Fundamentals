@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدرس 24 — الملتيميتر | Multimeter</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/deck.css">
+</head>
+<body data-lesson="e24" data-title="الدرس 24 — الملتيميتر · Multimeter">
+<div class="deck">
+
+<!-- ══════ 1 · الغلاف — تحقيق ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:clamp(4.6rem,15vw,8rem)">🔎</div>
+    <h1 class="title">الدائرة صامتة، والعين لا تكفي</h1>
+    <p class="en-title">Multimeter</p>
+    <p class="big dim mt">
+      كل شيء موصول، والمصباح مُطفأ.<br>
+      لا تفكّ الدائرة — قِسها.
+    </p>
+    <p class="mute mt">اضغط <kbd>◀</kbd> لتبدأ الفحص.</p>
+  </div>
+</section>
+
+<!-- ══════ 2 · الأداة نفسها ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">أداة المهندس الأولى <span class="en-sub">Meet the Instrument</span></h2>
+
+    <div class="part" data-part="multimeter"></div>
+
+    <p class="big center mt">
+      قرص في الوسط يختار نوع القياس.<br>
+      وسلكان: الأسود في مدخل COM، والأحمر في مدخل القياس.
+    </p>
+
+    <p class="center mt">اسمها بالإنجليزية: <span class="term">multimeter</span> 🔊</p>
+  </div>
+</section>
+
+<!-- ══════ 3 · أربعة قياسات ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">أربعة قياسات وقرص واحد <span class="en-sub">Volts · Amps · Ohms · Beep</span></h2>
+
+    <div class="grid g2">
+      <div class="card card--v center">
+        <div style="font-size:2.6rem">🅥</div>
+        <p class="card__body big"><strong>الجهد</strong><br>قوّة الدفع. وحدته الفولت.</p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.6rem">🅐</div>
+        <p class="card__body big"><strong>التيّار</strong><br>كمّية المارّ. وحدته الأمبير.</p>
+      </div>
+      <div class="card card--c center">
+        <div style="font-size:2.6rem">Ω</div>
+        <p class="card__body big"><strong>المقاومة</strong><br>مقدار الإعاقة. وحدتها الأوم.</p>
+      </div>
+      <div class="card card--r center">
+        <div style="font-size:2.6rem">🔔</div>
+        <p class="card__body big"><strong>الاستمرارية</strong><br>هل الطريق متّصل؟</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 4 · القرص ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">أدِر القرص قبل أن تلمس <span class="en-sub">Set the Dial First</span></h2>
+
+    <div class="anim" data-anim="meter-look"></div>
+
+    <p class="big center mt">
+      اختر نوع القياس أوّلًا.<br>
+      القرص في المكان الخطأ يعطي رقمًا بلا معنى.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 5 · الجهد بالتوازي ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">الجهد يُقاس والدائرة تعمل <span class="en-sub">Voltage Goes Across</span></h2>
+
+    <svg viewBox="0 0 340 176" width="100%" style="max-width:430px;display:block;margin:0 auto">
+      <path d="M60 44 H280 V132 H60 Z" fill="none" stroke="#94A3B8" stroke-width="7" stroke-linejoin="round"/>
+      <line x1="42" y1="76" x2="78" y2="76" stroke="#0F172A" stroke-width="7"/>
+      <line x1="52" y1="96" x2="68" y2="96" stroke="#0F172A" stroke-width="7"/>
+      <circle cx="170" cy="132" r="20" fill="#FDE68A" stroke="#0F172A" stroke-width="5"/>
+      <line x1="157" y1="119" x2="183" y2="145" stroke="#0F172A" stroke-width="4"/>
+      <line x1="183" y1="119" x2="157" y2="145" stroke="#0F172A" stroke-width="4"/>
+      <rect x="118" y="16" width="104" height="48" rx="10" fill="#F9A825" stroke="#8D6E63" stroke-width="4"/>
+      <rect x="130" y="26" width="80" height="20" rx="4" fill="#12291F"/>
+      <line x1="142" y1="64" x2="118" y2="132" stroke="#111827" stroke-width="5" stroke-linecap="round"/>
+      <line x1="198" y1="64" x2="222" y2="132" stroke="#E53935" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="118" cy="132" r="6" fill="#111827"/>
+      <circle cx="222" cy="132" r="6" fill="#E53935"/>
+    </svg>
+
+    <p class="big center mt">
+      ضع الطرفين على جانبَي القطعة، والدائرة موصولة.<br>
+      الجهاز يقرأ فرق الدفع بين النقطتين.
+    </p>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> في وضع الجهد تبلغ مقاومة الجهاز نحو ١٠ ميغا أوم،
+        فلا يسحب تيّارًا يُذكر ولا يُغيّر عمل الدائرة.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 6 · التيّار بالتوالي ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">التيّار يمرّ من داخل الجهاز <span class="en-sub">Current Goes Through</span></h2>
+
+    <svg viewBox="0 0 340 176" width="100%" style="max-width:430px;display:block;margin:0 auto">
+      <path d="M60 44 H280 V132 H210 M130 132 H60 V44" fill="none" stroke="#94A3B8" stroke-width="7" stroke-linejoin="round"/>
+      <line x1="42" y1="76" x2="78" y2="76" stroke="#0F172A" stroke-width="7"/>
+      <line x1="52" y1="96" x2="68" y2="96" stroke="#0F172A" stroke-width="7"/>
+      <circle cx="280" cy="88" r="20" fill="#FDE68A" stroke="#0F172A" stroke-width="5"/>
+      <line x1="267" y1="75" x2="293" y2="101" stroke="#0F172A" stroke-width="4"/>
+      <line x1="293" y1="75" x2="267" y2="101" stroke="#0F172A" stroke-width="4"/>
+      <rect x="128" y="106" width="84" height="52" rx="10" fill="#F9A825" stroke="#8D6E63" stroke-width="4"/>
+      <rect x="138" y="116" width="64" height="18" rx="4" fill="#12291F"/>
+      <circle cx="130" cy="132" r="6" fill="#111827"/>
+      <circle cx="210" cy="132" r="6" fill="#E53935"/>
+    </svg>
+
+    <p class="big center mt">
+      افتح الطريق، وضع الجهاز في الفتحة.<br>
+      كل ما يمرّ في الدائرة يمرّ خلاله فيعدّه.
+    </p>
+
+    <div class="note note--danger mt">
+      <div class="note__ico">⛔</div>
+      <div class="note__body big">
+        الجهاز في وضع التيّار ممرٌّ سهل جدًّا.
+        ضعه على طرفَي بطارية — يحترق فتيله في لحظة.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 7 · المقاومة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">المقاومة تُقاس والقطعة مفصولة <span class="en-sub">Ohms With Power Off</span></h2>
+
+    <svg viewBox="0 0 340 150" width="100%" style="max-width:400px;display:block;margin:0 auto">
+      <line x1="30" y1="96" x2="96" y2="96" stroke="#94A3B8" stroke-width="7"/>
+      <polyline points="96,96 110,66 134,126 158,66 182,126 206,66 220,96" fill="none" stroke="#0F172A" stroke-width="7" stroke-linejoin="round"/>
+      <line x1="220" y1="96" x2="300" y2="96" stroke="#94A3B8" stroke-width="7"/>
+      <line x1="60" y1="96" x2="60" y2="34" stroke="#111827" stroke-width="5" stroke-linecap="round"/>
+      <line x1="268" y1="96" x2="268" y2="34" stroke="#E53935" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="60" cy="96" r="6" fill="#111827"/>
+      <circle cx="268" cy="96" r="6" fill="#E53935"/>
+      <rect x="120" y="8" width="88" height="40" rx="9" fill="#F9A825" stroke="#8D6E63" stroke-width="4"/>
+      <rect x="130" y="16" width="68" height="16" rx="4" fill="#12291F"/>
+    </svg>
+
+    <p class="big center mt">
+      انزع القطعة من الدائرة أوّلًا.<br>
+      لو بقيت البطارية موصولة، صار الرقم خاطئًا.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 8 · الاستمرارية ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">صفير قصير يكشف السلك المقطوع <span class="en-sub">The Continuity Beep</span></h2>
+
+    <div class="anim" data-anim="beep-test"></div>
+
+    <p class="big center mt">
+      صفير: بين الطرفين طريق سليم.<br>
+      صمت: الطريق مقطوع في مكان ما.
+    </p>
+
+    <p class="center mt">اسم الوضع بالإنجليزية: <span class="term">continuity</span> 🔊</p>
+  </div>
+</section>
+
+<!-- ══════ 9 · الدائرة التفاعلية ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">الطرفان على الطاولة الآن <span class="en-sub">Probe the Loop</span></h2>
+
+    <div class="circ" data-circ="measure-volt"></div>
+
+    <p class="big center mt">
+      أغلِق المفتاح: يظهر رقم على الشاشة.<br>
+      افتحه: الطريق مقطوع، فلا شيء يمرّ.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 10 · ترتيب البحث ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">رتّب بحثك عن العطل <span class="en-sub">Fault-Finding Order</span></h2>
+
+    <div class="grid g2">
+      <div class="card card--o center">
+        <div style="font-size:2.4rem">1️⃣</div>
+        <p class="card__body big">قِس البطارية. هل فيها دفع كافٍ؟</p>
+      </div>
+      <div class="card card--v center">
+        <div style="font-size:2.4rem">2️⃣</div>
+        <p class="card__body big">افحص كل سلك بالصفير.</p>
+      </div>
+      <div class="card card--c center">
+        <div style="font-size:2.4rem">3️⃣</div>
+        <p class="card__body big">افحص المفتاح مضغوطًا ومرفوعًا.</p>
+      </div>
+      <div class="card card--r center">
+        <div style="font-size:2.4rem">4️⃣</div>
+        <p class="card__body big">آخر ما تشكّ فيه: القطعة نفسها.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 11 · اختبار ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">قرار قبل أن تُدير القرص <span class="en-sub">Before You Turn the Dial</span></h2>
+
+    <div style="font-size:3.4rem;text-align:center">🎛️</div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">تريد معرفة دفع البطارية. أين تضع الطرفين؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt" data-right>على طرفَيها، والدائرة كما هي</button>
+          <button class="quiz__opt">أقطع السلك وأُدخل الجهاز</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. الجهد يُقرأ بين نقطتين، بلا فتح الطريق.
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">القرص على وضع التيّار، ولمستَ طرفَي البطارية؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">يظهر رقم صحيح</button>
+          <button class="quiz__opt" data-right>قصر يحرق الفتيل</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. وضع التيّار يكاد يكون سلكًا مكشوفًا.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 12 · الخاتمة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:4.2rem">🧾</div>
+    <h2 class="title">بطاقة القياس الصغيرة</h2>
+    <p class="en-title">Your Measuring Card</p>
+
+    <div class="grid g3 mt">
+      <div class="card card--v center">
+        <div style="font-size:2.3rem">🅥</div>
+        <p class="card__body big">الجهد: على الجانبين</p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.3rem">🅐</div>
+        <p class="card__body big">التيّار: من الداخل</p>
+      </div>
+      <div class="card card--c center">
+        <div style="font-size:2.3rem">Ω</div>
+        <p class="card__body big">المقاومة: بعد الفصل</p>
+      </div>
+    </div>
+
+    <div class="note note--fun mt">
+      <div class="note__ico">🔬</div>
+      <div class="note__body big">
+        <strong>مهمّة اليوم:</strong> قِس بطارية جديدة وأخرى قديمة، وسجّل الرقمين.
+        الفرق بينهما هو سبب توقّف لعبتك.
+      </div>
+    </div>
+
+    <div class="row row--center mt" style="margin-top:24px">
+      <a class="btn" href="25-tools-safety.html" style="text-decoration:none">الدرس التالي ◀</a>
+      <a class="btn btn--ghost" href="../index.html" style="text-decoration:none">🏠 كل الدروس</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script src="../assets/js/words.js"></script>
+<script src="../assets/js/parts.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/circuit.js"></script>
+<script src="../assets/js/uses.js"></script>
+<script src="../assets/js/uses-basic.js"></script>
+<script src="../assets/js/uses-sensors.js"></script>
+<script src="../assets/js/uses-robot.js"></script>
+<script src="../assets/js/logic.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/board.js"></script>
+<script src="../assets/js/deck.js"></script>
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدرس 28 — مفتوح أم مغلق؟ | Digital I/O</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/deck.css">
+</head>
+<body data-lesson="e28" data-title="الدرس 28 — مفتوح أم مغلق؟ · Digital I/O">
+<div class="deck">
+
+<!-- ══════ 1 · الغلاف — سؤال ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:clamp(4.6rem,15vw,8rem)">🔲</div>
+    <h1 class="title">كم حالة يعرفها المنفذ؟</h1>
+    <p class="en-title">Digital I/O — HIGH and LOW</p>
+    <p class="big dim mt">
+      لا واحدة، ولا ثلاث، ولا عشر.<br>
+      اثنتان بالضبط، وهذا سرّ بساطته.
+    </p>
+    <p class="mute mt">اضغط <kbd>◀</kbd> لتعرف الاثنتين.</p>
+  </div>
+</section>
+
+<!-- ══════ 2 · مرتفع ومنخفض ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">مرتفع… أو منخفض <span class="en-sub">HIGH or LOW</span></h2>
+
+    <svg viewBox="0 0 340 170" width="100%" style="max-width:420px;display:block;margin:0 auto">
+      <g stroke="#F59E0B" stroke-width="5" stroke-linecap="round">
+        <line x1="96" y1="12" x2="96" y2="26"/>
+        <line x1="44" y1="64" x2="30" y2="64"/>
+        <line x1="148" y1="64" x2="162" y2="64"/>
+        <line x1="58" y1="26" x2="48" y2="16"/>
+        <line x1="134" y1="26" x2="144" y2="16"/>
+      </g>
+      <circle cx="96" cy="64" r="34" fill="#FDE047" stroke="#334155" stroke-width="5"/>
+      <text x="96" y="122" text-anchor="middle" style="font-size:18px;fill:#0F172A">مرتفع</text>
+      <text x="96" y="148" text-anchor="middle" style="font-size:17px;fill:#B45309">HIGH</text>
+      <circle cx="244" cy="64" r="34" fill="#E2E8F0" stroke="#334155" stroke-width="5"/>
+      <text x="244" y="122" text-anchor="middle" style="font-size:18px;fill:#0F172A">منخفض</text>
+      <text x="244" y="148" text-anchor="middle" style="font-size:17px;fill:#475569">LOW</text>
+      <text x="170" y="72" text-anchor="middle" style="font-size:26px;fill:#94A3B8">↔</text>
+    </svg>
+
+    <p class="big center mt">
+      <strong>HIGH</strong> معناها: في المنفذ جهد.<br>
+      <strong>LOW</strong> معناها: لا جهد فيه. لا حالة بينهما.
+    </p>
+
+    <p class="center mt">
+      <span class="term">high</span> 🔊 · <span class="term">low</span> 🔊
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 3 · مستويان ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">درجتان لا سُلّم بينهما <span class="en-sub">Two Levels, No Steps</span></h2>
+
+    <svg viewBox="0 0 340 150" width="100%" style="max-width:430px;display:block;margin:0 auto">
+      <line x1="40" y1="24" x2="320" y2="24" stroke="#E2E8F0" stroke-width="3" stroke-dasharray="6 6"/>
+      <line x1="40" y1="112" x2="320" y2="112" stroke="#E2E8F0" stroke-width="3" stroke-dasharray="6 6"/>
+      <polyline points="40,112 90,112 90,24 160,24 160,112 220,112 220,24 280,24 280,112 320,112"
+                fill="none" stroke="#2563EB" stroke-width="7" stroke-linejoin="round"/>
+      <text x="24" y="30" text-anchor="middle" style="font-size:15px;fill:#0F172A">مرتفع</text>
+      <text x="24" y="118" text-anchor="middle" style="font-size:15px;fill:#0F172A">منخفض</text>
+    </svg>
+
+    <p class="big center mt">
+      الخطّ يقفز إلى الأعلى ثم يعود إلى الأسفل.<br>
+      لا يقف في المنتصف أبدًا.
+    </p>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> على أردوينو أونو، المرتفع نحو ٥ فولت والمنخفض صفر.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 4 · مخرَج ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">المنفذ مخرَج: اللوحة تأمر <span class="en-sub">Output — The Board Writes</span></h2>
+
+    <div class="grid g2">
+      <div class="part" data-part="led" data-job="off"></div>
+      <div class="part" data-part="buzzer" data-job="off"></div>
+    </div>
+
+    <p class="big center mt">
+      ترفع اللوحة جهد المنفذ فيضيء الليد أو يصفر الطنّان.<br>
+      وتخفضه فيتوقّف كلاهما.
+    </p>
+
+    <p class="center mt">اسمه بالإنجليزية: <span class="term">output</span> 🔊</p>
+  </div>
+</section>
+
+<!-- ══════ 5 · مدخل ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">المنفذ مدخل: اللوحة تقرأ <span class="en-sub">Input — The Board Reads</span></h2>
+
+    <div class="part" data-part="button"></div>
+
+    <p class="big center mt">
+      هنا لا تأمر اللوحة، بل تسأل المنفذ:<br>
+      هل أنت مرتفع الآن أم منخفض؟
+    </p>
+
+    <p class="center mt">اسمه بالإنجليزية: <span class="term">input</span> 🔊</p>
+  </div>
+</section>
+
+<!-- ══════ 6 · الاتجاهان ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">منفذ يقرأ ومنفذ يُخرج <span class="en-sub">Reading and Driving</span></h2>
+
+    <div class="anim" data-anim="listen-speak"></div>
+
+    <p class="big center mt">
+      أنت من يحدّد وظيفة كل منفذ في أوّل البرنامج.<br>
+      المنفذ نفسه يصلح للأمرين، لا للأمرين معًا.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 7 · الدائرة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">إصبعك يدخل، والضوء يخرج <span class="en-sub">Press and Watch</span></h2>
+
+    <div class="circ" data-circ="button-led"></div>
+
+    <p class="big center mt">
+      المنفذ الأوّل يقرأ الزرّ، والثاني يُشعل الليد.<br>
+      بينهما سطر واحد في البرنامج.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 8 · مقاومة الرفع ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">المنفذ المعلّق ومقاومة الرفع <span class="en-sub">Why a Pull-Up Resistor</span></h2>
+
+    <svg viewBox="0 0 340 190" width="100%" style="max-width:400px;display:block;margin:0 auto">
+      <line x1="40" y1="24" x2="300" y2="24" stroke="#E53935" stroke-width="6"/>
+      <text x="26" y="30" text-anchor="middle" style="font-size:14px;fill:#B91C1C">طاقة</text>
+      <polyline points="150,24 150,44 136,50 164,60 136,70 164,80 150,86 150,104"
+                fill="none" stroke="#334155" stroke-width="6"/>
+      <circle cx="150" cy="104" r="7" fill="#334155"/>
+      <line x1="150" y1="104" x2="252" y2="104" stroke="#334155" stroke-width="6"/>
+      <rect x="252" y="84" width="62" height="40" rx="7" fill="#00838F"/>
+      <text x="283" y="110" text-anchor="middle" style="font-size:15px;fill:#FFFFFF">منفذ</text>
+      <line x1="150" y1="104" x2="150" y2="126" stroke="#334155" stroke-width="6"/>
+      <circle cx="150" cy="126" r="5" fill="#334155"/>
+      <line x1="150" y1="126" x2="178" y2="112" stroke="#334155" stroke-width="6" stroke-linecap="round"/>
+      <circle cx="150" cy="150" r="5" fill="#334155"/>
+      <line x1="150" y1="150" x2="150" y2="164" stroke="#334155" stroke-width="6"/>
+      <line x1="126" y1="164" x2="174" y2="164" stroke="#334155" stroke-width="7"/>
+      <line x1="134" y1="174" x2="166" y2="174" stroke="#334155" stroke-width="6"/>
+      <line x1="142" y1="184" x2="158" y2="184" stroke="#334155" stroke-width="5"/>
+      <text x="204" y="134" text-anchor="middle" style="font-size:14px;fill:#0F172A">زرّ</text>
+    </svg>
+
+    <p class="big center mt">
+      الزرّ مرفوع: المقاومة تشدّ المنفذ إلى مرتفع.<br>
+      الزرّ مضغوط: يصل المنفذ بالأرضي فيصير منخفضًا.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 9 · معرض التطبيقات ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="uses" data-uses="button"></div>
+  </div>
+</section>
+
+<!-- ══════ 10 · الأمران ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">أمر يكتب وأمر يقرأ <span class="en-sub">Write and Read</span></h2>
+
+    <div style="font-size:2.6rem;text-align:center">📤</div>
+
+    <div class="code">
+      <div class="code__bar"><span class="code__dots"><i></i><i></i><i></i></span><span>io</span></div>
+<pre><code>digitalWrite(9, HIGH);
+digitalRead(2);</code></pre>
+    </div>
+
+    <p class="big center mt">
+      الأوّل يرفع جهد المنفذ التاسع.<br>
+      والثاني يسأل المنفذ الثاني عن حالته.
+    </p>
+
+    <p class="center mt">الكلمة بالإنجليزية: <span class="term">digital</span> 🔊</p>
+  </div>
+</section>
+
+<!-- ══════ 11 · فرز ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">هذه القطعة: تُقرأ أم تُشغَّل؟ <span class="en-sub">Sort by Direction</span></h2>
+
+    <div style="font-size:3rem;text-align:center">↔️</div>
+
+    <div class="sortq mt">
+      <div class="sortq__item" data-answer="no">
+        <div class="sortq__row">
+          <span class="sortq__label big">🔔 طنّان الإنذار</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">مدخل</button>
+            <button class="sortq__btn" data-val="no">مخرَج</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — اللوحة تأمره بالصفير.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="yes">
+        <div class="sortq__row">
+          <span class="sortq__label big">🚪 مفتاح باب الثلّاجة</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">مدخل</button>
+            <button class="sortq__btn" data-val="no">مخرَج</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — اللوحة تقرأ منه: الباب مفتوح أم مغلق.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="no">
+        <div class="sortq__row">
+          <span class="sortq__label big">💡 مصباح لوحة السيارة</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">مدخل</button>
+            <button class="sortq__btn" data-val="no">مخرَج</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — إشارة خارجة من اللوحة إليك.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 12 · اختبار ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">حالتان فقط، فلا تخطئ <span class="en-sub">Only Two States</span></h2>
+
+    <div style="font-size:3.4rem;text-align:center">🎚️</div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">هل يستطيع منفذ رقمي أن يُخرج نصف جهد؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">نعم، يختار ما يشاء</button>
+          <button class="quiz__opt" data-right>لا، مرتفع أو منخفض فقط</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. وفي الدرس التالي حيلة تجعله يبدو كأنه في المنتصف.
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">زرّ موصول بمقاومة رفع. رفعتَ إصبعك، فماذا يقرأ المنفذ؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt" data-right>مرتفعًا</button>
+          <button class="quiz__opt">منخفضًا</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. المقاومة تُثبّت المنفذ حتى لا تبقى قراءته مضطربة.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 13 · الخاتمة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:4.2rem">🔛</div>
+    <h2 class="title">لغة من كلمتين</h2>
+    <p class="en-title">A Language of Two Words</p>
+
+    <div class="grid g2 mt">
+      <div class="card card--v center">
+        <div style="font-size:2.3rem">⬆️</div>
+        <p class="card__body big">مرتفع: في المنفذ جهد</p>
+      </div>
+      <div class="card card--c center">
+        <div style="font-size:2.3rem">⬇️</div>
+        <p class="card__body big">منخفض: لا جهد فيه</p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.3rem">📥</div>
+        <p class="card__body big">مدخل: اللوحة تسأل</p>
+      </div>
+      <div class="card card--r center">
+        <div style="font-size:2.3rem">📤</div>
+        <p class="card__body big">مخرَج: اللوحة تأمر</p>
+      </div>
+    </div>
+
+    <div class="note note--fun mt">
+      <div class="note__ico">🔍</div>
+      <div class="note__body big">
+        <strong>مهمّة اليوم:</strong> عُدّ في بيتك خمسة أزرار تُقرأ،
+        وخمسة مصابيح تُشغَّل. ثم رتّبها في عمودين.
+      </div>
+    </div>
+
+    <div class="row row--center mt" style="margin-top:24px">
+      <a class="btn" href="29-analog-pwm.html" style="text-decoration:none">الدرس التالي ◀</a>
+      <a class="btn btn--ghost" href="../index.html" style="text-decoration:none">🏠 كل الدروس</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script src="../assets/js/words.js"></script>
+<script src="../assets/js/parts.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/circuit.js"></script>
+<script src="../assets/js/uses.js"></script>
+<script src="../assets/js/uses-basic.js"></script>
+<script src="../assets/js/uses-sensors.js"></script>
+<script src="../assets/js/uses-robot.js"></script>
+<script src="../assets/js/logic.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/board.js"></script>
+<script src="../assets/js/deck.js"></script>
+</body>
+</html>

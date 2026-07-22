@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدرس 10 — المقاومة | Resistor</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/deck.css">
+</head>
+<body data-lesson="e10" data-title="الدرس 10 — المقاومة · Resistor">
+<div class="deck">
+
+<!-- ══════ 1 · الغلاف — مفارقة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:clamp(4.4rem,14vw,7.6rem)">🛡️</div>
+    <h1 class="title">قطعة عملها أن تعرقل</h1>
+    <p class="en-title">The Resistor</p>
+    <p class="big dim mt">
+      لا تُضيء، ولا تتحرّك، ولا تُصدر صوتًا.<br>
+      كل ما تفعله أنّها تُصعّب المرور.<br>
+      ومع ذلك لا تخلو منها لوحة واحدة.
+    </p>
+    <p class="mute mt">اعرف لماذا <kbd>◀</kbd></p>
+  </div>
+</section>
+
+<!-- ══════ 2 · الفكرة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">تضييق مقصود في الطريق <span class="en-sub">A Deliberate Narrowing</span></h2>
+
+    <div class="anim" data-anim="narrow"></div>
+
+    <p class="big center mt">
+      الحجر في مجرى الماء يُضيّق الممرّ فيقلّ الجريان.<br>
+      والمقاومة تفعل هذا بالضبط داخل السلك.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 3 · شكلها ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">أسطوانة صغيرة بساقين <span class="en-sub">Resistor Shape &amp; Symbol</span></h2>
+
+    <div class="part" data-part="resistor"></div>
+
+    <p class="big center mt">
+      لا فرق بين ساقيها، فلا اتجاه لها.<br>
+      ركّبها كيفما شئت، ستعمل.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 4 · الحلقات ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">الحلقات الملوّنة ليست زينة <span class="en-sub">Colour Bands</span></h2>
+
+    <div style="text-align:center">
+      <svg viewBox="0 0 360 128" style="width:100%;max-width:430px" role="img">
+        <line x1="10" y1="56" x2="82" y2="56" stroke="#94A3B8" stroke-width="7" stroke-linecap="round"/>
+        <line x1="278" y1="56" x2="350" y2="56" stroke="#94A3B8" stroke-width="7" stroke-linecap="round"/>
+        <rect x="82" y="28" width="196" height="56" rx="26" fill="#D6B48A"/>
+        <rect x="110" y="28" width="20" height="56" fill="#C62828"/>
+        <rect x="150" y="28" width="20" height="56" fill="#C62828"/>
+        <rect x="190" y="28" width="20" height="56" fill="#6D4C41"/>
+        <rect x="242" y="28" width="14" height="56" fill="#C9A227"/>
+        <text x="120" y="106" text-anchor="middle" font-size="15" fill="#334155">٢</text>
+        <text x="160" y="106" text-anchor="middle" font-size="15" fill="#334155">٢</text>
+        <text x="200" y="106" text-anchor="middle" font-size="15" fill="#334155">×١٠</text>
+        <text x="249" y="106" text-anchor="middle" font-size="14" fill="#334155">الدقّة</text>
+        <text x="180" y="19" text-anchor="middle" font-size="17" font-weight="700" fill="#0F172A">٢٢٠ أوم</text>
+      </svg>
+    </div>
+
+    <p class="big center mt">
+      كل لون رقم. الحلقتان الأوليان رقمان،<br>
+      والثالثة تقول: كم صفرًا نضيف.
+    </p>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> وحدة القياس الأوم (Ω). أشهر ثلاث قيم في التجارب:
+        ٢٢٠ و١ كيلو أوم و١٠ كيلو أوم.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 5 · معرض التطبيقات ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="uses" data-uses="resistor"></div>
+  </div>
+</section>
+
+<!-- ══════ 6 · جرّبها ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">ضعها في الطريق وشغّل <span class="en-sub">Put It in the Path</span></h2>
+
+    <div class="circ" data-circ="resistor"></div>
+
+    <p class="big center mt">
+      موضعها قبل الليد أو بعده سواء.<br>
+      المهمّ أن تكون في الحلقة نفسها.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 7 · بدونها ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">وماذا لو نسيتَها مع الليد؟ <span class="en-sub">Forgetting It</span></h2>
+
+    <div class="grid g2">
+      <div class="card card--r center">
+        <div style="font-size:2.8rem">💥</div>
+        <p class="card__body big">
+          <strong>بدونها</strong><br>
+          يمرّ تيّار أكبر ممّا يحتمله، فيتلف في ثوانٍ.
+        </p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.8rem">🕰️</div>
+        <p class="card__body big">
+          <strong>معها</strong><br>
+          يمرّ القدر المحسوب، فيعمل سنوات طويلة.
+        </p>
+      </div>
+    </div>
+
+    <p class="big center mt">
+      الليد لا يحمي نفسه. نحن نحميه.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 8 · القيمة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">كبيرة أم صغيرة؟ لكلٍّ أثر <span class="en-sub">Choosing a Value</span></h2>
+
+    <div class="grid g2">
+      <div class="card card--c center">
+        <div style="font-size:2.6rem">🔆</div>
+        <p class="card__body big">
+          <strong>قيمة صغيرة</strong><br>
+          مرور أكثر وضوء أقوى، وخطر إن بالغتَ.
+        </p>
+      </div>
+      <div class="card card--v center">
+        <div style="font-size:2.6rem">🔅</div>
+        <p class="card__body big">
+          <strong>قيمة كبيرة</strong><br>
+          مرور أقلّ وضوء أخفت، وأمان أكبر.
+        </p>
+      </div>
+    </div>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> مع بطارية ٩ فولت يحتاج الليد نحو ٣٩٠ أوم.
+        كلّما ارتفع جهد المصدر لزمت قيمة أكبر.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 9 · تحقّق ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">قرارك أنت هذه المرّة <span class="en-sub">Your Decision</span></h2>
+
+    <div style="font-size:3.2rem;text-align:center">⚖️</div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">استبدلتَ مقاومة ٢٢٠ أوم بأخرى ١٠ كيلو أوم أمام الليد نفسه؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">يضيء أقوى</button>
+          <button class="quiz__opt" data-right>يضيء خافتًا جدًّا</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. القيمة الأكبر تعني تيّارًا أصغر،<br>
+          وربّما ضوءًا يكاد لا يُرى.
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">ركّبتَ المقاومة بالمقلوب. ماذا يحدث؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">لا تعمل</button>
+          <button class="quiz__opt" data-right>تعمل كما هي تمامًا</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. ساقاها متماثلتان،<br>
+          فلا معنى للمقلوب هنا.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 10 · فرز ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">هل تلزم مقاومة هنا؟ <span class="en-sub">Needed or Not</span></h2>
+
+    <div style="font-size:3rem;text-align:center">🧮</div>
+
+    <div class="sortq mt">
+      <div class="sortq__item" data-answer="yes">
+        <div class="sortq__row">
+          <span class="sortq__label big">💡 ليد مع بطارية ٩ فولت</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">تلزم</button>
+            <button class="sortq__btn" data-val="no">لا تلزم</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — بدونها يتلف الليد فورًا.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="no">
+        <div class="sortq__row">
+          <span class="sortq__label big">🔦 مصباح كشّاف مصنوع لهذا الجهد</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">تلزم</button>
+            <button class="sortq__btn" data-val="no">لا تلزم</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — خيطه نفسه مقاومته مناسبة.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="yes">
+        <div class="sortq__row">
+          <span class="sortq__label big">🔘 زرّ تقرؤه لوحة تحكّم</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">تلزم</button>
+            <button class="sortq__btn" data-val="no">لا تلزم</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — مقاومة تُثبّت القراءة حين يكون الزرّ مرفوعًا.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 11 · الحرارة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">لماذا تبقى مقاومتك باردة؟ <span class="en-sub">Why It Stays Cool</span></h2>
+
+    <div style="font-size:3.4rem;text-align:center">❄️🧱</div>
+
+    <p class="big center mt">
+      كل مقاومة تحوّل جزءًا من الطاقة حرارةً.<br>
+      لكن تيّار تجاربك ضئيل جدًّا،<br>
+      فالحرارة أقلّ من أن تُحسّ بها.
+    </p>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> المقاومة الشائعة تتحمّل ربع واط.
+        في أجهزة القدرة تُستعمل مقاومات أكبر حجمًا بأجسام خزفية.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 12 · الخاتمة — تحدٍّ منزلي ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:4rem">🔬</div>
+    <h2 class="title">افحص لوحة قديمة بعينك</h2>
+    <p class="en-title">Inspect an Old Board</p>
+
+    <div class="note note--fun mt">
+      <div class="note__ico">🧭</div>
+      <div class="note__body big">
+        <strong>تحدٍّ:</strong> اطلب من أحد الكبار لوحة جهاز معطّل.
+        عُدّ الأسطوانات ذات الحلقات الملوّنة. كم مقاومة وجدت؟
+      </div>
+    </div>
+
+    <div class="grid g3 mt">
+      <div class="card card--v center">
+        <div style="font-size:2.3rem">🚧</div>
+        <p class="card__body big">تضيّق الطريق</p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.3rem">🎨</div>
+        <p class="card__body big">وحلقاتها قيمتها</p>
+      </div>
+      <div class="card card--r center">
+        <div style="font-size:2.3rem">🛡️</div>
+        <p class="card__body big">وتحمي ما بعدها</p>
+      </div>
+    </div>
+
+    <div class="row row--center mt" style="margin-top:24px">
+      <a class="btn" href="11-led.html" style="text-decoration:none">الدرس التالي ◀</a>
+      <a class="btn btn--ghost" href="../index.html" style="text-decoration:none">🏠 كل الدروس</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script src="../assets/js/words.js"></script>
+<script src="../assets/js/parts.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/circuit.js"></script>
+<script src="../assets/js/uses.js"></script>
+<script src="../assets/js/uses-basic.js"></script>
+<script src="../assets/js/uses-sensors.js"></script>
+<script src="../assets/js/uses-robot.js"></script>
+<script src="../assets/js/logic.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/board.js"></script>
+<script src="../assets/js/deck.js"></script>
+</body>
+</html>

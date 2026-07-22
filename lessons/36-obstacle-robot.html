@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدرس 36 — روبوت يتجنّب الجدار | Obstacle Robot</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/deck.css">
+</head>
+<body data-lesson="e36" data-title="الدرس 36 — روبوت يتجنّب الجدار · Obstacle Robot">
+<div class="deck">
+
+<!-- ══════ 1 · الغلاف — قصّة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:clamp(4.6rem,15vw,8rem)">🧹</div>
+    <h1 class="title">كنستِ البيت والأنوار مطفأة</h1>
+    <p class="en-title">Obstacle Robot</p>
+    <p class="big dim mt">
+      تحرّكت المكنسة ليلًا بين الكراسي والأبواب،<br>
+      ولم تصطدم بشيء. والظلام لم يعنِها.
+    </p>
+    <p class="mute mt">اضغط <kbd>◀</kbd> فسرّها ليس في عينيها.</p>
+  </div>
+</section>
+
+<!-- ══════ 2 · القصّة كاملة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">يمشي… فيقف… فيغيّر طريقه <span class="en-sub">The Whole Story</span></h2>
+
+    <div class="anim" data-anim="wall-avoid"></div>
+
+    <p class="big center mt">
+      مهمّته بسيطة: أن يتقدّم ما دام الطريق خاليًا.<br>
+      فإن اقترب من جسم، بحث عن طريق آخر.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 3 · الحسّاس ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">يقيس بالصوت لا بالضوء <span class="en-sub">Sound, Not Light</span></h2>
+
+    <div class="part" data-part="ultrasonic"></div>
+
+    <p class="big center mt">
+      فيه فتحتان: واحدة ترسل نبضة صوت،<br>
+      والأخرى تنتظر عودة الصدى.<br>
+      والصوت أعلى من أن تسمعه أذنك.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 4 · الزمن يصير مسافة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">الزمن يتحوّل إلى مسافة <span class="en-sub">Time Becomes Distance</span></h2>
+
+    <div class="circ" data-circ="sonar"></div>
+
+    <p class="big center mt">
+      كلّما بعُد الجدار، طال زمن عودة الصدى.
+    </p>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> الصوت يقطع نحو ٣٤٣ مترًا في الثانية.
+        نضرب الزمن في السرعة، ثم نقسم على اثنين، لأن الصوت ذهب وعاد.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 5 · الخطوات ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">خمس خطوات ثم يعيدها <span class="en-sub">Five Steps on Repeat</span></h2>
+
+    <div class="anim" data-anim="avoid-steps"></div>
+
+    <p class="big center mt">
+      لا يفكّر في الطريق كلّه.<br>
+      يقرّر خطوته التالية فقط، ثم يقيس من جديد.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 6 · العتبة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">متى يقرّر أنه اقترب كفايةً؟ <span class="en-sub">How Close Is Too Close</span></h2>
+
+    <div class="anim" data-anim="robot-wall"></div>
+
+    <p class="big center mt">
+      نختار مسافة، ولتكن عشرين سنتيمترًا.<br>
+      ما دون ذلك يُعدّ خطرًا فيتوقّف.<br>
+      عتبة قصيرة جدًّا تجعله يصطدم قبل أن يقف.
+    </p>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> الحسّاس الشائع يقيس من سنتيمترين
+        إلى نحو أربعة أمتار، في مخروط ضيّق أمامه.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 7 · معرض تطبيقات حسّاس المسافة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="uses" data-uses="ultrasonic"></div>
+  </div>
+</section>
+
+<!-- ══════ 8 · لماذا الصوت ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">ولماذا لم نختر الضوء؟ <span class="en-sub">Why Sound Wins Here</span></h2>
+
+    <div class="grid g3">
+      <div class="card card--o center">
+        <div style="font-size:2.4rem">🌑</div>
+        <p class="card__body big">يعمل في الظلام التامّ كما يعمل في النهار</p>
+      </div>
+      <div class="card card--c center">
+        <div style="font-size:2.4rem">🎨</div>
+        <p class="card__body big">لون الجسم لا يغيّر النتيجة</p>
+      </div>
+      <div class="card card--v center">
+        <div style="font-size:2.4rem">📏</div>
+        <p class="card__body big">يعطي مسافة بالأرقام لا مجرّد وجود جسم</p>
+      </div>
+    </div>
+
+    <p class="big center mt">
+      ولهذا يقيس الخفّاش مسافاته بالصدى أيضًا.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 9 · حدود الحسّاس ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="guide">
+      <div class="guide__face">⚡</div>
+      <div class="guide__bubble">
+        <p class="mb0">
+          لكل أداة حدّ تقف عنده.
+          <br>ومعرفة حدود أداتك جزء من صنعة المهندس.
+        </p>
+      </div>
+    </div>
+
+    <h2 style="text-align:center">أسطح لا يعود منها صدى واضح <span class="en-sub">Where the Echo Fails</span></h2>
+
+    <div class="grid g3">
+      <div class="card card--r center">
+        <div style="font-size:2.4rem">🧽</div>
+        <p class="card__body big">الإسفنج والقماش يبتلعان الصوت</p>
+      </div>
+      <div class="card card--v center">
+        <div style="font-size:2.4rem">📐</div>
+        <p class="card__body big">السطح المائل يرمي الصدى بعيدًا عن الحسّاس</p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.4rem">🪶</div>
+        <p class="card__body big">الجسم النحيل جدًّا قد يفلت من المخروط</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 10 · ماذا لو غاب الحسّاس ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">انزع الحسّاس… فماذا يبقى؟ <span class="en-sub">Take the Sensor Away</span></h2>
+
+    <div style="font-size:3.6rem;text-align:center">🚧</div>
+
+    <p class="big center mt">
+      يبقى محرّكان يدوران، ولوحة تنفّذ أوامر ثابتة.<br>
+      يمشي إلى الأمام حتى يصطدم، ثم يظلّ يدفع الجدار.<br>
+      الحسّاس هو الذي جعله يقرّر.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 11 · تحقّق ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">فكّر كما يفكّر الروبوت <span class="en-sub">Think Like the Robot</span></h2>
+
+    <div style="font-size:3.2rem;text-align:center">🧮</div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">عاد الصدى بسرعة كبيرة. ماذا يعني ذلك؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt" data-right>الجسم قريب جدًّا</button>
+          <button class="quiz__opt">الجسم بعيد جدًّا</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. الزمن القصير يدلّ على مسافة قصيرة.
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">لماذا نقسم الزمن على اثنين قبل حساب المسافة؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">لأن الحسّاس فيه فتحتان</button>
+          <button class="quiz__opt" data-right>لأن الصوت قطع الطريق ذهابًا وإيابًا</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. الزمن المقيس يشمل رحلتين، والمسافة رحلة واحدة.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 12 · الخاتمة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:4rem">🦇</div>
+    <h2 class="title">صدى واحد يكفي ليتجنّب الاصطدام</h2>
+    <p class="en-title">One Echo Is Enough</p>
+
+    <div class="grid g3 mt">
+      <div class="card card--c center">
+        <div style="font-size:2.3rem">📡</div>
+        <p class="card__body big">نبضة صوت تنطلق ثم تعود</p>
+      </div>
+      <div class="card card--v center">
+        <div style="font-size:2.3rem">⏱️</div>
+        <p class="card__body big">زمن العودة يصير مسافة</p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.3rem">🔄</div>
+        <p class="card__body big">دون العتبة: يقف ويغيّر مساره</p>
+      </div>
+    </div>
+
+    <div class="note note--fun mt">
+      <div class="note__ico">🏔️</div>
+      <div class="note__body big">
+        <strong>جرّبها بنفسك:</strong> نادِ في مكان واسع وعُدّ حتى يعود صوتك.
+        كلّما طال العدّ، بعُد الجدار الذي ارتدّ عنه.
+      </div>
+    </div>
+
+    <div class="row row--center mt" style="margin-top:24px">
+      <a class="btn" href="37-final-project.html" style="text-decoration:none">الدرس التالي ◀</a>
+      <a class="btn btn--ghost" href="../index.html" style="text-decoration:none">🏠 كل الدروس</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script src="../assets/js/words.js"></script>
+<script src="../assets/js/parts.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/circuit.js"></script>
+<script src="../assets/js/uses.js"></script>
+<script src="../assets/js/uses-basic.js"></script>
+<script src="../assets/js/uses-sensors.js"></script>
+<script src="../assets/js/uses-robot.js"></script>
+<script src="../assets/js/logic.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/board.js"></script>
+<script src="../assets/js/deck.js"></script>
+</body>
+</html>

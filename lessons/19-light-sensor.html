@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدرس 19 — من يُشعل مصابيح الشارع؟ | The Light Sensor</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/deck.css">
+</head>
+<body data-lesson="e19" data-title="الدرس 19 — من يُشعل مصابيح الشارع؟ · The Light Sensor">
+<div class="deck">
+
+<!-- ══════ 1 · الغلاف — مشهد يومي ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:clamp(4.6rem,15vw,8rem)">🌇</div>
+    <h1 class="title">من يُشعل مصابيح الشارع؟</h1>
+    <p class="en-title">The Light Sensor</p>
+    <p class="big dim mt">
+      قف عند النافذة وقت المغرب.<br>
+      سترى الأعمدة تضيء واحدًا بعد واحد.<br>
+      ولا أحد في الشارع يضغط زرًّا.
+    </p>
+    <p class="mute mt">اضغط <kbd>◀</kbd> لتعرف من يُصدر الأمر.</p>
+  </div>
+</section>
+
+<!-- ══════ 2 · العمود يقرّر ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">في رأس العمود قطعة تنظر <span class="en-sub">The Lamp Post Decides</span></h2>
+
+    <div class="anim" data-anim="sun-moon-lamp"></div>
+
+    <p class="big center mt">
+      قطعة صغيرة تُوجَّه إلى السماء.<br>
+      تقيس الضوء طوال اليوم.<br>
+      وحين يقلّ عن حدٍّ معيّن، يعمل المصباح.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 3 · شكلها ورمزها ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">المقاومة الضوئية عن قرب <span class="en-sub">Meet the LDR</span></h2>
+
+    <div class="part" data-part="ldr"></div>
+
+    <p class="big center mt">
+      قرص صغير عليه خطّ متعرّج.<br>
+      ذلك الخطّ هو الذي يتأثّر بالضوء.
+    </p>
+
+    <p class="center mt">
+      اسمها بالإنجليزية: <span class="term">ldr</span> 🔊
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 4 · القاعدة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">ضوء أكثر… مقاومة أقلّ <span class="en-sub">More Light, Less Resistance</span></h2>
+
+    <div class="grid g2">
+      <div class="card card--o center">
+        <div style="font-size:2.8rem">☀️</div>
+        <p class="card__body big">
+          <strong>في الضوء</strong><br>
+          تقلّ مقاومتها، فيمرّ تيّار أكبر.
+        </p>
+      </div>
+      <div class="card card--b center">
+        <div style="font-size:2.8rem">🌙</div>
+        <p class="card__body big">
+          <strong>في الظلام</strong><br>
+          تزيد مقاومتها، فيكاد التيّار يتوقّف.
+        </p>
+      </div>
+    </div>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> مادّتها كبريتيد الكادميوم.
+        في الظلام تتجاوز مقاومتها مليون أوم،
+        وفي ضوء الغرفة تهبط إلى نحو عشرة آلاف أوم.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 5 · مقسّم الجهد ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="guide">
+      <div class="guide__face">⚡</div>
+      <div class="guide__bubble">
+        <p class="mb0">المقاومة وحدها لا تتكلّم.<br>فكيف نقرأ ما تقوله؟</p>
+      </div>
+    </div>
+
+    <h2 style="text-align:center">مقاومتان تتقاسمان الدفع <span class="en-sub">The Divider Trick</span></h2>
+
+    <div class="part" data-part="divider"></div>
+
+    <p class="big center mt">
+      نضع معها مقاومة ثابتة.<br>
+      والنقطة بينهما يتغيّر جهدها مع الضوء.<br>
+      تلك النقطة هي التي تُقرأ.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 6 · معرض التطبيقات ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="uses" data-uses="ldr"></div>
+  </div>
+</section>
+
+<!-- ══════ 7 · العتبة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">متى يقرّر أنّ الليل قد حلّ؟ <span class="en-sub">The Threshold</span></h2>
+
+    <div class="circ" data-circ="night-light"></div>
+
+    <p class="big center mt">
+      نختار حدًّا فاصلًا ونسمّيه العتبة.<br>
+      فوقه: نهار. تحته: ليل.<br>
+      وبرفع العتبة يضيء المصباح أبكر.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 8 · خطأ التركيب ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">خطأ يقع فيه كثيرون <span class="en-sub">A Common Mistake</span></h2>
+
+    <div class="anim" data-anim="night-sensor"></div>
+
+    <p class="big center mt">
+      لا تُوجّه الحسّاس إلى المصباح الذي يشغّله.<br>
+      سيضيء المصباح، فيرى الحسّاس ضوءًا، فيُطفئه.<br>
+      ثم يعيد الكرّة بلا توقّف.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 9 · ماذا لو غاب ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">وماذا لو نُزع من العمود؟ <span class="en-sub">Without the Sensor</span></h2>
+
+    <div class="grid g2">
+      <div class="card card--r center">
+        <div style="font-size:2.8rem">🧑‍🔧</div>
+        <p class="card__body big">
+          يحتاج الشارع عاملًا يُشعل ويُطفئ كل يوم.
+        </p>
+      </div>
+      <div class="card card--r center">
+        <div style="font-size:2.8rem">💸</div>
+        <p class="card__body big">
+          أو يبقى مضيئًا في النهار، فتُهدر الكهرباء.
+        </p>
+      </div>
+    </div>
+
+    <p class="big center mt">
+      قطعة بحجم زرّ توفّر عمل رجل كامل.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 10 · فرز ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">مقاومتها الآن كبيرة أم صغيرة؟ <span class="en-sub">High or Low?</span></h2>
+
+    <div style="font-size:3rem;text-align:center">🔎</div>
+
+    <div class="sortq mt">
+      <div class="sortq__item" data-answer="no">
+        <div class="sortq__row">
+          <span class="sortq__label big">🔦 كشّاف مسلّط عليها</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">كبيرة</button>
+            <button class="sortq__btn" data-val="no">صغيرة</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — ضوء قويّ، فتهبط المقاومة كثيرًا.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="yes">
+        <div class="sortq__row">
+          <span class="sortq__label big">📦 داخل صندوق مغلق</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">كبيرة</button>
+            <button class="sortq__btn" data-val="no">صغيرة</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — ظلام تامّ، فترتفع المقاومة إلى أعلاها.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="yes">
+        <div class="sortq__row">
+          <span class="sortq__label big">✋ يدك تغطّيها</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">كبيرة</button>
+            <button class="sortq__btn" data-val="no">صغيرة</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — يدك تحجب الضوء، فترتفع المقاومة.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 11 · سؤالان ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">اختبر نفسك في الظلام <span class="en-sub">Test Yourself</span></h2>
+
+    <div style="font-size:3.2rem;text-align:center">🌗</div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">أدخلنا الحسّاس غرفة مظلمة. ماذا يحدث لمقاومته؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt" data-right>ترتفع كثيرًا</button>
+          <button class="quiz__opt">تبقى كما هي</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. قلّة الضوء ترفع المقاومة،<br>
+          فيقلّ التيّار المارّ فيها.
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">هل تصلح هذه القطعة لتصوير وجه صديقك؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">نعم، فهي عين</button>
+          <button class="quiz__opt" data-right>لا، تقيس المقدار فقط</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. هي تقول: هنا ضوء كثير أو قليل.<br>
+          أمّا الصورة والشكل فعملُ الكاميرا.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 12 · الخاتمة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:4.2rem">🌃</div>
+    <h2 class="title">صار الليل عندك قابلًا للقياس</h2>
+    <p class="en-title">You Can Measure the Night Now</p>
+
+    <div class="grid g2 mt">
+      <div class="card card--o center">
+        <div style="font-size:2.3rem">☀️</div>
+        <p class="card__body big">ضوء ← مقاومة قليلة</p>
+      </div>
+      <div class="card card--b center">
+        <div style="font-size:2.3rem">🌙</div>
+        <p class="card__body big">ظلام ← مقاومة كبيرة</p>
+      </div>
+      <div class="card card--v center">
+        <div style="font-size:2.3rem">➗</div>
+        <p class="card__body big">مقسّم الجهد يترجم التغيّر</p>
+      </div>
+      <div class="card card--c center">
+        <div style="font-size:2.3rem">🎚️</div>
+        <p class="card__body big">والعتبة تحسم القرار</p>
+      </div>
+    </div>
+
+    <div class="note note--fun mt">
+      <div class="note__ico">📓</div>
+      <div class="note__body big">
+        <strong>رصد هذا الأسبوع:</strong> سجّل كل يوم الساعة التي أضاء فيها عمود شارعكم.
+        هل تتقدّم أم تتأخّر؟
+      </div>
+    </div>
+
+    <div class="row row--center mt" style="margin-top:24px">
+      <a class="btn" href="20-temp-sensor.html" style="text-decoration:none">الدرس التالي ◀</a>
+      <a class="btn btn--ghost" href="../index.html" style="text-decoration:none">🏠 كل الدروس</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script src="../assets/js/words.js"></script>
+<script src="../assets/js/parts.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/circuit.js"></script>
+<script src="../assets/js/uses.js"></script>
+<script src="../assets/js/uses-basic.js"></script>
+<script src="../assets/js/uses-sensors.js"></script>
+<script src="../assets/js/uses-robot.js"></script>
+<script src="../assets/js/logic.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/board.js"></script>
+<script src="../assets/js/deck.js"></script>
+</body>
+</html>

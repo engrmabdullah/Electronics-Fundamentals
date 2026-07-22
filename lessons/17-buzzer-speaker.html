@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدرس 17 — كيف تصير الكهرباء صوتًا؟ | Buzzer &amp; Speaker</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/deck.css">
+</head>
+<body data-lesson="e17" data-title="الدرس 17 — كيف تصير الكهرباء صوتًا؟ · Buzzer &amp; Speaker">
+<div class="deck">
+
+<!-- ══════ 1 · الغلاف — تجربة مباشرة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:clamp(4.4rem,14vw,7.6rem)">🗣️</div>
+    <h1 class="title">ضع أصابعك على حنجرتك وقل: آآه</h1>
+    <p class="en-title">Buzzer &amp; Speaker — Making Sound</p>
+    <p class="big dim mt">
+      ستشعر برجفة تحت أصابعك.<br>
+      كل صوت في الدنيا يبدأ من اهتزاز مثلها.
+    </p>
+    <p class="mute mt">اضغط <kbd>◀</kbd> بعد أن تجرّب.</p>
+  </div>
+</section>
+
+<!-- ══════ 2 · ما الصوت ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">الصوت هواء يهتزّ <span class="en-sub">Sound Is Moving Air</span></h2>
+
+    <div class="anim" data-anim="bee-buzz"></div>
+
+    <p class="big center mt">
+      جناح النحلة يهتزّ بسرعة، فيدفع الهواء ويسحبه.<br>
+      تصل الموجة إلى أذنك فتسمع الطنين.<br>
+      فمهمّة قطعة الصوت واحدة: أن تهتزّ.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 3 · الطنّان ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">علبة سوداء لها فتحة واحدة <span class="en-sub">Meet the Buzzer</span></h2>
+
+    <div class="part" data-part="buzzer"></div>
+
+    <p class="big center mt">
+      داخلها غشاء رقيق مشدود.<br>
+      يمرّ التيّار فيهتزّ الغشاء، فيخرج الصفير من الفتحة.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 4 · كيف يعمل ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">اهتزاز أسرع من أن تراه العين <span class="en-sub">Too Fast to See</span></h2>
+
+    <div class="anim" data-anim="buzzer-shake"></div>
+
+    <p class="big center mt">
+      الغشاء يذهب ويعود آلاف المرّات في الثانية.<br>
+      حركته أصغر من أن تُرى، وصوتها يملأ الغرفة.
+    </p>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> عدد الاهتزازات في الثانية يُسمّى التردّد، ووحدته الهرتز.
+        وأذن الإنسان تسمع بين ٢٠ و٢٠٠٠٠ هرتز تقريبًا.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 5 · نشط وخامل ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">طنّانان متشابهان، وأحدهما صامت <span class="en-sub">Active or Passive</span></h2>
+
+    <div class="grid g2">
+      <div class="card card--o center">
+        <div style="font-size:2.6rem">🎵</div>
+        <p class="card__body big">
+          <strong>النشط</strong><br>
+          بداخله دائرة تولّد النبضات. أوصله بالبطارية فيصفر نغمة واحدة.
+        </p>
+      </div>
+      <div class="card card--c center">
+        <div style="font-size:2.6rem">🎹</div>
+        <p class="card__body big">
+          <strong>الخامل</strong><br>
+          ينتظر نبضات ترسلها إليه. أنت تختار سرعتها، فتختار النغمة.
+        </p>
+      </div>
+    </div>
+
+    <p class="big center mt">
+      للتنبيه اختر النشط. ولعزف لحن اختر الخامل.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 6 · معرض تطبيقات الطنّان ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="uses" data-uses="buzzer"></div>
+  </div>
+</section>
+
+<!-- ══════ 7 · جرّب: جرس الباب ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">ثلاث قطع تصنع جرس باب <span class="en-sub">Build a Doorbell</span></h2>
+
+    <div class="circ" data-circ="bell-kid"></div>
+
+    <p class="big center mt">
+      بطارية وزرّ وطنّان. لا رابع لها.<br>
+      وانتبه: للطنّان النشط قطبية، فرجله الطويلة للموجب.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 8 · السمّاعة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">مخروط ورقي فوق مغناطيس <span class="en-sub">Meet the Speaker</span></h2>
+
+    <div class="part" data-part="speaker"></div>
+
+    <p class="big center mt">
+      الطنّان يُخرج نغمة واحدة.<br>
+      والسمّاعة تُخرج الكلام والموسيقى وكل صوت.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 9 · كيف تعمل السمّاعة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">ملفّ يُدفع ويُجذب <span class="en-sub">Coil, Magnet, Cone</span></h2>
+
+    <div class="anim" data-anim="speaker-cone"></div>
+
+    <p class="big center mt">
+      خلف المخروط ملفّ خفيف داخل مغناطيس ثابت.<br>
+      يتبدّل اتجاه التيّار فيتحرّك الملفّ ذهابًا وإيابًا.<br>
+      فيدفع المخروط الهواء معه.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 10 · معرض تطبيقات السمّاعة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="uses" data-uses="speaker"></div>
+  </div>
+</section>
+
+<!-- ══════ 11 · التردّد والطبقة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">لماذا يختلف صوت الفيل عن الفأر؟ <span class="en-sub">Fast or Slow</span></h2>
+
+    <div class="anim" data-anim="fast-slow"></div>
+
+    <div class="sortq mt">
+      <div class="sortq__item" data-answer="fast">
+        <div class="sortq__row">
+          <span class="sortq__label big">🦟 طنين بعوضة</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="fast">اهتزاز سريع</button>
+            <button class="sortq__btn" data-val="slow">اهتزاز بطيء</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — سريع، فالصوت حادّ.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="slow">
+        <div class="sortq__row">
+          <span class="sortq__label big">🥁 طبل كبير</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="fast">اهتزاز سريع</button>
+            <button class="sortq__btn" data-val="slow">اهتزاز بطيء</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — بطيء، فالصوت غليظ.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="fast">
+        <div class="sortq__row">
+          <span class="sortq__label big">🚨 صفّارة إنذار</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="fast">اهتزاز سريع</button>
+            <button class="sortq__btn" data-val="slow">اهتزاز بطيء</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — اختير حادًّا لتنتبه له الأذن سريعًا.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 12 · اختبار ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">سؤالان قبل أن نُغلق القسم <span class="en-sub">Before We Close</span></h2>
+
+    <div style="font-size:3.4rem;text-align:center">👂</div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">تريد طنّانًا يعزف لحنًا من نغمات كثيرة. أيّهما؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">النشط، فنغمته جاهزة</button>
+          <button class="quiz__opt" data-right>الخامل، فأنت تختار تردّده</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. النشط نغمة واحدة،<br>
+          والخامل يتبع نبضاتك.
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">تكلّمتَ أمام سمّاعة مفصولة. ماذا يحدث؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">لا شيء إطلاقًا</button>
+          <button class="quiz__opt" data-right>يتولّد فيها تيّار ضعيف</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. صوتك يحرّك المخروط، فيتحرّك الملفّ.<br>
+          هكذا يعمل الميكروفون.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 13 · الخاتمة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:4rem">🎬</div>
+    <h2 class="title">جهازك صار يضيء ويتحرّك ويتكلّم</h2>
+    <p class="en-title">End of the Components Section</p>
+
+    <p class="big dim mt">
+      أتممتَ قسم العناصر كلّه.<br>
+      بقي شيء واحد لا يعرفه جهازك بعد.
+    </p>
+
+    <div class="grid g3 mt">
+      <div class="card card--v center">
+        <div style="font-size:2.3rem">〰️</div>
+        <p class="card__body big">كل صوت اهتزاز في الهواء</p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.3rem">🔔</div>
+        <p class="card__body big">الطنّان نغمة، والسمّاعة كل صوت</p>
+      </div>
+      <div class="card card--c center">
+        <div style="font-size:2.3rem">🎵</div>
+        <p class="card__body big">سريع فحادّ، وبطيء فغليظ</p>
+      </div>
+    </div>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">👁️</div>
+      <div class="note__body big">
+        <strong>وفي القسم التالي:</strong> جهازك لا يعرف شيئًا عمّا حوله.
+        سنعطيه ما يرى به ويقيس.
+      </div>
+    </div>
+
+    <div class="row row--center mt" style="margin-top:24px">
+      <a class="btn" href="18-what-is-sensor.html" style="text-decoration:none">الدرس التالي ◀</a>
+      <a class="btn btn--ghost" href="../index.html" style="text-decoration:none">🏠 كل الدروس</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script src="../assets/js/words.js"></script>
+<script src="../assets/js/parts.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/circuit.js"></script>
+<script src="../assets/js/uses.js"></script>
+<script src="../assets/js/uses-basic.js"></script>
+<script src="../assets/js/uses-sensors.js"></script>
+<script src="../assets/js/uses-robot.js"></script>
+<script src="../assets/js/logic.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/board.js"></script>
+<script src="../assets/js/deck.js"></script>
+</body>
+</html>

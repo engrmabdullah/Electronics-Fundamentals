@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدرس 4 — العلاقة بين الثلاثة | Ohm's Law</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/deck.css">
+</head>
+<body data-lesson="e04" data-title="الدرس 4 — العلاقة بين الثلاثة · Ohm's Law">
+<div class="deck">
+
+<!-- ══════ 1 · الغلاف — سؤال محيّر ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:clamp(4.4rem,14vw,7.6rem)">🎛️</div>
+    <h1 class="title">مقبض واحد يغيّر كل شيء</h1>
+    <p class="en-title">Ohm's Law</p>
+    <p class="big dim mt">
+      تلفّ مقبض الصوت قليلًا، فيهدأ الراديو.<br>
+      لم تلمس البطارية ولا السمّاعة.<br>
+      فما الذي تغيّر داخل السلك؟
+    </p>
+    <p class="mute mt">الجواب في ثلاثة أرقام <kbd>◀</kbd></p>
+  </div>
+</section>
+
+<!-- ══════ 2 · الأرقام الثلاثة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">ثلاثة أرقام تحكم كل دائرة <span class="en-sub">Three Numbers</span></h2>
+
+    <div class="grid g3">
+      <div class="card card--v center">
+        <div style="font-size:2.8rem">⚡</div>
+        <p class="card__body big">
+          <strong>الجهد</strong><br>
+          قوّة الدفع
+        </p>
+      </div>
+      <div class="card card--r center">
+        <div style="font-size:2.8rem">🧱</div>
+        <p class="card__body big">
+          <strong>المقاومة</strong><br>
+          مقدار المعارضة
+        </p>
+      </div>
+      <div class="card card--c center">
+        <div style="font-size:2.8rem">🌊</div>
+        <p class="card__body big">
+          <strong>التيّار</strong><br>
+          ما يمرّ فعلًا
+        </p>
+      </div>
+    </div>
+
+    <p class="big center mt">
+      الاثنان الأوّلان نختارهما، والثالث ينتج عنهما.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 3 · القاعدة الأولى ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">القاعدة الأولى: ضاعِف الدفع <span class="en-sub">More Push</span></h2>
+
+    <div class="circ" data-circ="battery-series"></div>
+
+    <p class="big center mt">
+      بطاريتان بدل واحدة تعنيان دفعًا مضاعفًا.<br>
+      المقاومة لم تتغيّر، فزاد التيّار وزاد الضوء.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 4 · القاعدة الثانية ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">القاعدة الثانية: ضيِّق الطريق <span class="en-sub">More Resistance</span></h2>
+
+    <div class="grid g2">
+      <div class="card card--o center">
+        <div style="font-size:2.8rem">🚗</div>
+        <p class="card__body big">
+          طريق واسع<br>
+          يعبره عدد كبير في الدقيقة.
+        </p>
+      </div>
+      <div class="card card--r center">
+        <div style="font-size:2.8rem">🚧</div>
+        <p class="card__body big">
+          طريق ضيّق<br>
+          يعبره عدد أقلّ في الدقيقة.
+        </p>
+      </div>
+    </div>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> القاعدتان معًا هما قانون أوم:
+        التيّار = الجهد ÷ المقاومة. اكتشفه العالم الألماني أوم سنة ١٨٢٧.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 5 · المقاومة المتغيّرة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">قطعة تُغيّر المقاومة بيدك <span class="en-sub">A Knob You Turn</span></h2>
+
+    <div class="part" data-part="potentiometer"></div>
+
+    <p class="big center mt">
+      داخلها شريط طويل، ومؤشّر ينزلق عليه.<br>
+      تلفّ المقبض فيطول الطريق أو يقصر.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 6 · قفزة أم تدرّج ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">قفزة واحدة… أو تدرّج طويل <span class="en-sub">Step or Slope</span></h2>
+
+    <div class="anim" data-anim="snap-vs-fade"></div>
+
+    <p class="big center mt">
+      المفتاح يعطيك حالتين فقط.<br>
+      والمقبض يعطيك كل ما بينهما.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 7 · معرض التطبيقات ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="uses" data-uses="pot"></div>
+  </div>
+</section>
+
+<!-- ══════ 8 · تحقّق ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">غيّرنا رقمًا… ماذا يحدث؟ <span class="en-sub">Predict the Change</span></h2>
+
+    <div style="font-size:3.2rem;text-align:center">🔮</div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">أبقينا البطارية وزدنا المقاومة. ماذا يحدث للتيّار؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">يزيد</button>
+          <button class="quiz__opt" data-right>ينقص</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. معارضة أكبر تعني عبورًا أقلّ،<br>
+          فيخفت الضوء.
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">أبقينا المقاومة وأضفنا بطارية ثانية. ماذا يحدث؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt" data-right>يزيد التيّار</button>
+          <button class="quiz__opt">لا يتغيّر شيء</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. دفع أقوى على المعارضة نفسها<br>
+          يعني مرورًا أكثر.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 9 · فرز ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">هل يزداد الضوء؟ <span class="en-sub">Brighter or Dimmer</span></h2>
+
+    <div style="font-size:3rem;text-align:center">💡</div>
+
+    <div class="sortq mt">
+      <div class="sortq__item" data-answer="yes">
+        <div class="sortq__row">
+          <span class="sortq__label big">🔋 أضفنا بطارية ثانية</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">يزداد</button>
+            <button class="sortq__btn" data-val="no">يخفت</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — الدفع زاد والمعارضة ثابتة.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="no">
+        <div class="sortq__row">
+          <span class="sortq__label big">🧱 وضعنا مقاومة أكبر</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">يزداد</button>
+            <button class="sortq__btn" data-val="no">يخفت</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — الطريق صار أضيق فقلّ المرور.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="no">
+        <div class="sortq__row">
+          <span class="sortq__label big">🎛️ لففنا المقبض إلى آخره</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">يزداد</button>
+            <button class="sortq__btn" data-val="no">يخفت</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — أقصى مقاومة تعني أقلّ تيّار.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 10 · العودة إلى الراديو ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">فلماذا هدأ الراديو إذًا؟ <span class="en-sub">Back to the Radio</span></h2>
+
+    <div style="font-size:3.4rem;text-align:center">📻</div>
+
+    <p class="big center mt">
+      المقبض لم يفعل شيئًا سوى إطالة الطريق.<br>
+      فقلّ التيّار الواصل إلى السمّاعة،<br>
+      فقلّ اهتزازها، فخفت الصوت.
+    </p>
+
+    <div class="note note--fun mt">
+      <div class="note__ico">🎚️</div>
+      <div class="note__body big">
+        المقبض نفسه في مروحة السقف، وفي إضاءة الصالة،
+        وفي عجلة سرعة القطار الكهربائي.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 11 · الخاتمة — ماذا لو ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:4rem">🤔</div>
+    <h2 class="title">ماذا لو اختفت المقاومة كلّها؟</h2>
+    <p class="en-title">What If Resistance Vanished?</p>
+
+    <p class="big dim mt">
+      لصار التيّار ضخمًا في كل دائرة،<br>
+      ولاحترقت القطع قبل أن تعمل.<br>
+      المقاومة هي التي تجعل الدائرة ممكنة.
+    </p>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">➡️</div>
+      <div class="note__body big">
+        عرفنا الآن الأرقام الثلاثة. يبقى سؤال:
+        <strong>أين تجري هذه الأرقام كلّها؟</strong> في طريق له شكل خاصّ.
+      </div>
+    </div>
+
+    <div class="row row--center mt" style="margin-top:24px">
+      <a class="btn" href="05-circuit.html" style="text-decoration:none">الدرس التالي ◀</a>
+      <a class="btn btn--ghost" href="../index.html" style="text-decoration:none">🏠 كل الدروس</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script src="../assets/js/words.js"></script>
+<script src="../assets/js/parts.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/circuit.js"></script>
+<script src="../assets/js/uses.js"></script>
+<script src="../assets/js/uses-basic.js"></script>
+<script src="../assets/js/uses-sensors.js"></script>
+<script src="../assets/js/uses-robot.js"></script>
+<script src="../assets/js/logic.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/board.js"></script>
+<script src="../assets/js/deck.js"></script>
+</body>
+</html>

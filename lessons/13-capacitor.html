@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدرس 13 — الخزّان الصغير | The Capacitor</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/deck.css">
+</head>
+<body data-lesson="e13" data-title="الدرس 13 — الخزّان الصغير · The Capacitor">
+<div class="deck">
+
+<!-- ══════ 1 · الغلاف — سؤال محيّر ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:clamp(4.4rem,14vw,7.6rem)">📸</div>
+    <h1 class="title">من أين جاء وميض الفلاش؟</h1>
+    <p class="en-title">Capacitor — Store, Then Release</p>
+    <p class="big dim mt">
+      بطارية الكاميرا صغيرة وهادئة.<br>
+      والوميض يملأ الغرفة في جزء من ثانية.
+    </p>
+    <p class="mute mt">الجواب قطعة واحدة. اضغط <kbd>◀</kbd>.</p>
+  </div>
+</section>
+
+<!-- ══════ 2 · شكله ورمزه ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">أسطوانة صغيرة عليها علامة سالب <span class="en-sub">Meet the Capacitor</span></h2>
+
+    <div class="part" data-part="capacitor"></div>
+
+    <p class="big center mt">
+      داخله لوحان معدنيّان بينهما مادّة عازلة.<br>
+      الشحنة تتجمّع على اللوحين، ولا تعبر بينهما.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 3 · نوعان وقطبية ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">واحد له اتجاه، وواحد بلا اتجاه <span class="en-sub">Polarised or Not</span></h2>
+
+    <div class="part" data-part="capacitor-cer"></div>
+
+    <div class="grid g2 mt">
+      <div class="card card--r center">
+        <div style="font-size:2.4rem">⚠️</div>
+        <p class="card__body big">
+          <strong>الأسطواني</strong><br>
+          له قطبية. اعكسه فقد يتلف أو ينتفخ.
+        </p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.4rem">🙂</div>
+        <p class="card__body big">
+          <strong>الصغير البنّي</strong><br>
+          بلا قطبية. ركّبه بأيّ اتجاه شئت.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 4 · كيف يعمل ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">يمتلئ ببطء، ويُفرغ في لحظة <span class="en-sub">Charge and Discharge</span></h2>
+
+    <div class="anim" data-anim="cap-bucket"></div>
+
+    <p class="big center mt">
+      البطارية تملؤه شحنةً قليلة قليلة.<br>
+      ثم يجد طريقًا، فيدفع كل ما جمعه دفعة واحدة.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 5 · ليس بطارية ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="guide">
+      <div class="guide__face">⚡</div>
+      <div class="guide__bubble">
+        <p class="mb0">أنا <strong>فولت</strong>. انتبه لهذا الفرق:<br>
+           المكثّف <strong>ليس</strong> بطارية صغيرة.</p>
+      </div>
+    </div>
+
+    <div class="grid g2 mt">
+      <div class="card card--v center">
+        <div style="font-size:2.6rem">🔋</div>
+        <p class="card__body big">
+          <strong>البطارية</strong><br>
+          تحمل طاقة كبيرة، وتعطيها بهدوء ساعاتٍ طويلة.
+        </p>
+      </div>
+      <div class="card card--c center">
+        <div style="font-size:2.6rem">🪣</div>
+        <p class="card__body big">
+          <strong>المكثّف</strong><br>
+          يحمل شحنة قليلة، ويطلقها كلّها في جزء من ثانية.
+        </p>
+      </div>
+    </div>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> تُقاس السعة بالفاراد.
+        والمألوف في الأجهزة أجزاء من المليون منه، تُسمّى ميكروفاراد.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 6 · معرض التطبيقات ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="uses" data-uses="capacitor"></div>
+  </div>
+</section>
+
+<!-- ══════ 7 · الفلاش ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">جواب السؤال الأوّل <span class="en-sub">Inside the Flash</span></h2>
+
+    <div class="anim" data-anim="cap-flash"></div>
+
+    <p class="big center mt">
+      البطارية تشحن المكثّف طوال ثانيتين.<br>
+      ثم يُفرغ كل شحنته في المصباح فجأة.<br>
+      دفعة قصيرة جدًّا، وقويّة جدًّا.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 8 · جرّب ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">افصل المفتاح وراقب المصباح <span class="en-sub">Watch It Fade</span></h2>
+
+    <div class="circ" data-circ="cap-kid"></div>
+
+    <p class="big center mt">
+      أغلِق المفتاح: يمتلئ المكثّف والمصباح يعمل.<br>
+      افصله: يبقى الضوء لحظة ثم يخفت.<br>
+      تلك اللحظة هي شحنته وهي تنفد.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 9 · ماذا لو غاب ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">لماذا يوضع في كل جهاز تقريبًا؟ <span class="en-sub">Smoothing the Supply</span></h2>
+
+    <div class="grid g2">
+      <div class="card card--r center">
+        <div style="font-size:2.6rem">〰️</div>
+        <p class="card__body big">
+          <strong>بدونه</strong><br>
+          تهتزّ التغذية عند كل تشغيل، فترتجف الصورة وتضطرب الرقاقة.
+        </p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.6rem">➖</div>
+        <p class="card__body big">
+          <strong>معه</strong><br>
+          يملأ الهبوط اللحظي بشحنته، فتبقى التغذية مستوية.
+        </p>
+      </div>
+    </div>
+
+    <div class="note note--warn mt">
+      <div class="note__ico">⛔</div>
+      <div class="note__body big">
+        مكثّفات التلفاز والكاميرا تحتفظ بشحنتها بعد فصل الكهرباء.
+        لا تفتح جهازًا، ولا تلمس ما بداخله.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 10 · اختبار ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">تحقّق من الفكرة <span class="en-sub">Check the Idea</span></h2>
+
+    <div style="font-size:3.4rem;text-align:center">🪣</div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">فصلتَ المفتاح، فبقي المصباح مضيئًا لحظة. لماذا؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">البطارية ما زالت موصولة</button>
+          <button class="quiz__opt" data-right>المكثّف يُفرغ شحنته المخزّنة</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. ما جمعه أثناء الغلق يخرج بعد الفصل.
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">هل يصلح مكثّف بديلًا لبطارية الكشّاف؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">نعم، فكلاهما يخزّن</button>
+          <button class="quiz__opt" data-right>لا، شحنته تنفد في ثوانٍ</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. المكثّف للحظة، والبطارية لساعات.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 11 · فرز ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">لهذه المهمّة: بطارية أم مكثّف؟ <span class="en-sub">Which One Fits?</span></h2>
+
+    <div style="font-size:3rem;text-align:center">⚖️</div>
+
+    <div class="sortq mt">
+      <div class="sortq__item" data-answer="cap">
+        <div class="sortq__row">
+          <span class="sortq__label big">📸 ومضة واحدة قويّة جدًّا</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="cap">مكثّف</button>
+            <button class="sortq__btn" data-val="bat">بطارية</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — دفعة سريعة، وهذا عمل المكثّف تحديدًا.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="bat">
+        <div class="sortq__row">
+          <span class="sortq__label big">🔦 إضاءة كشّاف ثلاث ساعات</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="cap">مكثّف</button>
+            <button class="sortq__btn" data-val="bat">بطارية</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — زمن طويل يحتاج مخزونًا كبيرًا.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="cap">
+        <div class="sortq__row">
+          <span class="sortq__label big">🖥️ ملء هبوط قصير في التغذية</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="cap">مكثّف</button>
+            <button class="sortq__btn" data-val="bat">بطارية</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — يستجيب بسرعة، ويسدّ الهبوط اللحظي.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 12 · الخاتمة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:4rem">🪣</div>
+    <h2 class="title">ماذا لو نزعنا كل مكثّفات البيت؟</h2>
+    <p class="en-title">A Thought Experiment</p>
+
+    <p class="big dim mt">
+      لا فلاش في الكاميرا.<br>
+      وصورة التلفاز ترتجف مع كل حركة.
+    </p>
+
+    <div class="grid g3 mt">
+      <div class="card card--c center">
+        <div style="font-size:2.3rem">🪫</div>
+        <p class="card__body big">يخزّن شحنة صغيرة</p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.3rem">⚡</div>
+        <p class="card__body big">يُفرغها في لحظة</p>
+      </div>
+      <div class="card card--v center">
+        <div style="font-size:2.3rem">➖</div>
+        <p class="card__body big">يسوّي التغذية المضطربة</p>
+      </div>
+    </div>
+
+    <div class="note note--fun mt">
+      <div class="note__ico">🔎</div>
+      <div class="note__body big">
+        <strong>ابحث اليوم:</strong> انظر إلى صورة لوحة إلكترونية.
+        الأسطوانات الصغيرة الواقفة عليها هي المكثّفات. عُدَّها.
+      </div>
+    </div>
+
+    <div class="row row--center mt" style="margin-top:24px">
+      <a class="btn" href="14-transistor.html" style="text-decoration:none">الدرس التالي ◀</a>
+      <a class="btn btn--ghost" href="../index.html" style="text-decoration:none">🏠 كل الدروس</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script src="../assets/js/words.js"></script>
+<script src="../assets/js/parts.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/circuit.js"></script>
+<script src="../assets/js/uses.js"></script>
+<script src="../assets/js/uses-basic.js"></script>
+<script src="../assets/js/uses-sensors.js"></script>
+<script src="../assets/js/uses-robot.js"></script>
+<script src="../assets/js/logic.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/board.js"></script>
+<script src="../assets/js/deck.js"></script>
+</body>
+</html>

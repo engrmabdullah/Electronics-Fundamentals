@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدرس 18 — كيف يحسّ الروبوت؟ | What is a Sensor?</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/deck.css">
+</head>
+<body data-lesson="e18" data-title="الدرس 18 — كيف يحسّ الروبوت؟ · What is a Sensor?">
+<div class="deck">
+
+<!-- ══════ 1 · الغلاف — تجربة مباشرة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:clamp(4.6rem,15vw,8rem)">🙈</div>
+    <h1 class="title">كيف يحسّ الروبوت؟</h1>
+    <p class="en-title">What is a Sensor?</p>
+    <p class="big dim mt">
+      أغمض عينيك، ثم امشِ خطوتين.<br>
+      لن تعرف أين الجدار.<br>
+      الآلة بلا حسّاس مثلك الآن.
+    </p>
+    <p class="mute mt">افتح عينيك، واضغط <kbd>◀</kbd>.</p>
+  </div>
+</section>
+
+<!-- ══════ 2 · القاعدة الأولى: يستقبل لا يُصدر ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">مَن يستقبل ومَن يُصدر؟ <span class="en-sub">Input and Output</span></h2>
+
+    <div class="anim" data-anim="ear-mouth"></div>
+
+    <div class="grid g2 mt">
+      <div class="card card--c center">
+        <div style="font-size:2.4rem">📥</div>
+        <p class="card__body big">
+          <strong>الحسّاس</strong><br>
+          يأخذ خبرًا من العالم.
+        </p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.4rem">📤</div>
+        <p class="card__body big">
+          <strong>المصباح</strong><br>
+          يُرسل ضوءًا إلى العالم.
+        </p>
+      </div>
+    </div>
+
+    <p class="big center mt">الاتجاهان متعاكسان تمامًا.</p>
+  </div>
+</section>
+
+<!-- ══════ 3 · حواسّك ومقابلها ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">حواسّك ومقابلها في الآلة <span class="en-sub">Your Senses, Its Sensors</span></h2>
+
+    <div class="grid g3">
+      <div class="card card--v center">
+        <div style="font-size:2.5rem">👁️ ← 📷</div>
+        <p class="card__body big">عينك تستقبل الضوء.<br>ومثلها الكاميرا.</p>
+      </div>
+      <div class="card card--c center">
+        <div style="font-size:2.5rem">👂 ← 🎤</div>
+        <p class="card__body big">أذنك تستقبل الصوت.<br>ومثلها الميكروفون.</p>
+      </div>
+      <div class="card card--r center">
+        <div style="font-size:2.5rem">✋ ← 🌡️</div>
+        <p class="card__body big">جلدك يشعر بالحرارة.<br>ومثله حسّاس الحرارة.</p>
+      </div>
+    </div>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎯</div>
+      <div class="note__body big">
+        <strong>انتبه:</strong> عين الروبوت كاميرا، أو حسّاس ضوء صغير.
+        أمّا المصباح فيُصدر الضوء ولا يستقبله.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 4 · شكله ورمزه ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">شكل الحسّاس ورمزه <span class="en-sub">The Sensor Up Close</span></h2>
+
+    <div class="part" data-part="sensor"></div>
+
+    <p class="big center mt">
+      له ثلاثة أطراف غالبًا:<br>
+      طرفان يأخذان الكهرباء، وطرف يخرج منه الخبر.
+    </p>
+
+    <p class="center mt">
+      اسمه بالإنجليزية: <span class="term">sensor</span> 🔊
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 5 · كيف يصير الخبر إشارة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">كيف يصير الخبر إشارة؟ <span class="en-sub">Making a Signal</span></h2>
+
+    <div class="anim">
+      <svg class="anim__svg" viewBox="0 0 400 150" xmlns="http://www.w3.org/2000/svg">
+        <text x="48" y="72" class="a-x">☀️</text>
+        <text x="48" y="122" class="a-tsm">حدث في العالم</text>
+
+        <path d="M86 62 h44 l-13 -10 M130 62 l-13 10" stroke="#16A34A" stroke-width="4"
+              fill="none" stroke-linecap="round"/>
+
+        <rect x="142" y="28" width="96" height="66" rx="11" fill="#EDE9FE"
+              stroke="#7C3AED" stroke-width="4"/>
+        <text x="190" y="72" class="a-bt">📡</text>
+        <text x="190" y="122" class="a-tsm">الحسّاس يقيسه</text>
+
+        <path d="M250 62 h44 l-13 -10 M294 62 l-13 10" stroke="#16A34A" stroke-width="4"
+              fill="none" stroke-linecap="round"/>
+
+        <rect x="304" y="22" width="66" height="74" rx="9" fill="#F1F5F9"
+              stroke="#334155" stroke-width="4"/>
+        <rect x="316" y="80" width="42" height="10" rx="4" fill="#F59E0B">
+          <animate attributeName="y" values="80;36;36;80;80"
+                   keyTimes="0;0.34;0.62;0.96;1" dur="3.2s" repeatCount="indefinite"/>
+          <animate attributeName="height" values="10;54;54;10;10"
+                   keyTimes="0;0.34;0.62;0.96;1" dur="3.2s" repeatCount="indefinite"/>
+        </rect>
+        <text x="337" y="122" class="a-tsm">فيرتفع الجهد</text>
+      </svg>
+      <div class="anim__bar">
+        <span class="anim__cap">حدث ← قياس ← إشارة كهربائية 📈</span>
+      </div>
+    </div>
+
+    <p class="big center mt">
+      في داخله مادّة تتغيّر بما حولها.<br>
+      فيتغيّر الجهد على طرف الخروج.<br>
+      ذلك التغيّر هو الخبر كلّه.
+    </p>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> أغلب حسّاسات التعليم تُخرج جهدًا بين صفر وخمسة فولت،
+        أو إشارة من حالتين فقط: مرتفعة أو منخفضة.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 6 · معرض التطبيقات ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="uses" data-uses="sensor"></div>
+  </div>
+</section>
+
+<!-- ══════ 7 · نوعان من الجواب ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">جواب بنعم ولا… وجواب بمقدار <span class="en-sub">Two Kinds of Answer</span></h2>
+
+    <div class="parts-grid">
+      <div class="part" data-part="pir" data-job="off"></div>
+      <div class="part" data-part="ldr" data-job="off"></div>
+    </div>
+
+    <div class="grid g2 mt">
+      <div class="card card--v center">
+        <div style="font-size:2.2rem">✅⛔</div>
+        <p class="card__body big">حسّاس الحركة يقول: نعم أو لا.</p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.2rem">📊</div>
+        <p class="card__body big">حسّاس الضوء يقول: قليل أو كثير.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 8 · ماذا لو نُزع ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="guide">
+      <div class="guide__face">⚡</div>
+      <div class="guide__bubble">
+        <p class="mb0">انزع الحسّاس من الروبوت،<br>وانظر ماذا يبقى منه.</p>
+      </div>
+    </div>
+
+    <h2 style="text-align:center">ماذا يحدث إن نُزع الحسّاس؟ <span class="en-sub">Take It Away</span></h2>
+
+    <div class="anim">
+      <svg class="anim__svg" viewBox="0 0 400 165" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10" y="16" width="180" height="132" rx="14" fill="#ECFDF5"
+              stroke="#16A34A" stroke-width="3"/>
+        <text x="100" y="40" class="a-t">معه حسّاس</text>
+        <rect x="152" y="54" width="26" height="74" rx="3" fill="#94A3B8"/>
+        <text x="54" y="114" class="a-x">🤖</text>
+        <text x="84" y="82" class="a-s">📡</text>
+        <path d="M100 94 q14 10 0 20" stroke="#DC2626" stroke-width="3"
+              fill="none" stroke-linecap="round"/>
+        <text x="86" y="142" class="a-tsm">يقيس البعد فيقف</text>
+
+        <rect x="210" y="16" width="180" height="132" rx="14" fill="#FEF2F2"
+              stroke="#EF4444" stroke-width="3"/>
+        <text x="300" y="40" class="a-t">بلا حسّاس</text>
+        <rect x="352" y="54" width="26" height="74" rx="3" fill="#94A3B8"/>
+        <text x="242" y="114" class="a-x">🤖
+          <animate attributeName="x" values="242;324;324;242;242"
+                   keyTimes="0;0.5;0.74;0.82;1" dur="3.4s" repeatCount="indefinite"/>
+        </text>
+        <text x="336" y="84" class="a-x" opacity="0">💥
+          <animate attributeName="opacity" values="0;0;1;0;0"
+                   keyTimes="0;0.5;0.6;0.74;1" dur="3.4s" repeatCount="indefinite"/>
+        </text>
+        <text x="292" y="142" class="a-tsm">يمضي حتى يصطدم</text>
+      </svg>
+      <div class="anim__bar">
+        <span class="anim__cap">قياسٌ يسبق الحركة… أو اصطدام 🤖🧱</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 9 · الدائرة الأولى ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">أوّل دائرة يقودها حسّاس <span class="en-sub">First Sensor Circuit</span></h2>
+
+    <div class="circ" data-circ="ldr-lamp"></div>
+
+    <p class="big center mt">
+      الحسّاس هنا لا يُشعل المصباح بيده.<br>
+      هو يفتح طريق التيّار، والتيّار يُشعل.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 10 · فرز: يستقبل أم يُصدر ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">أيّها يستقبل وأيّها يُصدر؟ <span class="en-sub">Sort Them</span></h2>
+
+    <div style="font-size:3rem;text-align:center">⚖️</div>
+
+    <div class="sortq mt">
+      <div class="sortq__item" data-answer="yes">
+        <div class="sortq__row">
+          <span class="sortq__label big">🎤 ميكروفون</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">يستقبل</button>
+            <button class="sortq__btn" data-val="no">يُصدر</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — يأخذ الصوت من الهواء. فهو حسّاس.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="no">
+        <div class="sortq__row">
+          <span class="sortq__label big">🔊 سمّاعة</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">يستقبل</button>
+            <button class="sortq__btn" data-val="no">يُصدر</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — تدفع الهواء فتصنع صوتًا. فهي مُخرَج.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="yes">
+        <div class="sortq__row">
+          <span class="sortq__label big">📷 كاميرا</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">يستقبل</button>
+            <button class="sortq__btn" data-val="no">يُصدر</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — تجمع الضوء الداخل إليها. فهي عين الروبوت.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 11 · سؤالان ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">سؤالان قبل أن ننتقل <span class="en-sub">Before We Move On</span></h2>
+
+    <div style="font-size:3.2rem;text-align:center">🧠</div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">هل يُشعل الحسّاس المصباح بنفسه؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">نعم، هو مصدر الضوء</button>
+          <button class="quiz__opt" data-right>لا، هو يُبلغ فقط</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. الحسّاس يقيس ويُبلغ.<br>
+          والدائرة أو اللوحة هي التي تُشعل.
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">ما الذي يقابل عين الإنسان في الروبوت؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt" data-right>الكاميرا وحسّاس الضوء</button>
+          <button class="quiz__opt">المصباح الأمامي</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. العين تستقبل الضوء، والمصباح يُصدره.<br>
+          المصباح يساعد الكاميرا، ولا يحلّ محلّها.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 12 · الخاتمة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:4.2rem">🧭</div>
+    <h2 class="title">ثلاث جُمل تلخّص الدرس</h2>
+    <p class="en-title">The Whole Lesson in Three Lines</p>
+
+    <div class="grid g3 mt">
+      <div class="card card--c center">
+        <div style="font-size:2.3rem">📥</div>
+        <p class="card__body big">الحسّاس يستقبل ولا يُصدر</p>
+      </div>
+      <div class="card card--v center">
+        <div style="font-size:2.3rem">🔌</div>
+        <p class="card__body big">يحوّل ما يقيسه إلى كهرباء</p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.3rem">📣</div>
+        <p class="card__body big">ثم يُبلغ، وغيره ينفّذ</p>
+      </div>
+    </div>
+
+    <div class="note note--fun mt">
+      <div class="note__ico">🔦</div>
+      <div class="note__body big">
+        <strong>مهمّة اليوم:</strong> ابحث عن ثلاثة حسّاسات في بيتك.
+        ابدأ بسقف الممرّ، وباب المصعد، وشاشة هاتفك.
+      </div>
+    </div>
+
+    <div class="row row--center mt" style="margin-top:24px">
+      <a class="btn" href="19-light-sensor.html" style="text-decoration:none">الدرس التالي ◀</a>
+      <a class="btn btn--ghost" href="../index.html" style="text-decoration:none">🏠 كل الدروس</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script src="../assets/js/words.js"></script>
+<script src="../assets/js/parts.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/circuit.js"></script>
+<script src="../assets/js/uses.js"></script>
+<script src="../assets/js/uses-basic.js"></script>
+<script src="../assets/js/uses-sensors.js"></script>
+<script src="../assets/js/uses-robot.js"></script>
+<script src="../assets/js/logic.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/board.js"></script>
+<script src="../assets/js/deck.js"></script>
+</body>
+</html>

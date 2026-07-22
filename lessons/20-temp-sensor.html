@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدرس 20 — من يخبر المكيّف أن الجوّ حارّ؟ | The Heat Sensor</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/deck.css">
+</head>
+<body data-lesson="e20" data-title="الدرس 20 — من يخبر المكيّف أن الجوّ حارّ؟ · The Heat Sensor">
+<div class="deck">
+
+<!-- ══════ 1 · الغلاف — مفارقة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:clamp(4.6rem,15vw,8rem)">🌡️</div>
+    <h1 class="title">من يخبر المكيّف أن الجوّ حارّ؟</h1>
+    <p class="en-title">The Heat Sensor</p>
+    <p class="big dim mt">
+      حبّة أصغر من حبّة العدس.<br>
+      وهي التي تُشغّل مكيّفًا يزن أربعين كيلوجرامًا،<br>
+      ثمّ توقفه.
+    </p>
+    <p class="mute mt">اضغط <kbd>◀</kbd> لترى الحبّة.</p>
+  </div>
+</section>
+
+<!-- ══════ 2 · شكله ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">مقاومة تتغيّر بالحرارة <span class="en-sub">Meet the Thermistor</span></h2>
+
+    <div class="part" data-part="thermistor"></div>
+
+    <p class="big center mt">
+      حبّة سوداء لها سلكان.<br>
+      كلّما تغيّرت حرارتها تغيّرت مقاومتها.<br>
+      والدائرة تقرأ هذا التغيّر.
+    </p>
+
+    <p class="center mt">
+      اسمه بالإنجليزية: <span class="term">thermistor</span> 🔊
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 3 · نوعان ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">عائلتان متعاكستان <span class="en-sub">NTC and PTC</span></h2>
+
+    <div class="grid g2">
+      <div class="card card--r center">
+        <div style="font-size:2.6rem">🔽</div>
+        <p class="card__body big">
+          <strong>NTC</strong><br>
+          كلّما سخن قلّت مقاومته. وهو الأشهر.
+        </p>
+      </div>
+      <div class="card card--c center">
+        <div style="font-size:2.6rem">🔼</div>
+        <p class="card__body big">
+          <strong>PTC</strong><br>
+          كلّما سخن زادت مقاومته، فيحمي الأجهزة.
+        </p>
+      </div>
+    </div>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> الشائع في التجارب NTC قيمته عشرة آلاف أوم
+        عند خمسٍ وعشرين درجة مئوية، وتهبط إلى نحو ٣٦٠٠ أوم عند خمسين درجة.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 4 · الزجاج مقابل الكهرباء ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">ميزان يُقرأ بالعين، وآخر يُقرأ بالسلك <span class="en-sub">Glass or Electric</span></h2>
+
+    <div class="anim" data-anim="thermo-rise"></div>
+
+    <p class="big center mt">
+      في ميزان الزجاج يتمدّد السائل فيصعد.<br>
+      وأنت تقرأ الرقم بعينك.<br>
+      أمّا الثرمستور فيسلّم الخبر إلى الدائرة.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 5 · النسخة الرقمية ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">قريب يرسل الرقم جاهزًا <span class="en-sub">The Digital Cousin</span></h2>
+
+    <div class="part" data-part="dht11"></div>
+
+    <p class="big center mt">
+      هذا لا يترك للدائرة عملًا.<br>
+      يقيس الحرارة والرطوبة معًا،<br>
+      ثم يرسل رقمين واضحين.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 6 · معرض التطبيقات ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="uses" data-uses="thermistor"></div>
+  </div>
+</section>
+
+<!-- ══════ 7 · الدائرة ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <div class="guide">
+      <div class="guide__face">⚡</div>
+      <div class="guide__bubble">
+        <p class="mb0">سخّن الحسّاس في الرسم،<br>وراقب المروحة قبل أن تقرأ السطر.</p>
+      </div>
+    </div>
+
+    <h2 style="text-align:center">سخِّنه وراقب المروحة <span class="en-sub">Heat It Up</span></h2>
+
+    <div class="circ" data-circ="temp-fan"></div>
+
+    <p class="big center mt">
+      سخنت الحبّة، فقلّت مقاومتها،<br>
+      فمرّ تيّار أكبر، فدارت المروحة.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 8 · لماذا يتوقّف ثم يعود ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">لماذا يعمل المكيّف ثم يتوقّف؟ <span class="en-sub">On, Off, On Again</span></h2>
+
+    <div class="grid g3">
+      <div class="card card--r center">
+        <div style="font-size:2.5rem">🥵</div>
+        <p class="card__body big">الحرارة فوق المطلوب، فيبدأ التبريد.</p>
+      </div>
+      <div class="card card--v center">
+        <div style="font-size:2.5rem">🧊</div>
+        <p class="card__body big">هبطت درجتين تحت المطلوب، فيتوقّف.</p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.5rem">🔁</div>
+        <p class="card__body big">ثم ترتفع ببطء، فيعود من جديد.</p>
+      </div>
+    </div>
+
+    <div class="note note--tip mt">
+      <div class="note__ico">🎓</div>
+      <div class="note__body big">
+        <strong>للكبار:</strong> هذا الفارق المقصود يُسمّى فجوة التشغيل.
+        لولاه لعمل الجهاز وتوقّف عشرات المرّات في الدقيقة.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 9 · ماذا لو تعطّل ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">وماذا لو انقطع سلكه؟ <span class="en-sub">When It Fails</span></h2>
+
+    <div class="grid g2">
+      <div class="card card--r center">
+        <div style="font-size:2.8rem">🧊❌</div>
+        <p class="card__body big">
+          المقاومة تصير كبيرة جدًّا،
+          فتحسب الثلّاجة أنّ الداخل شديد البرودة.
+        </p>
+      </div>
+      <div class="card card--r center">
+        <div style="font-size:2.8rem">🥛</div>
+        <p class="card__body big">
+          فلا تعمل أبدًا، ويفسد الحليب في الداخل.
+        </p>
+      </div>
+    </div>
+
+    <p class="big center mt">
+      الخطأ في القياس أخطر من غياب القياس.
+    </p>
+  </div>
+</section>
+
+<!-- ══════ 10 · فرز ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">أيّ هذه تقيس الحرارة؟ <span class="en-sub">Which One Measures Heat?</span></h2>
+
+    <div style="font-size:3rem;text-align:center">🔥</div>
+
+    <div class="sortq mt">
+      <div class="sortq__item" data-answer="yes">
+        <div class="sortq__row">
+          <span class="sortq__label big">🤒 ميزان حرارة طبّي رقمي</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">يقيس</button>
+            <button class="sortq__btn" data-val="no">لا يقيس</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — في طرفه المعدني حسّاس حرارة صغير.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="no">
+        <div class="sortq__row">
+          <span class="sortq__label big">🔥 سخّان الماء</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">يقيس</button>
+            <button class="sortq__btn" data-val="no">لا يقيس</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — السلك الحامي يصنع الحرارة ولا يقيسها.</div>
+      </div>
+
+      <div class="sortq__item" data-answer="yes">
+        <div class="sortq__row">
+          <span class="sortq__label big">🍞 فرن يُطفئ نفسه عند تمام الخبز</span>
+          <span class="sortq__pick">
+            <button class="sortq__btn" data-val="yes">يقيس</button>
+            <button class="sortq__btn" data-val="no">لا يقيس</button>
+          </span>
+        </div>
+        <div class="sortq__why">صحيح — في جداره حسّاس يراقب حرارة الهواء.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 11 · سؤالان ══════ -->
+<section class="slide">
+  <div class="wrap">
+    <h2 style="text-align:center">أجب ثم تحقّق <span class="en-sub">Answer, Then Check</span></h2>
+
+    <div style="font-size:3.2rem;text-align:center">❓</div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">أمسكتَ ثرمستور NTC بيدك الدافئة. مقاومته…</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt" data-right>تقلّ</button>
+          <button class="quiz__opt">تزيد</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. حرف N يعني أنّ العلاقة معكوسة:<br>
+          حرارة أعلى، مقاومة أقلّ.
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz mt">
+      <div class="quiz__body">
+        <p class="quiz__q big">هل يعرف حسّاس الحرارة أنّ أحدًا دخل الغرفة؟</p>
+        <div class="quiz__opts">
+          <button class="quiz__opt">نعم، يعرف كل شيء</button>
+          <button class="quiz__opt" data-right>لا، يقيس الحرارة وحدها</button>
+        </div>
+        <div class="quiz__why">
+          صحيح. كل حسّاس يقيس شيئًا واحدًا.<br>
+          ولمعرفة الداخل حسّاس آخر، ستراه بعد درسين.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 12 · الخاتمة ══════ -->
+<section class="slide slide--center">
+  <div class="wrap">
+    <div style="font-size:4.2rem">🍳</div>
+    <h2 class="title">حرارة تُقاس، لا تُخمَّن</h2>
+    <p class="en-title">Measured, Not Guessed</p>
+
+    <div class="grid g2 mt">
+      <div class="card card--r center">
+        <div style="font-size:2.3rem">🔽</div>
+        <p class="card__body big">NTC: حرارة أعلى ← مقاومة أقلّ</p>
+      </div>
+      <div class="card card--c center">
+        <div style="font-size:2.3rem">🔼</div>
+        <p class="card__body big">PTC: العلاقة مقلوبة</p>
+      </div>
+      <div class="card card--o center">
+        <div style="font-size:2.3rem">🔁</div>
+        <p class="card__body big">فجوة التشغيل تريح الجهاز</p>
+      </div>
+      <div class="card card--v center">
+        <div style="font-size:2.3rem">📟</div>
+        <p class="card__body big">وبعضها يرسل الرقم جاهزًا</p>
+      </div>
+    </div>
+
+    <div class="note note--fun mt">
+      <div class="note__ico">🍚</div>
+      <div class="note__body big">
+        <strong>تجربة بمساعدة كبير:</strong> ضع يدك قرب غطاء قِدر الأرزّ.
+        ذلك الجهاز يقيس حرارة القاع ليعرف أنّ الماء نفد.
+      </div>
+    </div>
+
+    <div class="row row--center mt" style="margin-top:24px">
+      <a class="btn" href="21-distance-sensor.html" style="text-decoration:none">الدرس التالي ◀</a>
+      <a class="btn btn--ghost" href="../index.html" style="text-decoration:none">🏠 كل الدروس</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script src="../assets/js/words.js"></script>
+<script src="../assets/js/parts.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/circuit.js"></script>
+<script src="../assets/js/uses.js"></script>
+<script src="../assets/js/uses-basic.js"></script>
+<script src="../assets/js/uses-sensors.js"></script>
+<script src="../assets/js/uses-robot.js"></script>
+<script src="../assets/js/logic.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/board.js"></script>
+<script src="../assets/js/deck.js"></script>
+</body>
+</html>
